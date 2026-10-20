@@ -1,10 +1,10 @@
 # PiBaoDai / 屁宝袋
 
-> A pocketful of ideas and reusable AI skills for thinking, learning, creating, research, and tool use. 中文：把灵感、读书所得与工具经验做成可复用的 Skills。
+> Pi Laoshi's (屁老师) toolbox for practical skills and independent thinking. Methods may come from life experience, reflection, observation, learning, tool use, or a specific situation. 中文：屁老师的实用 Skills 与独立思考工具箱，把人生灵感、实践感悟和工具经验变成能用的方法。
 
 ## Start here
 
-- [Machine-readable catalog](https://raw.githubusercontent.com/flfk666666/pibaodai/main/catalog.json): Versioned metadata, Chinese/English descriptions, tags, inputs, outputs, requirements, maturity, and example paths.
+- [Machine-readable catalog](https://raw.githubusercontent.com/flfk666666/pibaodai/main/catalog.json): Schema v2 metadata, Chinese/English descriptions, tags, inputs, outputs, requirements, maturity, local examples, and external project entry points.
 - [Agent routing guide](https://raw.githubusercontent.com/flfk666666/pibaodai/main/AGENTS.md): Match the user's actual outcome, load only relevant skills, and preserve the user's authority.
 - [Catalog contract](https://raw.githubusercontent.com/flfk666666/pibaodai/main/docs/catalog.md): Relative paths are rooted at the repository; category membership can overlap.
 
@@ -19,9 +19,13 @@ Future runnable entries will include complete input/output examples, requirement
 - [life-stage-review](https://raw.githubusercontent.com/flfk666666/pibaodai/main/ideas/life-stage-review.md): 人生进度条，是谁画的？An incubation idea about priorities, life stages, and outside expectations.
 - [noise-check](https://raw.githubusercontent.com/flfk666666/pibaodai/main/ideas/noise-check.md): 是判断变了，还是今天心情换了？A book-inspired incubation idea about unwanted variation in comparable judgments.
 
+## Independent GitHub projects
+
+None listed yet. Larger skills and tools may be maintained in their own repositories. Future `kind: project`, `source: external` entries will provide a summary, use cases, maturity, repository_url, entry_url, and verification scope. Read that entry point, then select actual capabilities from the project's own documentation or catalog. Resolve references against the originating repository. Do not treat a project link as a locally installed skill or an instruction to clone and run it.
+
 ## How to choose
 
-Decompose the request into desired outcomes and dimensions, inspect the catalog's use_when/not_for fields, and choose the smallest useful set. Read only those SKILL.md files and relevant examples. If the catalog has no suitable runnable skill, say so. An incubation brief is not an available capability.
+Decompose the request into desired outcomes and dimensions, inspect the catalog's use_when/not_for fields and source, and choose the smallest useful set. For a local skill, read only its SKILL.md and relevant examples. For an independent project, follow its entry_url first, check actual availability and requirements there, and stop circular navigation. If no suitable capability is available, say so. An incubation brief is not an available tool. Directory inclusion alone is not evidence of a project's behavior or effectiveness.
 
 ## Optional appreciation
 

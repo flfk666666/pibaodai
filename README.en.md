@@ -3,19 +3,22 @@
 </p>
 
 <p align="center">
-  <strong>Reusable AI skills, drawn from stray ideas, good books, and hard-won tool experience.</strong>
+  <strong>Pi Laoshi's toolbox for practical skills and independent thinking.</strong><br>
+  Turn life experience, reflection, and tool know-how into methods you can put to work.
 </p>
 
 <p align="center">
   <a href="README.md">简体中文</a> · <strong>English</strong><br>
-  <a href="#take-a-look-inside">Start here</a> · <a href="#whats-going-in-the-bag">Browse</a> · <a href="#let-your-ai-look-inside">For your AI</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="LICENSE">MIT</a>
+  <a href="#take-a-look-inside">Start here</a> · <a href="#whats-going-in-the-bag">Browse</a> · <a href="#room-for-bigger-projects">Independent projects</a> · <a href="#let-your-ai-look-inside">For your AI</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="LICENSE">MIT</a>
 </p>
 
 ---
 
-Some ideas arrive in the shower. Some stay with you after a book. Others appear after a tool has made you earn them.
+PiBaoDai (屁宝袋) is Pi Laoshi's (屁老师) place for useful ideas, lessons from experience, reflections, and ways of getting tools to do what you need.
 
-PiBaoDai (屁宝袋) gives those ideas a place to become usable skills: **when to use them, what to do, and what comes out.** You can come back to them, and your AI can find the relevant method without reading your entire life story.
+Everyday life, hands-on work, observation, reading, and revisiting a decision can all produce something worth keeping. The aim is practical: make a task easier, understand a problem better, and develop your own judgment.
+
+Each method explains **when to use it, what to do, and what comes out**. Some help you think independently; others support a specific task or situation. You can come back to them, and your AI can find the relevant method without reading your entire life story.
 
 A little personality in the bag. A useful result when you open it.
 
@@ -34,14 +37,14 @@ Two ideas are taking shape:
 
 ## What's going in the bag?
 
-Categories help discovery. A skill can belong in more than one.
+Categories grow with the collection, and a skill can belong in more than one. A method may come from an experience, a review, a tool workflow, or something learned through reading.
 
 | Pocket | What belongs here | Start here |
 | --- | --- | --- |
 | 🧠 Thinking & decisions | Examine judgments, assumptions, choices, and trade-offs | [Noise idea](ideas/noise-check.md), incubating |
 | 🌱 Life & growth | Review life stages, personal priorities, and small next experiments | [Whose timeline?](ideas/life-stage-review.md), incubating |
-| 📚 Learning & books | Understand English; turn reading into questions and practice | [Book-to-method idea](ideas/noise-check.md), incubating |
-| 🎬 Content & editing | Spoken scripts, storytelling, shots, and editing preparation | First entries to be selected |
+| 📚 Learning & understanding | Learning methods, knowledge, questions, and practice | [Judgment-method idea](ideas/noise-check.md), incubating |
+| 🎬 Creating & communication | Spoken scripts, communication, shots, and editing | First entries to be selected |
 | 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Bring a workflow you've tried](CONTRIBUTING.md) |
 | 📈 Quant & research | Inspect evidence, backtest design, and research claims | First entries to be selected |
 
@@ -57,6 +60,19 @@ Inspired by *Noise*, an idea for checking unwanted variation in comparable judgm
 
 Both are incubation briefs, not installable skills. Their methods and worked cases still need development.
 
+## Room for bigger projects
+
+A skill can grow into a complete tool or need its own code, dependencies, and release cycle. When it does, it can live in a separate GitHub repository.
+
+| Location | What stays in PiBaoDai | What the AI reads next |
+| --- | --- | --- |
+| A lightweight skill in this repository | Its purpose, `SKILL.md`, and worked example | The selected files |
+| An independent GitHub project | A summary, use cases, status, repository link, and AI entry point | The project's documentation or catalog, then the relevant capability and requirements |
+
+PiBaoDai remains the shared entry point while each independent project develops at its own pace. The directory can keep pointing people and agents to the right place as the collection grows.
+
+No independent projects are listed yet. Their entry format is defined in [the catalog contract](docs/catalog.md). A project link is a way to explore further; its own documentation establishes how to use it and what has been verified.
+
 ## Let your AI look inside
 
 Give this to an assistant that can read a webpage or repository:
@@ -68,6 +84,8 @@ https://raw.githubusercontent.com/flfk666666/pibaodai/main/llms.txt
 Follow its link to catalog.json. Break my goal into the outcomes and dimensions
 I need. Match use_when, not_for, inputs, outputs, and maturity.
 Read only the selected SKILL.md files and relevant examples.
+For an independent project, read its entry point before choosing a capability
+or attempting setup; follow its own requirements.
 Explain the match and any missing inputs. Do not treat incubating ideas
 as available skills. If nothing fits, say so.
 
@@ -77,7 +95,7 @@ My goal: describe what you want to do here.
 | Need | Entry point |
 | --- | --- |
 | A compact index for an agent | [llms.txt](llms.txt) |
-| Searchable descriptions, tags, inputs, outputs, and maturity | [catalog.json](catalog.json) |
+| Searchable descriptions, tags, inputs, outputs, sources, and maturity | [catalog.json](catalog.json) |
 | Guidance for choosing and combining skills | [AGENTS.md](AGENTS.md) |
 | Field definitions and maintenance rules | [Catalog contract](docs/catalog.md) |
 
@@ -86,7 +104,7 @@ If your assistant cannot browse, provide the catalog and the selected files dire
 ## Once a skill is available
 
 1. Confirm its status is experimental or stable, then read its example to see whether the result fits your needs.
-2. Have your AI read the skill's `SKILL.md`, then provide your material. If your host supports skill installation, install the complete skill folder using that host's workflow.
+2. Have your AI read the skill's `SKILL.md`, then provide your material. If your host supports skill installation, install the complete skill folder using that host's workflow. For an independent project, follow that project's instructions.
 3. Share what worked or failed in an Issue, with private details removed.
 
 To keep a local copy:

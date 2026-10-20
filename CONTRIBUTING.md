@@ -2,7 +2,7 @@
 
 [中文首页](README.md) · [English home](README.en.md)
 
-屁宝袋欢迎能帮人把一件事做得更清楚、更顺手的办法。一个反复踩坑后总结的小招数，也值得有自己的位置。
+屁宝袋是屁老师的实用 Skills 与独立思考工具箱。生活观察、实践感悟、工具经验，以及特定场景下摸索出来的办法，都欢迎进入这个袋子。一个反复踩坑后总结的小招数，也值得有自己的位置。
 
 ## 先选一种参与方式
 
@@ -33,7 +33,13 @@ skills/your-skill/
 
 新 Skill 默认标为 `experimental`。`stable` 需要记录覆盖过的场景和已知失败情况；不能只靠文案变成熟。
 
-## 读书、借鉴与公开范围
+## 较大的独立项目
+
+如果方法已经长成一个有独立代码、依赖或发布节奏的项目，可以保留自己的 GitHub 仓库，在屁宝袋登记入口。提供项目简介、适用场景、状态、`repository_url`、供 AI 继续读取的 `entry_url`，以及验证范围。
+
+按 [目录说明](docs/catalog.md) 使用 `kind: project`、`source: external`，并同步中英文首页与 `llms.txt`。外部项目在自身仓库维护使用说明和案例；不要把链接包装成已经安装、已经运行过的本地 Skill。
+
+## 经验、借鉴与公开范围
 
 - 把读书所得变成自己的提问方式、检查流程或练习，标明书名、作者和可靠来源。
 - 引用别人的 Skill 时保留作者和原链接；改编还要说明你改了什么，以及原材料的许可。
@@ -45,12 +51,14 @@ skills/your-skill/
 
 ## Contribute in English
 
-Bring a useful method, a tool workflow, a worked example, or a clear report of something that failed.
+Bring a useful method from life experience, reflection, independent thinking, tool use, or a specific task. Worked examples and clear reports of what failed are welcome too. Reading can inspire a method, alongside other forms of experience.
 
 Each runnable skill lives in `skills/<skill-id>/` and contains a `SKILL.md` with `name` and `description` frontmatter, plus a complete input/output example. Add references, scripts, and assets only when the workflow needs them.
 
 Explain what the skill needs, what it produces, when it helps, and when it should not be used. Mark examples as either redacted real runs or authored illustrations. For tool workflows, name the dependencies and the extent of actual verification.
 
 Register the skill in `catalog.json`, then update both READMEs and `llms.txt`. See [the catalog contract](docs/catalog.md). Run `npm test` and `npm run check`, and include the results in your pull request.
+
+A larger project can stay in its own GitHub repository. Register it as `kind: project`, `source: external`, with a summary, use cases, status, `repository_url`, `entry_url`, and verification scope. Keep its full instructions and examples in its own repository. A directory link does not imply that a project has been installed or tested locally.
 
 New skills start as `experimental`. Promote a skill to `stable` only with documented usage evidence and known limitations. Attribute books and upstream work, respect their permissions, and keep private material out of the repository.

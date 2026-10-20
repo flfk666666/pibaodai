@@ -1,7 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "repository": "https://github.com/flfk666666/pibaodai",
   "raw_base": "https://raw.githubusercontent.com/flfk666666/pibaodai/main/",
+  "author": {
+    "name": "屁老师",
+    "name_en": "Pi Laoshi"
+  },
+  "description": {
+    "zh": "屁老师的实用 Skills 与独立思考工具箱：收纳人生灵感、实践感悟、工具经验和具体场景的方法，也为独立 GitHub 项目提供统一入口。",
+    "en": "Pi Laoshi's toolbox for practical skills and independent thinking, shaped by life experience, reflection, and tool use, with a shared entry point for independent GitHub projects."
+  },
   "categories": [
     {
       "id": "thinking",
@@ -20,15 +28,15 @@
     {
       "id": "learning",
       "name": {
-        "zh": "学习与读书",
-        "en": "Learning & books"
+        "zh": "学习与认知",
+        "en": "Learning & understanding"
       }
     },
     {
       "id": "creating",
       "name": {
-        "zh": "内容与剪辑",
-        "en": "Content & editing"
+        "zh": "创作与表达",
+        "en": "Creating & communication"
       }
     },
     {
@@ -50,6 +58,7 @@
     {
       "id": "life-stage-review",
       "kind": "idea",
+      "source": "local",
       "status": "incubating",
       "name": {
         "zh": "人生进度条，是谁画的？",
@@ -96,6 +105,7 @@
     {
       "id": "noise-check",
       "kind": "idea",
+      "source": "local",
       "status": "incubating",
       "name": {
         "zh": "是判断变了，还是今天心情换了？",
