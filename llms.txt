@@ -7,6 +7,7 @@
 - [Machine-readable catalog](https://raw.githubusercontent.com/flfk666666/pibaodai/main/catalog.json): Schema v2 metadata, Chinese/English descriptions, tags, inputs, outputs, requirements, maturity, local examples, and external project entry points.
 - [Agent routing guide](https://raw.githubusercontent.com/flfk666666/pibaodai/main/AGENTS.md): Match the user's actual outcome, load only relevant skills, and preserve the user's authority.
 - [Catalog contract](https://raw.githubusercontent.com/flfk666666/pibaodai/main/docs/catalog.md): Relative paths are rooted at the repository; category membership can overlap.
+- [Idea-to-skill workflow](https://raw.githubusercontent.com/flfk666666/pibaodai/main/docs/skill-workflow.md): For maintaining the collection: usage instructions, full worked examples, evidence labels, registration, and publication. This is a process guide, not a runnable catalog entry.
 
 ## Runnable skills
 

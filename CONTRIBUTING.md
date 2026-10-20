@@ -11,6 +11,16 @@
 - **补一个案例：** 展示输入与输出；说清是实测记录，还是为解释方法编写的示例。
 - **提交 Skill：** 用一个真实、可重复的问题起步，附完整案例，再登记到目录里。
 
+这四种方式任选一种，不需要先完成前面的步骤。
+
+## 现在就能参与，需要什么权限？
+
+仓库是公开的。登录 GitHub 后，就可以通过 [Issue 入口](https://github.com/flfk666666/pibaodai/issues/new/choose) 提脑洞、报告翻车，也可以先贴出一个去掉隐私的案例。
+
+想直接改文件、补案例或提交 Skill，可以 [Fork 仓库](https://github.com/flfk666666/pibaodai/fork)，在自己的副本里修改，再向本仓库发起 Pull Request。维护者审阅后决定是否合并。普通参与者无需申请仓库写入权限，也不用先成为协作者。
+
+还没写成 Skill 也没关系；按 [从想法到 Skill 的固定流程](docs/skill-workflow.md) 一起打磨。
+
 ## 一个 Skill 的最小交付
 
 放在 `skills/<skill-id>/`，目录名使用小写英文、数字和连字符。
@@ -52,6 +62,10 @@ skills/your-skill/
 ## Contribute in English
 
 Bring a useful method from life experience, reflection, independent thinking, tool use, or a specific task. Worked examples and clear reports of what failed are welcome too. Reading can inspire a method, alongside other forms of experience.
+
+Choose any one way to contribute: suggest an idea, report a failure, add a worked example, or submit a skill. These are alternatives, not a required sequence.
+
+Sign in to GitHub and [open an Issue](https://github.com/flfk666666/pibaodai/issues/new/choose). To change files, [fork the repository](https://github.com/flfk666666/pibaodai/fork), edit your copy, and open a pull request for the maintainer to review. Contributors do not need write access or collaborator status. See [the idea-to-skill workflow](docs/skill-workflow.md).
 
 Each runnable skill lives in `skills/<skill-id>/` and contains a `SKILL.md` with `name` and `description` frontmatter, plus a complete input/output example. Add references, scripts, and assets only when the workflow needs them.
 

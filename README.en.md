@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="README.md">简体中文</a> · <strong>English</strong><br>
-  <a href="#take-a-look-inside">Start here</a> · <a href="#whats-going-in-the-bag">Browse</a> · <a href="#room-for-bigger-projects">Independent projects</a> · <a href="#let-your-ai-look-inside">For your AI</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="LICENSE">MIT</a>
+  <a href="#let-your-ai-look-inside">For your AI</a> · <a href="#whats-going-in-the-bag">Browse</a> · <a href="#take-a-look-inside">Start here</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="#room-for-bigger-projects">Independent projects</a> · <a href="LICENSE">MIT</a>
 </p>
 
 ---
@@ -120,6 +120,8 @@ Skills are methods and instructions, rather than a new foundation model. Results
 A useful skill explains **who it helps, what problem it handles, what it needs, what it produces, and where it falls short**. An attributed introduction to an upstream resource is welcome too.
 
 Start with a small idea or a complete example. Read [the contribution guide](CONTRIBUTING.md) when you're ready to submit it. Feedback from actual use helps decide what belongs in the next version.
+
+Follow the [idea-to-skill workflow](docs/skill-workflow.md) to turn new insights or tool experience into a method with usage instructions, a complete worked example, and a catalog entry.
 
 Original repository content and code are available under the [MIT License](LICENSE). Attribute adapted work and book-inspired ideas. Third-party material retains its own rights and licensing.
 

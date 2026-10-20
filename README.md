@@ -9,7 +9,7 @@
 
 <p align="center">
   <strong>简体中文</strong> · <a href="README.en.md">English</a><br>
-  <a href="#先逛逛这个袋子">先逛逛</a> · <a href="#袋里准备装什么">看分类</a> · <a href="#一个袋子也能装下大项目">独立项目</a> · <a href="#让你的-ai-来翻袋子">交给 AI 找</a> · <a href="CONTRIBUTING.md">一起添点东西</a> · <a href="LICENSE">MIT</a>
+  <a href="#让你的-ai-来翻袋子">交给 AI 找</a> · <a href="#袋里准备装什么">看分类</a> · <a href="#先逛逛这个袋子">先逛逛</a> · <a href="CONTRIBUTING.md">一起添点东西</a> · <a href="#一个袋子也能装下大项目">独立项目</a> · <a href="LICENSE">MIT</a>
 </p>
 
 ---
@@ -118,6 +118,8 @@ git clone https://github.com/flfk666666/pibaodai.git
 欢迎自己的小方法，也欢迎对外部好东西的清楚介绍。一个好 Skill 至少说清：**帮谁解决什么问题、需要什么、给出什么、什么情况下不好用。**
 
 比起一下塞进一百个名字，更希望每次多一个完整案例、多一次真实反馈。新想法可以先开 Issue；准备提交时看 [贡献指南](CONTRIBUTING.md)。
+
+有了新灵感或工具经验，按 [从想法到 Skill 的流程](docs/skill-workflow.md) 提炼方法、补使用说明与完整案例，再收进目录。
 
 原始内容与仓库代码使用 [MIT 许可证](LICENSE)。借鉴、改编和书籍灵感注明来源；第三方材料保留其自身权利与许可。
 
