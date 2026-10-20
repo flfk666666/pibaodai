@@ -7,7 +7,8 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "check": "node scripts/validate-catalog.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "test:skills": "python -m unittest discover -s skills/character-panel/tests"
   },
   "license": "MIT"
 }

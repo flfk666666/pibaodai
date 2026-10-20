@@ -39,16 +39,22 @@ A little personality in the bag. A useful result when you open it.
 
 ## Take a look inside
 
-The bag has just opened. The bilingual home, category map, and AI directory are ready; the first three skills are still being selected. **There are no published, installable skills yet.**
+The bag now contains **1 experimental skill and 2 incubating ideas**. The first skill provides data collection and private records; scoring is still unavailable.
 
-Two ideas are taking shape:
+| Skill | What it can do now | Status |
+| --- | --- | --- |
+| [🪪 Personal character panel](skills/character-panel/SKILL.md) | Help adults record their own basic information, answers across 36 items, and visible photo observations, with saved progress and selected-item retests | Experimental |
+
+Personal character panel uses a Python 3.10+ standard-library runner. Keep its private `current.md` outside public repositories and the skill installation. All scores remain `null`; it produces no total scores or global percentiles. Photo observations cover visible everyday presentation. Read the [fictional example input](skills/character-panel/examples/input.md) and [paired output with verification scope](skills/character-panel/examples/output.md) before trying it.
+
+Two other ideas are taking shape:
 
 | Idea | What it would help you examine | Status |
 | --- | --- | --- |
 | [🌱 Whose timeline is it, anyway?](ideas/life-stage-review.md) | Personal wishes, practical constraints, and other people's timetables | Incubating |
 | [🧠 Did the evidence change, or just your mood?](ideas/noise-check.md) | Unwanted variation in comparable judgments, inspired by *Noise* | Incubating |
 
-**The first release of skills will start small:** choose three methods the maintainer has used repeatedly, give each a complete worked example, then record a demonstration. This initial repository contains the directory and idea briefs; the skills, usage examples, and recording will follow when ready.
+Each skill needs usage instructions, a complete example, and a clear account of what has been verified. Experimental releases offer the parts ready to try and develop through feedback from actual use.
 
 ## What's going in the bag?
 
@@ -57,10 +63,10 @@ Categories grow with the collection, and a skill can belong in more than one. A 
 | Pocket | What belongs here | Start here |
 | --- | --- | --- |
 | 🧠 Thinking & decisions | Examine judgments, assumptions, choices, and trade-offs | [Noise idea](ideas/noise-check.md), incubating |
-| 🌱 Life & growth | Review life stages, personal priorities, and small next experiments | [Whose timeline?](ideas/life-stage-review.md), incubating |
+| 🌱 Life & growth | Review life stages, record current circumstances, and plan small next experiments | [Personal character panel](skills/character-panel/SKILL.md), experimental; [Whose timeline?](ideas/life-stage-review.md), incubating |
 | 📚 Learning & understanding | Learning methods, knowledge, questions, and practice | [Judgment-method idea](ideas/noise-check.md), incubating |
 | 🎬 Creating & communication | Spoken scripts, communication, shots, and editing | First entries to be selected |
-| 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Bring a workflow you've tried](CONTRIBUTING.md) |
+| 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Private records and resumable collection](skills/character-panel/SKILL.md), experimental |
 | 📈 Quant & research | Inspect evidence, backtest design, and research claims | First entries to be selected |
 
 ## Two ideas still taking shape
@@ -116,7 +122,7 @@ My goal: describe what you want to do here.
 
 If your assistant cannot browse, provide the catalog and the selected files directly. Discovery and installation paths depend on the host application.
 
-## Once a skill is available
+## Try a skill
 
 1. Confirm its status is experimental or stable, then read its example to see whether the result fits your needs.
 2. Have your AI read the skill's `SKILL.md`, then provide your material. If your host supports skill installation, install the complete skill folder using that host's workflow. For an independent project, follow that project's instructions.

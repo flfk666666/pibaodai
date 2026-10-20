@@ -95,7 +95,7 @@ For selection, explain why the external project fits, then read its entry point.
 
 User: “看了新闻有点想买，又怕自己在追热点，帮我理一下。”
 
-Split the request into evidence review, decision framing, and any requested investment analysis. Currently the catalog has incubation briefs and no runnable skills. Say that clearly. A future noise skill might help compare repeated judgments, but an `incubating` idea cannot be presented as an available tool. A category or idea does not authorize a trade or prove an investment conclusion.
+Split the request into evidence review, decision framing, and any requested investment analysis. The catalog currently includes the experimental `character-panel` skill for adult self-review data collection and private records, plus two incubation ideas. It has no runnable noise or investment-analysis skill. A future noise skill might help compare repeated judgments, but an `incubating` idea cannot be presented as an available tool. Personal character panel does not match this request merely because it shares a category. A category or idea does not authorize a trade or prove an investment conclusion.
 
 Return the closest available match, its reason for matching, missing inputs, and status. Reading a relevant skill's example costs less context than loading all skills.
 

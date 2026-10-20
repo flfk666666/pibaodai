@@ -20,3 +20,4 @@ jobs:
           package-manager-cache: false
       - run: npm test
       - run: npm run check
+      - run: python3 -m unittest discover -s skills/character-panel/tests

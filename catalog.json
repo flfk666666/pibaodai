@@ -56,6 +56,69 @@
   ],
   "entries": [
     {
+      "id": "character-panel",
+      "kind": "skill",
+      "source": "local",
+      "status": "experimental",
+      "name": {
+        "zh": "完整角色看板",
+        "en": "Personal character panel"
+      },
+      "description": {
+        "zh": "面向成年人自评，用基础资料、36项问答与照片可见观察建立私人角色档案；逐项保存、断点续测和局部复测，评分规则仍待确定。",
+        "en": "Build a private self-review record for adults from basic information, 36 items, and visible photo observations. Save each answer, resume later, and revisit selected items; scoring rules remain undefined."
+      },
+      "categories": [
+        "life",
+        "thinking",
+        "tools"
+      ],
+      "tags": [
+        "完整角色看板",
+        "自评",
+        "资料采集",
+        "断点续测",
+        "私人存档",
+        "personal character panel",
+        "self-review",
+        "private record",
+        "resume"
+      ],
+      "use_when": [
+        "成年人希望整理本人现状，并在之后继续补充或复核部分资料。 Adults want to record their own current situation and return to missing or outdated information.",
+        "需要把基础资料、问答和照片可见观察逐项存入本地私人档案。 Save basic information, answers, and visible photo observations to a local private record."
+      ],
+      "not_for": [
+        "已校准的心理、医学或能力测评，以及外形分、总分或全球百分位。 Validated psychological, medical, or ability assessment, appearance scores, total scores, or global percentiles.",
+        "未成年人外形评价、未经本人同意的他人评价，或从照片推断性格、智力、健康与财富。 Appearance assessment of minors, assessment of others without consent, or inferring personality, intelligence, health, or wealth from photos.",
+        "自动公开、提交或上传私人资料。 Automatically publishing, committing, or uploading private records."
+      ],
+      "inputs": [
+        "成年人本人同意，以及自行选择提供的基础资料与36项回答。 An adult's consent for self-review, basic information, and chosen answers across 36 items.",
+        "本人授权用于日常综合形象观察的照片；可以先完成不依赖照片的项目。 Authorized photos for visible everyday presentation observations; other items can proceed before photos are provided.",
+        "公开仓库与安装目录之外的私人存档目录。 A private state directory outside public repositories and the skill installation."
+      ],
+      "outputs": [
+        "本地私人 current.md，含输入进度、来源、日期和所有为空的分数。 A local private current.md with input progress, sources, dates, and null scores.",
+        "可恢复的采集进度、局部复测记录、历史快照与修订保护。 Resumable collection progress, selected-item retests, history snapshots, and revision protection."
+      ],
+      "requirements": [
+        "Python 3.10+；运行器只使用标准库。 Python 3.10+; the runner uses the standard library only.",
+        "AI需有本地文件与命令执行权限；照片观察还需实际读取图片的能力。 The assistant needs local file and command access, plus image viewing for photo observations."
+      ],
+      "path": "skills/character-panel/SKILL.md",
+      "examples": [
+        {
+          "input": "skills/character-panel/examples/input.md",
+          "output": "skills/character-panel/examples/output.md"
+        }
+      ],
+      "evidence": {
+        "origin": "屁老师提出的六维角色档案设计，由 AI 协助整理为采集与存档流程。 A six-dimension personal record design proposed by Pi Laoshi, with AI-assisted collection and archival instructions.",
+        "validation": "The authored fictional example was executed through the real store. 24 checkpoint tests and 27 catalog tests passed on Windows/Python 3.11; catalog, local links and metadata checked. This verifies persistence/resume/retest behavior, not human outcomes or assessment validity. All scores remain null; no calibrated scoring, total score or global percentile."
+      }
+    },
+    {
       "id": "life-stage-review",
       "kind": "idea",
       "source": "local",

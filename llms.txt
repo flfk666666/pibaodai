@@ -11,9 +11,11 @@
 
 ## Runnable skills
 
-None published yet. The initial release establishes the repository and discovery contract. The first three skill choices, worked examples, and demonstration are deferred. Do not offer an incubation brief as an executable capability.
+- [character-panel](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/SKILL.md): 完整角色看板 / Personal character panel. Experimental adult self-review collection and private records: basic information, 36 items, visible everyday photo observations, per-answer saves, resume, selected-item retests, history, and revision protection. Requires Python 3.10+ standard library, local file/command access, and image viewing for photo observations. Keep private current.md outside public repositories and the skill installation. All scores remain null; no total scores or global percentiles. Examples are fictional demonstration data, not real-person assessments or score calibration.
+  - [Example input](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/examples/input.md)
+  - [Example output and verification scope](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/examples/output.md)
 
-Future runnable entries will include complete input/output examples, requirements, maturity, and honest verification evidence. Consult catalog.json for the current inventory rather than assuming a fixed skill count.
+The current inventory is 1 experimental local skill and 2 incubating ideas. Consult catalog.json for the latest entries, requirements, and evidence. Do not offer an incubation brief as an executable capability.
 
 ## Ideas — not installable
 

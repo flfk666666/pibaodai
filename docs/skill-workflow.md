@@ -40,7 +40,7 @@
 | 检查点 | 怎样判断结果是否满足目标，哪里仍需人判断 |
 | 验证范围 | 实际执行过什么、哪些步骤只是演示、已知失败情况 |
 
-没有实测材料时，可以制作明确标注的演示案例；不能写成“亲测有效”。`stable` 需要有记录的实际使用证据和已知边界。首批公开 Skills 仍由维护者后续选择，这份流程说明本身不算一个已上架的 Skill。
+没有实测材料时，可以制作明确标注的演示案例；不能写成“亲测有效”。`stable` 需要有记录的实际使用证据和已知边界。首个实验版为[完整角色看板](../skills/character-panel/SKILL.md)，先提供资料采集和存档，评分尚未确定；其余条目后续选择。这份流程说明本身不算一个已上架的 Skill。
 
 ## Idea-to-skill workflow
 
@@ -53,4 +53,4 @@ Bring an idea, reflection, tool experience, or a solution to a concrete problem.
 5. Remove private details, retain attribution, update the catalog and bilingual entry points, then run `npm test` and `npm run check`.
 6. Submit a pull request for review. An AI acting for the maintainer may publish within the user's authorization and must verify the remote result. Improve the method with actual feedback; reserve `stable` for documented use evidence and known limitations.
 
-This document describes the maintenance process. It is not a published runnable skill and does not select the first three skills.
+This document describes the maintenance process and is not itself a runnable skill. The first experimental entry is [Personal character panel](../skills/character-panel/SKILL.md), providing data collection and private records with scoring still undefined. Further entries will be selected later.

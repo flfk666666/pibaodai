@@ -1,0 +1,249 @@
+{
+  "version": "0.1.0",
+  "axes": [
+    {"id": "A", "name": "外形条件与呈现"},
+    {"id": "B", "name": "身体素质与状态"},
+    {"id": "C", "name": "认知与心理"},
+    {"id": "D", "name": "实践与协作能力"},
+    {"id": "E", "name": "个人经济实力"},
+    {"id": "F", "name": "家庭与社会资源"}
+  ],
+  "basic_profile": {
+    "questions": [
+      "这是为你本人建立档案吗？你是否已满18岁？可以使用昵称，不需要身份证、生日或真实姓名。",
+      "先说出生年份、目前常住城市和正在做的工作或主要身份。性别、国家、教育背景及希望使用的称呼可选填；不愿透露的可以跳过。"
+    ],
+    "required_fields": ["birth_year", "current_city", "occupation"],
+    "fields": {
+      "is_self_assessment": "是否评估本人，布尔值；首版面向本人自评",
+      "adult_confirmation": "是否已满18岁，布尔值；未确认前不进行外形评价",
+      "display_name": "昵称或希望使用的称呼，可选",
+      "birth_year": "出生年份，只需年份；临近成年边界时另确认是否已满18岁",
+      "gender": "本人愿意提供的性别自述，可选，不从照片猜测",
+      "current_city": "目前常住城市，不需要住址",
+      "current_country": "目前常住国家，可选；本地参照前确认",
+      "occupation": "目前工作或主要身份，可为学生、待业、照护者等",
+      "education": "本人愿意提供的教育背景，可选",
+      "appearance_context": "默认日常综合形象，变更场景须明确记录",
+      "international_targets": "希望另行比较的具体国家列表，可后补"
+    }
+  },
+  "items": [
+    {
+      "id": "A1", "axis": "A", "name": "身高与外形尺度",
+      "questions": ["你最近测量的身高是多少厘米？大约什么时候、是否脱鞋测量的？只记得自报值也可以先存，日期未知就留空。"],
+      "required_fields": ["height_cm"], "required_evidence": false, "rubric_version": null,
+      "fields": {"height_cm": "身高数值，unit为cm", "measurement_conditions": "脱鞋/穿鞋、测量方式；不清楚可空"}
+    },
+    {
+      "id": "A2", "axis": "A", "name": "面部整体与侧貌",
+      "questions": ["方便提供近期正脸自然表情、微笑和左右侧脸照片吗？请说明大致拍摄日期、是否使用美颜及日常妆容；可以先记待补照片。"],
+      "required_fields": [], "required_evidence": true, "rubric_version": null,
+      "fields": {"photo_conditions": "拍摄视角、光线、处理与妆容说明", "appearance_preferences": "本人希望关注的日常观感，可选；本版不产生审美分"}
+    },
+    {
+      "id": "A3", "axis": "A", "name": "身材比例与轮廓",
+      "questions": ["方便提供普通合身衣着的全身正面和侧面照片吗？请说明拍摄日期及是否塑形处理；围度可选，不需要私密照片。"],
+      "required_fields": [], "required_evidence": true, "rubric_version": null,
+      "fields": {"photo_conditions": "衣着、视角、处理及日期说明", "optional_measurements": "本人实测围度及单位，可选；不可从图估算"}
+    },
+    {
+      "id": "A4", "axis": "A", "name": "可见仪容维护",
+      "questions": ["目前日常怎样打理头发、胡须及仪容？可沿用已保存且清楚的近期照片，说明它是否代表平常状态。"],
+      "required_fields": [], "required_evidence": true, "rubric_version": null,
+      "fields": {"grooming_routine": "日常打理方式，可选", "representative_state": "照片是否代表日常状态及差异"}
+    },
+    {
+      "id": "A5", "axis": "A", "name": "穿搭与整体风格",
+      "questions": ["平时主要在什么场景穿衣，想呈现什么感觉？可以给1—2套常穿搭配的照片，普通日常装就行，不需要品牌价格。"],
+      "required_fields": [], "required_evidence": true, "rubric_version": null,
+      "fields": {"daily_scenes": "主要生活/工作穿衣场景", "style_intention": "本人想表达的风格，可选"}
+    },
+    {
+      "id": "A6", "axis": "A", "name": "表情与仪态呈现",
+      "questions": ["已有照片里的表情和站姿是否接近平时？如果想讨论动态表现，可另外提供短视频；没有视频就只记照片中可见的姿态。"],
+      "required_fields": [], "required_evidence": true, "rubric_version": null,
+      "fields": {"representative_state": "材料是否代表日常及差异", "movement_context": "视频场景，可选；无视频不推断动态"}
+    },
+    {
+      "id": "B1", "axis": "B", "name": "日常功能与活动限制",
+      "questions": ["最近两周，走路、上下楼、搬日常物品或久坐工作时，通常能完成到什么程度？有哪些限制或需要帮助的地方？不必提供诊断或病历。"],
+      "required_fields": ["activity_summary"], "required_evidence": false, "rubric_version": null,
+      "fields": {"activity_summary": "实际日常活动与完成情况", "limitations": "限制、辅助方式或无明显限制"}
+    },
+    {
+      "id": "B2", "axis": "B", "name": "力量表现",
+      "questions": ["有没有近期已经完成的力量训练或测试记录？说一个动作、重量或次数、动作条件和日期；没有记录就先写训练经历，不需要现在挑战极限。"],
+      "required_fields": ["performance"], "required_evidence": false, "rubric_version": null,
+      "fields": {"performance": "具体动作、负荷/次数或暂无可比记录", "protocol": "器械、动作标准、辅助与测量条件"}
+    },
+    {
+      "id": "B3", "axis": "B", "name": "心肺耐力表现",
+      "questions": ["最近有没有跑走、骑行、游泳等已经完成的记录？说距离、时长、是否持续完成及日期；平时步数可补充，但不直接当耐力测试。"],
+      "required_fields": ["performance"], "required_evidence": false, "rubric_version": null,
+      "fields": {"performance": "项目、距离、时长或暂无可比记录", "conditions": "路线、设备、休息及主观感受"}
+    },
+    {
+      "id": "B4", "axis": "B", "name": "协调与活动能力",
+      "questions": ["说一个近期做过、能说明协调或活动能力的安全日常动作或运动：怎样完成，有没有限制？可以提供已有记录，不需要临时尝试陌生测试。"],
+      "required_fields": ["activity_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"activity_case": "实际动作、场景、完成情况", "conditions": "辅助方式、限制及已有视频说明，可选"}
+    },
+    {
+      "id": "B5", "axis": "B", "name": "休息与恢复状态",
+      "questions": ["近两周通常睡多久、作息怎样？休息后是否能恢复，白天有没有受影响？说几天的常见情况，不用单晚表现代表长期状态。"],
+      "required_fields": ["rest_summary"], "required_evidence": false, "rubric_version": null,
+      "fields": {"rest_summary": "近两周典型睡眠与恢复情况", "daytime_impact": "对日间活动的实际影响", "time_window": "自述覆盖的日期区间"}
+    },
+    {
+      "id": "B6", "axis": "B", "name": "日常精力与持续性",
+      "questions": ["近两周，一个普通工作或学习日能持续做哪些活动？举一个精力足够或明显中断的例子，说明任务要求和环境。"],
+      "required_fields": ["energy_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"energy_case": "任务、持续情况、变化与限制", "time_window": "自述覆盖的日期区间"}
+    },
+    {
+      "id": "C1", "axis": "C", "name": "理解与学习新规则",
+      "questions": ["回想最近一次学会陌生规则、工具或流程：你怎样理解它，能否用自己的话解释并举个应用例子？这里先收学习过程，不作为智力测试。"],
+      "required_fields": ["learning_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"learning_case": "情境、原规则、理解/应用过程及结果", "corrections": "遇到误解后如何修正，可选", "candidate_task_note": "候选材料；尚无正式题目、答案和校准"}
+    },
+    {
+      "id": "C2", "axis": "C", "name": "逻辑与数量推理",
+      "questions": ["举一个近期需要推理或计算的具体问题：已知条件是什么，你怎样得出结论，如何核对？没有合适经历可先跳过，不能据此判能力差。"],
+      "required_fields": ["reasoning_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"reasoning_case": "已知条件、过程、结论与核对方法", "candidate_task_note": "经历采集；未施测标准化推理题，不换算IQ"}
+    },
+    {
+      "id": "C3", "axis": "C", "name": "信息辨别与证据意识",
+      "questions": ["最近碰到过互相冲突的消息或说法吗？你查了哪些来源，怎样分事实和猜测，还有什么不知道？可以去掉事件中的私人细节。"],
+      "required_fields": ["evidence_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"evidence_case": "冲突材料、来源、判断过程与剩余不确定", "candidate_task_note": "候选经历材料，不冒充统一信息判断测验"}
+    },
+    {
+      "id": "C4", "axis": "C", "name": "判断与不确定性处理",
+      "questions": ["选一个近期做的真实决定：目标、备选项、代价和未知是什么？什么证据会让你改主意？结果可以另说，不用结果好坏代替判断过程。"],
+      "required_fields": ["decision_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"decision_case": "目标、选项、代价、未知、反证与当时决定", "outcome": "后续结果及复盘，可选；与当时可知信息分开"}
+    },
+    {
+      "id": "C5", "axis": "C", "name": "专注与计划调节",
+      "questions": ["近一个月选一件原本打算完成的事：怎样开始，怎样安排，中途有何干扰，最后怎样调整和收尾？可以再补一次不同结果的经历。"],
+      "required_fields": ["planning_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"planning_case": "计划、实际行为、环境干扰、调整和收尾", "additional_case": "另一实例或日志，可选"}
+    },
+    {
+      "id": "C6", "axis": "C", "name": "情绪调节与压力应对",
+      "questions": ["近期压力较大时，你通常做了什么、怎样恢复、后续如何行动？选一个愿意分享的实例即可，不需要讲创伤细节或给自己贴诊断标签。"],
+      "required_fields": ["coping_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"coping_case": "情境、行为、支持方式、恢复与后续", "variation": "不同情境下有无差异，可选"}
+    },
+    {
+      "id": "D1", "axis": "D", "name": "核心专业或手艺",
+      "questions": ["你最希望展示哪个专业或手艺？选一个近期作品或任务，说明难度、自己做的部分、用了哪些帮助、结果怎样验证。可用文字概述替代敏感原件。"],
+      "required_fields": ["domain", "work_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"domain": "本次讨论的专业领域", "work_case": "任务、本人贡献、独立程度、结果与验证", "work_links": "有权分享的作品或记录，可选"}
+    },
+    {
+      "id": "D2", "axis": "D", "name": "现实问题解决",
+      "questions": ["说一个你真正解决过的问题：怎样定位、有哪些限制、试了什么、怎样确认解决？也可说没解决的部分，重点是本人实际动作。"],
+      "required_fields": ["problem_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"problem_case": "问题、约束、排查、行动、验证及遗留问题"}
+    },
+    {
+      "id": "D3", "axis": "D", "name": "沟通与表达",
+      "questions": ["选一段自己的文字、说明或演示：给谁看，希望对方理解或做到什么，实际反馈怎样？先提供一小段去隐私材料或完整过程。"],
+      "required_fields": ["communication_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"communication_case": "受众、目标、表达材料、反馈与结果", "language": "使用语言与情境，不由外貌判断表达能力"}
+    },
+    {
+      "id": "D4", "axis": "D", "name": "协作与组织",
+      "questions": ["回想一次实际协作：你负责什么，怎样分工、处理分歧和交接？团队结果里哪些能对应到你的行动？不需要同伴姓名。"],
+      "required_fields": ["collaboration_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"collaboration_case": "角色、分工、冲突处理、交接与本人贡献", "team_context": "规模、时长、约束等匿名背景"}
+    },
+    {
+      "id": "D5", "axis": "D", "name": "执行与交付可靠性",
+      "questions": ["选最近几件有明确目标的任务：原定什么、实际交付什么、延期或变更如何处理、怎样确认收尾？先从一件最完整的说起。"],
+      "required_fields": ["delivery_cases"], "required_evidence": false, "rubric_version": null,
+      "fields": {"delivery_cases": "任务列表或首个完整实例，含计划、变更、质量与收尾", "coverage_note": "只提供一例时注明，不外推长期可靠性"}
+    },
+    {
+      "id": "D6", "axis": "D", "name": "生活实践与独立处理",
+      "questions": ["选一件近期自己处理的生活事务、工具问题或突发状况：怎样找到办法，借助了什么，最后结果怎样？使用辅助工具不等于能力差。"],
+      "required_fields": ["life_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"life_case": "实际事务、环境、行动、所需帮助与结果"}
+    },
+    {
+      "id": "E1", "axis": "E", "name": "本人收入水平",
+      "questions": ["近12个月你本人的收入大致多少、什么币种？是税前还是税后、工资还是全部收入？可用区间并注明；不需要流水或账户截图。"],
+      "required_fields": ["income_amount", "currency", "income_basis"], "required_evidence": false, "rubric_version": null,
+      "fields": {"income_amount": "本人收入金额或区间，不混入家庭收入", "currency": "币种", "income_basis": "税前/税后及工资/全部收入", "income_period": "收入覆盖的起止日期", "sources": "来源类别及是否一次性，可选"}
+    },
+    {
+      "id": "E2", "axis": "E", "name": "本人净资产",
+      "questions": ["按现在的大致情况，你本人有哪些资产和未偿负债？分别说估值、币种、自己所有的比例；父母未转移的资产不计入。已扣贷款的净权益请特别注明。"],
+      "required_fields": ["assets", "liabilities", "currency"], "required_evidence": false, "rubric_version": null,
+      "fields": {"assets": "资产列表：类别、总估值、本人比例、总值/净权益口径", "liabilities": "本人未偿负债列表或明确无负债，说明已在资产中扣过的部分", "currency": "币种；多币种分别注明", "valuation_basis": "估值日期、方法及不确定性"}
+    },
+    {
+      "id": "E3", "axis": "E", "name": "可用流动缓冲",
+      "questions": ["目前随时可用于生活的现金和低波动可快速变现资金大致多少？每月必要支出多少？请分开受限资金、投资资产和他人支持；区间也可。"],
+      "required_fields": ["available_funds", "necessary_monthly_expenses", "currency"], "required_evidence": false, "rubric_version": null,
+      "fields": {"available_funds": "可实际动用的资金，排除受限部分及不宜当现金的资产", "necessary_monthly_expenses": "同口径必要月支出；明确住房/偿付是否已计入", "currency": "币种", "restrictions": "受限金额及原因；避免重复扣同一支出", "support_included": "本人支付与他人承担的部分"}
+    },
+    {
+      "id": "E4", "axis": "E", "name": "偿付负担",
+      "questions": ["目前每月必须偿还多少贷款或其他债务，同期本人税后月收入多少？没有债务可明确记0；收入不稳定或为0也如实记录，不直接做除法。"],
+      "required_fields": ["monthly_debt_service", "monthly_after_tax_income", "currency"], "required_evidence": false, "rubric_version": null,
+      "fields": {"monthly_debt_service": "每月到期偿付总额或0", "monthly_after_tax_income": "同期间本人税后月收入或区间", "currency": "币种", "debt_conditions": "期限、变化与特殊条件；不收债权人身份"}
+    },
+    {
+      "id": "E5", "axis": "E", "name": "收支结余空间",
+      "questions": ["选一个能代表近期生活的月份或期间：本人税后收入、实际开支和其中必要开支各多少？哪些由家庭承担？区间可先存，但不把区间伪装成精确结余率。"],
+      "required_fields": ["after_tax_income", "actual_expenses", "currency"], "required_evidence": false, "rubric_version": null,
+      "fields": {"after_tax_income": "选定期间本人税后收入", "actual_expenses": "同期间实际本人开支", "currency": "币种", "necessary_expenses": "同期间必要开支，可选", "period": "收入与开支共同覆盖的日期区间", "household_boundary": "个人/家庭边界与他人承担部分"}
+    },
+    {
+      "id": "E6", "axis": "E", "name": "经济来源持续性",
+      "questions": ["过去12个月收入来源怎样变化，有没有中断？如果主要来源停了，你已具备哪些替代或保障、附带什么条件？不需要对未来作保证。"],
+      "required_fields": ["continuity_summary"], "required_evidence": false, "rubric_version": null,
+      "fields": {"continuity_summary": "来源、波动、中断与期间", "alternatives": "实际可用的替代/保障及条件，未落实设想另标"}
+    },
+    {
+      "id": "F1", "axis": "F", "name": "可调用的家庭经济支援",
+      "questions": ["遇到确实需要时，家庭能提供什么经济支持？大致范围、附带条件和曾实际兑现的情况怎样？不知道就记未知，不用透露家人姓名或全部财富。"],
+      "required_fields": ["support_summary"], "required_evidence": false, "rubric_version": null,
+      "fields": {"support_summary": "当前可调用支持或明确没有/未知", "conditions": "用途、偿还、时间与其他条件", "actual_case": "匿名兑现实例；承诺与已兑现分开"}
+    },
+    {
+      "id": "F2", "axis": "F", "name": "居住与实物支持",
+      "questions": ["目前住房、车辆或其他实物有哪些来自他人的使用支持？谁承担费用、能用多久、有什么条件？本人已有资产与借用资源分开。"],
+      "required_fields": ["housing_support"], "required_evidence": false, "rubric_version": null,
+      "fields": {"housing_support": "住房安排、使用权与费用分担或无支持", "other_support": "其他实物使用支持，可选", "stability_conditions": "持续性与附带条件"}
+    },
+    {
+      "id": "F3", "axis": "F", "name": "时间与照护支持",
+      "questions": ["忙碌、学习或需要帮助时，实际有人能帮你处理事务或照护吗？通常能帮什么、多久、是否稳定？只说关系类别，不需要对方隐私。"],
+      "required_fields": ["time_support"], "required_evidence": false, "rubric_version": null,
+      "fields": {"time_support": "可调用的帮助类型、时长或无支持", "conditions": "可用时段、稳定性与条件"}
+    },
+    {
+      "id": "F4", "axis": "F", "name": "可调用的人脉协作",
+      "questions": ["在你关心的行业或地方，是否有真正能互相提供信息或协作的联系？用一个匿名实际例子说明能帮到哪一步，不按通讯录人数算。"],
+      "required_fields": ["network_case"], "required_evidence": false, "rubric_version": null,
+      "fields": {"network_case": "匿名联系类别、可调用帮助与实际例子或暂无", "scope": "适用行业/地域及限制"}
+    },
+    {
+      "id": "F5", "axis": "F", "name": "平台与环境资源可及性",
+      "questions": ["目前所在城市、学校、单位或组织，给你哪些实际可用的学习、服务和机会？你是否具备使用资格、真正用过？名气与实际资源分开。"],
+      "required_fields": ["accessible_resources"], "required_evidence": false, "rubric_version": null,
+      "fields": {"accessible_resources": "实际可及资源、使用资格与费用", "usage_case": "实际使用与受限情况，可选", "geographic_scope": "地域限制；不默认能跨境使用"}
+    },
+    {
+      "id": "F6", "axis": "F", "name": "家庭责任与资源限制",
+      "questions": ["目前供养、照护或家庭安排，对你能用的时间、资金和地点有什么实际限制？用汇总范围即可，不需要家人的健康或私人细节。"],
+      "required_fields": ["constraints_summary"], "required_evidence": false, "rubric_version": null,
+      "fields": {"constraints_summary": "责任与限制或明确暂无", "impact": "对资金、时间、地点和选择的实际影响", "available_relief": "已经存在的分担/公共支持，可选"}
+    }
+  ]
+}
