@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/flfk666666/pibaodai",
+  "raw_base": "https://raw.githubusercontent.com/flfk666666/pibaodai/main/",
+  "categories": [
+    {
+      "id": "thinking",
+      "name": {
+        "zh": "思考与决策",
+        "en": "Thinking & decisions"
+      }
+    },
+    {
+      "id": "life",
+      "name": {
+        "zh": "人生与成长",
+        "en": "Life & growth"
+      }
+    },
+    {
+      "id": "learning",
+      "name": {
+        "zh": "学习与读书",
+        "en": "Learning & books"
+      }
+    },
+    {
+      "id": "creating",
+      "name": {
+        "zh": "内容与剪辑",
+        "en": "Content & editing"
+      }
+    },
+    {
+      "id": "tools",
+      "name": {
+        "zh": "工具与效率",
+        "en": "Tools & workflows"
+      }
+    },
+    {
+      "id": "quant",
+      "name": {
+        "zh": "量化与研究",
+        "en": "Quant & research"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "life-stage-review",
+      "kind": "idea",
+      "status": "incubating",
+      "name": {
+        "zh": "人生进度条，是谁画的？",
+        "en": "Whose timeline is it, anyway?"
+      },
+      "description": {
+        "zh": "探索如何区分自己的愿望、现实约束和别人的人生时间表。",
+        "en": "An idea for reviewing personal priorities, progress, outside expectations, and practical constraints."
+      },
+      "categories": [
+        "life",
+        "thinking"
+      ],
+      "tags": [
+        "人生",
+        "阶段",
+        "成长",
+        "复盘",
+        "life",
+        "reflection",
+        "priorities"
+      ],
+      "use_when": [
+        "The user wants to explore the proposed framework or contribute examples."
+      ],
+      "not_for": [
+        "Installation as a finished skill",
+        "A universal life score or validated psychological assessment"
+      ],
+      "inputs": [
+        "A proposed life-stage question or anonymized case"
+      ],
+      "outputs": [
+        "An incubation brief to discuss and develop"
+      ],
+      "requirements": [],
+      "path": "ideas/life-stage-review.md",
+      "examples": [],
+      "evidence": {
+        "origin": "Proposed by the maintainer during the project's initial discussion.",
+        "validation": "Idea only; the dimensions and worked cases have not been settled or behaviorally tested."
+      }
+    },
+    {
+      "id": "noise-check",
+      "kind": "idea",
+      "status": "incubating",
+      "name": {
+        "zh": "是判断变了，还是今天心情换了？",
+        "en": "Did the evidence change, or just your mood?"
+      },
+      "description": {
+        "zh": "受《Noise》启发，探索如何检查可比判断中的不必要差异。",
+        "en": "A book-inspired idea for distinguishing evidence changes, changing criteria, and possible noise in comparable judgments."
+      },
+      "categories": [
+        "thinking",
+        "learning",
+        "life"
+      ],
+      "tags": [
+        "噪音",
+        "噪声",
+        "判断",
+        "决策",
+        "读书",
+        "Noise",
+        "judgment",
+        "decision hygiene"
+      ],
+      "use_when": [
+        "The user wants to explore the proposed book-inspired workflow or contribute reading notes."
+      ],
+      "not_for": [
+        "Installation as a finished skill",
+        "Calling all unwanted information noise",
+        "Reproducing the book or claiming author endorsement"
+      ],
+      "inputs": [
+        "Reading notes or comparable judgment examples"
+      ],
+      "outputs": [
+        "An incubation brief with sources and open design questions"
+      ],
+      "requirements": [],
+      "path": "ideas/noise-check.md",
+      "examples": [],
+      "evidence": {
+        "origin": "The maintainer's proposal, inspired by Noise by Kahneman, Sibony, and Sunstein.",
+        "validation": "Idea only; the workflow awaits the maintainer's reading notes and comparable worked cases."
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# Credentials and personal overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db
+
+# Local tooling and generated output
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+.local/
+tmp/
+coverage/
