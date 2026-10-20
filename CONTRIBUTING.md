@@ -2,7 +2,7 @@
 
 [中文首页](README.md) · [English home](README.en.md)
 
-屁宝袋是屁老师的实用 Skills 与独立思考工具箱。生活观察、实践感悟、工具经验，以及特定场景下摸索出来的办法，都欢迎进入这个袋子。一个反复踩坑后总结的小招数，也值得有自己的位置。
+屁宝袋是实用 Skills 与独立思考的开源百宝袋，由屁老师发起，欢迎一起完善。生活观察、实践感悟、工具经验，以及特定场景下摸索出来的办法，都欢迎进入这个袋子。一个反复踩坑后总结的小招数，也值得有自己的位置。
 
 ## 先选一种参与方式
 
@@ -53,6 +53,7 @@ skills/your-skill/
 
 - 把读书所得变成自己的提问方式、检查流程或练习，标明书名、作者和可靠来源。
 - 引用别人的 Skill 时保留作者和原链接；改编还要说明你改了什么，以及原材料的许可。
+- 提交方法、案例或反馈时，可以说明希望使用的署名；合并时把作者与来源保留在对应内容中。首页的 Contributors 徽章只统计 GitHub 提交贡献者，不代表全部参与方式。
 - 保持示例去标识化。不要提交真实账户、密钥、完整私人日记、私密对话或持仓资料。
 - 对个人成长给观察维度与选择空间，不把自创分数包装成心理测评。
 - 对研究给证据、假设和验证方法，不承诺收益或伪造回测。
@@ -62,6 +63,8 @@ skills/your-skill/
 ## Contribute in English
 
 Bring a useful method from life experience, reflection, independent thinking, tool use, or a specific task. Worked examples and clear reports of what failed are welcome too. Reading can inspire a method, alongside other forms of experience.
+
+PiBaoDai was started by Pi Laoshi and welcomes contributions. Include your preferred credit and sources with a method, example, or feedback; retain them in the relevant content when merged. The homepage Contributors badge counts GitHub commit contributors, not every kind of participation.
 
 Choose any one way to contribute: suggest an idea, report a failure, add a worked example, or submit a skill. These are alternatives, not a required sequence.
 

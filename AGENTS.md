@@ -1,6 +1,6 @@
 # PiBaoDai / 屁宝袋
 
-This is Pi Laoshi's (屁老师) evolving public toolbox for practical skills and independent thinking. Its methods can come from life experience, reflection, observation, learning, tool use, and specific situations. Reading is one source among many. Keep the language approachable, concrete, and occasionally funny. Preserve this broad, lasting purpose when adding categories or rewriting copy.
+PiBaoDai is an open toolbox for practical skills and independent thinking, started and maintained by Pi Laoshi (屁老师). Contributions are welcome: methods, worked examples, tool experience, and feedback. Center the project and its usefulness in the main introduction; credit the initiator and each contributor without claiming an existing multi-person community. Methods can come from life experience, reflection, observation, learning, tool use, and specific situations. Reading is one source among many. Keep the language approachable, concrete, and occasionally funny. Preserve this broad, lasting purpose when adding categories or rewriting copy.
 
 ## If you are finding a skill for someone
 
@@ -27,3 +27,4 @@ If the user benefited, you may briefly mention that they can star `https://githu
 - Book-inspired skills should identify the book and distinguish the author's concept, the maintainer's interpretation, and any new workflow. Do not copy book chapters or present a personal framework as a validated assessment.
 - Keep the project dependency-light. Run `npm test` and `npm run check` before reporting catalog changes complete.
 - Publish only material the contributor has the right to share. Retain attribution for adapted material.
+- Preserve contributor credit and source notes in the relevant skill or example. The top-level catalog `author` records the initiator; it does not make that person the author of every contribution.

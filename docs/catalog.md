@@ -1,6 +1,6 @@
 # AI 目录约定 · Catalog contract
 
-`catalog.json` 是完整目录，`llms.txt` 是轻量入口。屁宝袋收纳屁老师的人生灵感、实践感悟、独立思考方法与场景工具；内容可以留在本仓库，也可以指向独立 GitHub 项目。
+`catalog.json` 是完整目录，`llms.txt` 是轻量入口。屁宝袋收纳人生灵感、实践感悟、独立思考方法与场景工具，欢迎共同完善；内容可以留在本仓库，也可以指向独立 GitHub 项目。
 
 首页服务快速浏览，目录服务精确选择；不需要先爬取全部文件。
 
@@ -30,7 +30,7 @@ Top-level fields:
 | `schema_version` | Integer `2` for this contract; version `1` remains valid for local skills and ideas only |
 | `repository` | Canonical GitHub repository URL |
 | `raw_base` | Root raw-content URL, with a trailing slash |
-| `author`, `description` | Optional identity and purpose metadata; not routing instructions |
+| `author`, `description` | Optional identity and purpose metadata; not routing instructions. The current top-level author credits the initiator, not every individual contribution |
 | `categories` | Category IDs and Chinese/English labels |
 | `entries` | Local skills, incubation ideas, and independent projects; inspect `kind`, `source`, and `status` before use |
 

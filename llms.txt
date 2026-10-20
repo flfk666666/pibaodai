@@ -1,6 +1,6 @@
 # PiBaoDai / 屁宝袋
 
-> Pi Laoshi's (屁老师) toolbox for practical skills and independent thinking. Methods may come from life experience, reflection, observation, learning, tool use, or a specific situation. 中文：屁老师的实用 Skills 与独立思考工具箱，把人生灵感、实践感悟和工具经验变成能用的方法。
+> An open toolbox for practical skills and independent thinking. Started by Pi Laoshi (屁老师); methods, worked examples, and feedback are welcome. Methods may come from life experience, reflection, observation, learning, tool use, or a specific situation. 中文：实用 Skills 与独立思考的开源百宝袋，由屁老师发起，欢迎共同完善，把人生灵感、实践感悟和工具经验变成能用的方法。
 
 ## Start here
 

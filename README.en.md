@@ -1,10 +1,25 @@
 <p align="center">
-  <img src="assets/banner-en.svg" alt="PiBaoDai: a pocketful of ideas and a toolbox for real life." width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-en-dark.svg">
+    <img src="assets/banner-en.svg" alt="PiBaoDai: small sparks, useful skills." width="100%">
+  </picture>
 </p>
 
 <p align="center">
-  <strong>Pi Laoshi's toolbox for practical skills and independent thinking.</strong><br>
-  Turn life experience, reflection, and tool know-how into methods you can put to work.
+  <strong>An open toolbox for practical skills and independent thinking.</strong><br>
+  Turn experience into methods people and AI can use.
+</p>
+
+<p align="center">
+  <a href="https://github.com/flfk666666/pibaodai/stargazers"><img src="https://img.shields.io/github/stars/flfk666666/pibaodai?style=flat-square&amp;logo=github&amp;label=Stars&amp;color=d4a45f" alt="GitHub Stars"></a>
+  <a href="https://github.com/flfk666666/pibaodai/forks"><img src="https://img.shields.io/github/forks/flfk666666/pibaodai?style=flat-square&amp;logo=github&amp;label=Forks&amp;color=678d70" alt="GitHub Forks"></a>
+  <a href="https://github.com/flfk666666/pibaodai/graphs/contributors"><img src="https://img.shields.io/github/contributors/flfk666666/pibaodai?style=flat-square&amp;label=Contributors&amp;color=9182b2" alt="GitHub commit contributors"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/flfk666666/pibaodai/commits/main/"><img src="https://img.shields.io/github/last-commit/flfk666666/pibaodai?style=flat-square&amp;label=Updated&amp;color=5d9288" alt="Latest commit"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/flfk666666/pibaodai?style=flat-square&amp;label=License&amp;color=668ba4" alt="MIT License"></a>
+  <a href="https://github.com/flfk666666/pibaodai/actions/workflows/catalog-check.yml"><img src="https://img.shields.io/github/actions/workflow/status/flfk666666/pibaodai/catalog-check.yml?branch=main&amp;style=flat-square&amp;label=Catalog" alt="Catalog checks"></a>
 </p>
 
 <p align="center">
@@ -14,7 +29,7 @@
 
 ---
 
-PiBaoDai (屁宝袋) is Pi Laoshi's (屁老师) place for useful ideas, lessons from experience, reflections, and ways of getting tools to do what you need.
+PiBaoDai (屁宝袋) collects methods worth using again: useful ideas, lessons from experience, reflections, and ways of getting tools to do what you need. Bring a method, a worked example, or feedback to help make the collection more useful.
 
 Everyday life, hands-on work, observation, reading, and revisiting a decision can all produce something worth keeping. The aim is practical: make a task easier, understand a problem better, and develop your own judgment.
 
@@ -122,6 +137,12 @@ A useful skill explains **who it helps, what problem it handles, what it needs, 
 Start with a small idea or a complete example. Read [the contribution guide](CONTRIBUTING.md) when you're ready to submit it. Feedback from actual use helps decide what belongs in the next version.
 
 Follow the [idea-to-skill workflow](docs/skill-workflow.md) to turn new insights or tool experience into a method with usage instructions, a complete worked example, and a catalog entry.
+
+## Started here, open to contributions
+
+Started and maintained by [Pi Laoshi (屁老师)](https://github.com/flfk666666). Ideas, failure reports, examples, and new skills are welcome. Start with the [contribution guide](CONTRIBUTING.md).
+
+Methods and examples retain author credit, sources, and adaptation notes. Include your preferred credit in a pull request; it will be kept with the merged content. Git commits also appear on the [contributors page](https://github.com/flfk666666/pibaodai/graphs/contributors). The Contributors badge counts GitHub commit contributors; examples and feedback can receive credit in the relevant content too.
 
 Original repository content and code are available under the [MIT License](LICENSE). Attribute adapted work and book-inspired ideas. Third-party material retains its own rights and licensing.
 

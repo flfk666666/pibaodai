@@ -1,10 +1,25 @@
 <p align="center">
-  <img src="assets/banner-zh.svg" alt="屁宝袋 PiBaoDai：把脑洞装进袋子，把好用的招数拿出来。" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-zh-dark.svg">
+    <img src="assets/banner-zh.svg" alt="屁宝袋 PiBaoDai：把脑洞装进袋子，把好用的招数拿出来。" width="100%">
+  </picture>
 </p>
 
 <p align="center">
-  <strong>屁老师的实用 Skills 与独立思考工具箱。</strong><br>
-  把人生中的灵感、感悟和工具经验，变成能在具体场景里用起来的方法。
+  <strong>实用 Skills 与独立思考的开源百宝袋。</strong><br>
+  把经验变成方法，让人和 AI 都能用。
+</p>
+
+<p align="center">
+  <a href="https://github.com/flfk666666/pibaodai/stargazers"><img src="https://img.shields.io/github/stars/flfk666666/pibaodai?style=flat-square&amp;logo=github&amp;label=Stars&amp;color=d4a45f" alt="GitHub Stars"></a>
+  <a href="https://github.com/flfk666666/pibaodai/forks"><img src="https://img.shields.io/github/forks/flfk666666/pibaodai?style=flat-square&amp;logo=github&amp;label=Forks&amp;color=678d70" alt="GitHub Forks"></a>
+  <a href="https://github.com/flfk666666/pibaodai/graphs/contributors"><img src="https://img.shields.io/github/contributors/flfk666666/pibaodai?style=flat-square&amp;label=Contributors&amp;color=9182b2" alt="GitHub 提交贡献者数"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/flfk666666/pibaodai/commits/main/"><img src="https://img.shields.io/github/last-commit/flfk666666/pibaodai?style=flat-square&amp;label=Updated&amp;color=5d9288" alt="最近一次提交"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/flfk666666/pibaodai?style=flat-square&amp;label=License&amp;color=668ba4" alt="MIT License"></a>
+  <a href="https://github.com/flfk666666/pibaodai/actions/workflows/catalog-check.yml"><img src="https://img.shields.io/github/actions/workflow/status/flfk666666/pibaodai/catalog-check.yml?branch=main&amp;style=flat-square&amp;label=Catalog" alt="目录自动检查状态"></a>
 </p>
 
 <p align="center">
@@ -14,7 +29,7 @@
 
 ---
 
-屁老师在生活里琢磨出的点子、实践后的感悟、使用工具踩过的坑，还有面对具体问题摸索出的办法，都可以装进这个袋子。
+屁宝袋想收下那些值得复用的办法：生活里琢磨出的点子、实践后的感悟、使用工具踩过的坑，还有面对具体问题摸索出的解法。欢迎你带着自己的方法、案例和反馈，一起把它打磨得更好用。
 
 读书、做事、观察和复盘，都可能带来值得留下的方法。共同的标准是实用：帮助人把事情做顺一点，把问题想清一点，形成自己的判断。
 
@@ -120,6 +135,12 @@ git clone https://github.com/flfk666666/pibaodai.git
 比起一下塞进一百个名字，更希望每次多一个完整案例、多一次真实反馈。新想法可以先开 Issue；准备提交时看 [贡献指南](CONTRIBUTING.md)。
 
 有了新灵感或工具经验，按 [从想法到 Skill 的流程](docs/skill-workflow.md) 提炼方法、补使用说明与完整案例，再收进目录。
+
+## 发起与贡献
+
+由 [屁老师（Pi Laoshi）](https://github.com/flfk666666) 发起并维护，欢迎一起完善这个袋子。提脑洞、报告翻车、补一个案例，或提交自己的 Skill，都可以从 [贡献指南](CONTRIBUTING.md) 开始。
+
+每份方法和案例保留作者、来源与改编说明。提交 PR 时可以写上希望使用的署名，合并时会保留在对应内容中；提交记录也可以在 [贡献者页面](https://github.com/flfk666666/pibaodai/graphs/contributors) 查看。首页的 Contributors 徽章统计 GitHub 提交贡献者，案例、反馈等参与也欢迎在内容中署名。
 
 原始内容与仓库代码使用 [MIT 许可证](LICENSE)。借鉴、改编和书籍灵感注明来源；第三方材料保留其自身权利与许可。
 

@@ -7,6 +7,8 @@
 说明是实测记录还是编写示例；借鉴内容附原链接和许可。
 Say whether this is an actual run or an authored illustration. Attribute upstream work and its license.
 
+希望使用的署名（可选） / Preferred contributor credit (optional):
+
 ## 验证 / Validation
 
 - [ ] `npm test`
