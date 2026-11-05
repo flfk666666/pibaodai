@@ -1,0 +1,1651 @@
+{
+  "version": "character-rules-v0.6",
+  "status": "experimental_revised_content_rubric_not_population_calibrated",
+  "origin": {
+    "basis": "修正v0.5.3实质审计发现的构念混合、覆盖混分、档位重叠、共同工资分母与调用门槛问题。",
+    "value_choice": "等权、五级行为锚点和数值平滑曲线均为公开项目选择，不是经研究证明的唯一权重或等距心理量尺。",
+    "external_data_boundary": "统计均高、工资与训练负荷可支持各自原始参照，不能自动给本项目转分与综合效度背书。",
+    "privacy": "只含通用规则，无真人答案、照片或分数。"
+  },
+  "levels": {
+    "anchor_scores": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "anchor_rule": "按本项内容条件选择已有材料支持的表现档；0/25/50/75/100是项目刻度，数字间距尚未验证。条件条使用当前限制程度，不强加高挑战门槛。",
+    "numeric_rule": "数值项按各自已声明函数连续计算，可出现任意合法小数，不硬套行为五档。",
+    "no_arbitrary_interpolation": "行为项不得凭感觉插值；若需要组合，必须先公开独立子维度及其固定权重，逐一判断后计算。",
+    "upper_level_policy": "尚未问到高档不是能力上限；没有积极线索时继续下题并标未覆盖，有具体线索时只问能区分相邻候选档的关键问题。",
+    "low_anchor_evidence_rule": "档位中的‘无法、依赖提示、尚不清楚、缺乏安排’必须由本人明确陈述或实际表现支持，不得从回答简略、资料没交或评价者尚未追问直接推定。"
+  },
+  "axis_weight_policy": {
+    "kind": "equal_units_neutral_default",
+    "axis_weight_units": 1,
+    "item_weight_units": 1,
+    "normalization": "六轴各1单位；每轴六项各1单位；计算时归一，不以16.666...小数累加作为输入。",
+    "meaning": "默认六维并列，不宣称对现实成功的贡献相等；可选综合仅为均衡项目指数，主结果是六维。",
+    "noncompensatory_note": "重要资格、安全或明确不可调用性不能被其它高分补偿；本版F1设门槛，其它硬约束单独呈现。"
+  },
+  "followup_policy": {
+    "first": "先复核已有跨题材料与事实来源，不重问已回答的事实。",
+    "positive_signal": "出现本项自主取舍、复杂条件、有效调整、迁移、明确高任务表现等线索，而决定候选档的一个关键条件未明。",
+    "ask": "仅针对该未决条件问一个中立问题，同时允许失败、反例、未知和跳过；不问诱导性的“证明你值高分”问题。",
+    "priority": "优先追问会实质区分当前相邻候选档、且已有材料不能回答的条件；一次只推进一个关键区别，避免把所有可能高档都变成新一轮长问卷。",
+    "continue": "材料已足以支持当前限定范围且无明显更高表现线索时继续下题；不追问所有理论可能的高分。用户明确无此经历、暂缺、跳过或不想补充时保存该状态并继续，不反复索取。",
+    "partial_answer": "回答简略不是失败证据。表述不全须缩小结论范围；明确的实际失效/困难才可支持低档。",
+    "pending_range": "积极线索使相邻两档未决时，可记录候选范围和待问问题；不得仅因泛泛想象高分而把上界默认100。",
+    "missing": "连基本内容都无法判断时分数null，保留原权重；0–100仅是数学未知边界，不是默认能力分。",
+    "coverage": "观察范围、时间、材料条件、来源和未测内容独立于表现分；不用回答数、照片数或证据完备度奖励分数。",
+    "self_report": "本人具体自报可用，不强要隐私证明或敏感工作原件换高分。",
+    "autosave": "每次回答或跳过保存到私人档案，保留原观察日期、引用及续测位置；模型改版生成新报告，不改写旧事实或旧分。"
+  },
+  "aggregation": {
+    "default_primary": "six_axes",
+    "optional_balanced_index": "equal_axis_and_equal_item_units",
+    "known_score": "按明确可评内容的原权重归一；完整范围保留未知原权重。",
+    "coverage_not_score": "coverage仅表达可评范围，不乘表现分、不按完成率奖惩。",
+    "precision": "中间量保留精度，最终展示取整；数值区间端点继续传播。"
+  },
+  "axes": [
+    {
+      "id": "A",
+      "name": "外形条件与呈现",
+      "short": "外形",
+      "weight_units": 1,
+      "construct": "在使用者声明的日常形象偏好下，分列身体条件、可见轮廓及主动呈现；不是人口颜值排名。",
+      "items": [
+        {
+          "id": "A1",
+          "name": "身高与外形尺度",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "按事先公开的男性高个偏好曲线表达身高条件；当地均高比较另列。",
+          "anchors": {
+            "0": "155cm及以下对应本曲线下界0，只是偏好端点。",
+            "25": "165cm对应25。",
+            "50": "175cm对应50。",
+            "75": "185cm对应75。",
+            "100": "195cm及以上对应100；不是越高越有吸引力的研究结论。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人给出的厘米数与测量条件；日期不清楚可明确未知。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有测量可能含鞋底或录入单位不明确。",
+            "近期明确变化或原值存在冲突。"
+          ],
+          "discriminating_question": "这个身高是何时、是否脱鞋测得？记不清可以保留未知，不要求重测。",
+          "cannot_infer": [
+            "不能从照片反推厘米。",
+            "不能把身高分或均高差当吸引力百分位、职业能力或人的价值。"
+          ],
+          "measure_type": "preference",
+          "numeric_rule": {
+            "kind": "height_preference",
+            "input_fields": [
+              "height_cm"
+            ],
+            "params": {
+              "points": [
+                [
+                  155,
+                  0
+                ],
+                [
+                  165,
+                  25
+                ],
+                [
+                  175,
+                  50
+                ],
+                [
+                  185,
+                  75
+                ],
+                [
+                  195,
+                  100
+                ]
+              ],
+              "interpolation": "linear",
+              "below_first": "cap_0",
+              "above_last": "cap_100"
+            },
+            "source_kind": "project_preference_curve",
+            "interpretation": "男性高个偏好配置，不是审美科学常模；地区突出程度不改写此全局偏好分。"
+          }
+        },
+        {
+          "id": "A2",
+          "name": "面部与侧貌匹配",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价已可见面部在所选风格目标下的协调与特色，不评价照片数量。",
+          "anchors": {
+            "0": "在可用材料中，事先声明的核心形象目标要素几乎均不匹配，且评价者能指出具体可见依据。",
+            "25": "存在明确符合目标的局部要素，但主要整体观感仍由不匹配主导。",
+            "50": "整体基本协调，但与目标风格的匹配普通或正负要素并存，未形成明显正向特色。",
+            "75": "主要可见要素协调，明确符合所选形象偏好，局部差异不主导整体。",
+            "100": "可见面部与所选目标高度匹配，特色和整体协调共同构成明显优势；不能仅因补角度或补日期升档。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "实际看过且获授权的可用面部材料；只评价已见范围。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "现有材料呈现明显正向特色，但遮挡、视角或表情使关键判断未决。",
+            "使用者指出日常形象与照片存在明确差异。"
+          ],
+          "discriminating_question": "你希望评价的是哪种日常形象目标？现有照片里有没有你觉得明显失真的角度或遮挡？",
+          "cannot_infer": [
+            "不能从外貌推智力、性格、财富、健康或精确骨骼比例。",
+            "本项是声明偏好下的审美判断，不是客观人群颜值等级。"
+          ],
+          "measure_type": "preference_judgment"
+        },
+        {
+          "id": "A3",
+          "name": "可见身形与轮廓",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价现有材料可见的上身、整体衣着轮廓或局部比例与目标风格的匹配；未见部位单列，不使整项自动失效。",
+          "anchors": {
+            "0": "在已见范围内，明确的核心轮廓目标几乎均未匹配，且有具体可见依据。",
+            "25": "已见轮廓有局部匹配，但主要整体观感仍由目标不匹配主导。",
+            "50": "已见轮廓基本符合目标，但优势不突出或正负要素并存。",
+            "75": "已见轮廓和体积关系清楚、协调且符合目标，构成明确正向呈现。",
+            "100": "已见轮廓在所选目标下表现出鲜明且协调的优势；无需交齐全身照片才能评价已见上身。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "至少有一处可用身形/衣着轮廓；明确列出可见与遮挡部位。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "现有上身或全身衣着照片呈现正向优势，但关键部位被宽松衣服或姿势遮住。",
+            "某部位未见，而用户明确想把该部位纳入本次评价。"
+          ],
+          "discriminating_question": "现有照片已能评价上身和衣着轮廓；若你想把腿部或自然站姿也纳入，这部分是否有材料，还是先保留未见？",
+          "cannot_infer": [
+            "不能从衣着轮廓估精确体脂率、肌肉量或腿长。",
+            "照片中可见上身不代表已观察自然全身比例、步态或医学体态。"
+          ],
+          "measure_type": "preference_judgment"
+        },
+        {
+          "id": "A4",
+          "name": "仪容维护与场景整洁",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价当前选择场景下发型、胡须、衣物等是否得到合适维护；不按理发频率或材料数量打分。",
+          "anchors": {
+            "0": "可见或明确自述的维护问题持续妨碍所选场景的基本整洁或使用需要。",
+            "25": "存在明显维护失配，重要场景常需他人提醒后才补救。",
+            "50": "基本整洁能维持，但部分维护靠临时补救或与目标不一致。",
+            "75": "能自主按所选场景维护，发型、胡须和衣物状态符合本人目标，频率与自身需要相适配。",
+            "100": "能在临时变化或更高场景要求下自主调整维护方案，呈现仍与目标相配；非要求更精致或更多消费。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "可见维护状态或本人具体维护习惯与目标场景。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有自主维护和出门前调整习惯，但是否按目标选择而非被动补救尚不清楚。"
+          ],
+          "discriminating_question": "你出门前通常会主动调整哪些细节？有没有临时改变场合时仍能快速处理的例子，或常来不及处理的部分？",
+          "cannot_infer": [
+            "不把卷发、留须或随意风格本身当不整洁。",
+            "不根据头发长度、价格或理发次数推断自律能力。"
+          ]
+        },
+        {
+          "id": "A5",
+          "name": "穿搭与整体风格",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价服装、配饰与本人目标及具体场景的协调，不奖励衣服数量、品牌或消费。",
+          "anchors": {
+            "0": "实际穿搭持续妨碍本人明确场景要求，且未能形成可用替代。",
+            "25": "主要搭配与所选目标明显冲突，常需外界代为调整。",
+            "50": "基本可穿且符合舒适需要，但整体目标表达或场景协调普通。",
+            "75": "能自主形成协调且符合本人目标的搭配，舒适、比例或配饰有明确选择。",
+            "100": "在具体更高要求或场景转换中仍能自主取舍，形成鲜明且一致的风格表达；不要求保守或大众化。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "至少一套可见搭配或一个具体场景的搭配选择。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有鲜明风格与约会/日常差异描述，但调整逻辑尚未问到。"
+          ],
+          "discriminating_question": "遇到上班、约会或旅行这种不同需求时，你通常保留什么、调整什么？有没有一次你觉得搭得特别准或不合适的例子？",
+          "cannot_infer": [
+            "不能把宽松、亚文化或不跟流行当能力低。",
+            "不能从品牌、单价或自拍数量推收入和审美等级。"
+          ],
+          "measure_type": "preference_judgment"
+        },
+        {
+          "id": "A6",
+          "name": "表情与姿态呈现",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "仅评价已观察静态/动态范围内，表情姿态能否自然配合所选表达目标。",
+          "anchors": {
+            "0": "已见呈现明显阻碍本人明确表达目标，且本人认可这种失配。",
+            "25": "表情或姿态有主导目标的明显不协调，通常需外部指导才可用。",
+            "50": "基本能形成可用呈现，但较依赖摆拍提示或自然度不稳定。",
+            "75": "已见表情/姿态自然、协调且能自主配合表达目标，静态判断仅限静态。",
+            "100": "在已观察的更高表达要求或场景转换中仍能自主调节，表现鲜明而协调；不得由更多角度本身升档。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "已见表情/姿态及是否代表日常的本人说明。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "中性与微笑已有自然变化，可能还存在主动表达/场景调节能力。"
+          ],
+          "discriminating_question": "你平时面对陌生人、镜头或熟人时，表情姿态会怎样调整？若现有照片只代表摆拍，哪些日常表现还没体现？",
+          "cannot_infer": [
+            "静态照片不证明步态、站姿稳定性或社交人格。",
+            "不能由表情推断情绪疾病、可靠性或性格。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "身体功能与当前状态",
+      "short": "身体",
+      "weight_units": 1,
+      "construct": "把日常功能、特定体能任务、动作控制、睡后恢复与清醒精力分列；不合成医学健康分。",
+      "items": [
+        {
+          "id": "B1",
+          "name": "日常活动独立性",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "在本人明确描述的日常活动/工作范围内，区分能否独立完成、是否有活动相关不适以及是否需要额外调整；不借极限运动成绩加分。",
+          "anchors": {
+            "0": "普通必要活动大部分无法完成，采用现有帮助后仍难进行。",
+            "25": "多项普通必要活动需大量帮助或被迫放弃。",
+            "50": "基本活动可完成，但明确限制使部分普通任务需额外帮助、减少或明显调整。",
+            "75": "本人明确存在所述活动/工作相关不适，或需要轻微额外调整，但普通必要任务仍能自主完成，不因此中断、减少或改由他人代办。",
+            "100": "在本次明确描述的活动范围内，本人明确没有活动相关不适，也不需要额外调整或帮助，任务能独立顺畅完成；未提到不适不能推定没有。此档无需运动员能力。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "具体普通日常活动/工作范围、实际完成情况、不适/调整及所用帮助。若只知道能完成、不知道是否不适，75/100条件未决，先标覆盖缺口而非猜无不适。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "日常基本独立，但不适是否真正影响活动还未区分。"
+          ],
+          "discriminating_question": "久坐不适或旧伤目前有没有让走路、楼梯、搬日常物品等任务减少、停下或需要别人帮忙？仅有不舒服也可以直接说明。",
+          "cannot_infer": [
+            "卧推、训练年限不直接证明日常功能满档。",
+            "不能由所述活动无不适推出全身无病、其它部位/时段无疼痛或无需就医。"
+          ],
+          "measure_type": "condition_low_limitation"
+        },
+        {
+          "id": "B2",
+          "name": "标准卧推任务表现",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "在声明动作、体重与条件下比较已完成的卧推1RM；仅作为上肢推力任务代理。",
+          "anchors": {
+            "0": "本项目数值曲线下界，不由未测、没录像或不是健身者给0。",
+            "25": "处于入门与初级节点之间的项目曲线位置。",
+            "50": "处于初级与中级节点之间的项目曲线位置。",
+            "75": "处于中级与高级节点之间的项目曲线位置。",
+            "100": "达到或超过声明参考行最高节点；并非全身力量、人群第100百分位或全球最佳。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人已有动作、负荷、独立完成次数、体重及日期/未知；本人明确自报可用。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "负荷、是否独立完成或动作条件已有高表现线索，仅关键协议条件不清。"
+          ],
+          "discriminating_question": "这次成绩是独立完成的标准平板杠铃单次吗？体重大约对应哪个时期？不需要重新做极限测试。",
+          "cannot_infer": [
+            "不能由卧推推断下肢力量、协调、全面体能或健康。",
+            "平台训练记录不是全体人口随机样本。"
+          ],
+          "measure_type": "task_proxy",
+          "numeric_rule": {
+            "kind": "bench_platform_proxy",
+            "input_fields": [
+              "body_weight_kg",
+              "bench_1rm_kg"
+            ],
+            "params": {
+              "reference_weight": 85,
+              "loads": [
+                60,
+                80,
+                104,
+                130,
+                158
+              ],
+              "scores": [
+                20,
+                40,
+                60,
+                80,
+                100
+              ],
+              "origin_point": [
+                0,
+                0
+              ],
+              "interpolation": "linear",
+              "outside_verified_body_weight": "lookup_same_source_rows_or_unknown; do_not_extrapolate",
+              "above_last": "cap_100",
+              "source_urls": [
+                "https://strengthlevel.com/strength-standards/bench-press/kg",
+                "https://strengthlevel.com/strength-standards"
+              ]
+            },
+            "source_kind": "external_reference_nodes_project_mapping",
+            "interpretation": "男性85kg平台训练者负荷节点有外部来源；20/40/60/80/100及插值仍由项目定义。其它体重不得硬套。"
+          }
+        },
+        {
+          "id": "B3",
+          "name": "连续游泳任务容量",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "只表达已完成的连续游泳距离；是具体活动表现，不冒称全面心肺能力。",
+          "anchors": {
+            "0": "连续游泳0m对应曲线下界；未游泳、未测或选其他运动保持未知。",
+            "25": "25m对应25。",
+            "50": "50m对应50。",
+            "75": "200m对应75。",
+            "100": "800m及以上对应100；上限是项目任务容量偏好，不是竞技或医学常模。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人已有连续距离、运动方式及大致日期；时长不确定不编造速度分。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "用户已有更长连续活动经历，仅是否中途停歇或距离尚不清楚。"
+          ],
+          "discriminating_question": "这段游泳是不中途站立、休息的连续距离吗？如果你更常做别的耐力活动，可以记录实际任务，先不强换成泳距分。",
+          "cannot_infer": [
+            "游泳技术与体能共同影响距离；不能换成VO₂max或全部耐力。",
+            "不把不会某种运动判作身体能力低。"
+          ],
+          "measure_type": "task_capacity",
+          "numeric_rule": {
+            "kind": "continuous_swim_task",
+            "input_fields": [
+              "continuous_swim_m"
+            ],
+            "params": {
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  25,
+                  25
+                ],
+                [
+                  50,
+                  50
+                ],
+                [
+                  200,
+                  75
+                ],
+                [
+                  800,
+                  100
+                ]
+              ],
+              "interpolation": "linear",
+              "above_last": "cap_100",
+              "other_activity": "separate_task_protocol_required"
+            },
+            "source_kind": "project_task_capacity_curve",
+            "interpretation": "本项目对连续游泳距离的平滑功能偏好；无适用人群常模，不称全面心肺评分。"
+          }
+        },
+        {
+          "id": "B4",
+          "name": "动作控制与适配",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "在本人选择的具体动作中，控制、平衡、左右差异与必要调整是否妨碍任务；与日常功能/最大力量分开。",
+          "anchors": {
+            "0": "已选普通动作无法完成或存在明确严重控制障碍。",
+            "25": "普通动作反复明显失控，需大量辅助才能继续。",
+            "50": "能完成所选动作，但左右差异、控制或活动范围使任务需明确调整或限制。",
+            "75": "所选普通动作能自主受控完成，轻微差异可识别并调整，不造成实质任务障碍。",
+            "100": "在明确更高动作控制要求下仍能自主完成并有效适配限制；不要求无旧伤或完美对称。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "至少一个本人已有动作及差异、调整与完成情况；不临时安排风险动作。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有跑跳差异或训练适配经验，但具体功能影响尚不清。"
+          ],
+          "discriminating_question": "你说跑跳能感觉左右腿不同，这种差异具体会让动作失败、落地不稳或需要避免某些动作吗？还是能完成、只是感觉不同？",
+          "cannot_infer": [
+            "日常不吃力不自动证明协调能力高。",
+            "旧伤名称、左右不同或腿练得少不自动等于功能障碍或疾病。"
+          ]
+        },
+        {
+          "id": "B5",
+          "name": "休息后的恢复感",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价本人休息后主观恢复是否充分，以及恢复支持来自主要休息还是日间常规补充；与B6任务是否能持续完成分别记录，不由穿戴深睡比例代替体验，也不诊断疾病。",
+          "anchors": {
+            "0": "本人明确休息后仍基本无法恢复到普通生活所需状态。",
+            "25": "本人明确休息后恢复很差，已反复显著侵蚀普通生活，常规休息也难回稳。",
+            "50": "本人明确主要休息后仍有恢复不足感；同时自报日间常规休息后大致回稳、普通任务可维持。不据此断言午休一定由夜间恢复不足造成。",
+            "75": "本人所述普通日主要休息后恢复感通常足够，日间休息为常规节奏而非弥补明确恢复不足。",
+            "100": "在本人明确的更高负荷情境后，已描述休息后的恢复感仍充分支持所需状态；不由多交日期或照片升级。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人对休息后恢复感及普通休息安排作用的具体描述；日间犯困频率与夜间恢复不足频率不能互相冒充。功能完成情况另列B6。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "普通任务通常能完成，但本人恢复不足与实际调整的关系尚不清。"
+          ],
+          "discriminating_question": "主要休息后你感觉恢复足够吗？日间午休是平常安排，还是在补仍未恢复的疲惫？只说实际体验，不需要穿戴指标。",
+          "cannot_infer": [
+            "恢复感不是医学睡眠诊断；穿戴深睡百分比不能证明恢复充分。",
+            "工作能完成不代表恢复感充分，恢复感不足也不等于执行力差。",
+            "日间困倦的3/5等频率不能未经说明当成夜间恢复不足的频率。"
+          ]
+        },
+        {
+          "id": "B6",
+          "name": "清醒任务精力",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价清醒工作/学习时疲惫对任务启动、持续和收尾的实际影响；不重复计睡后体验本身。",
+          "anchors": {
+            "0": "疲惫使多数普通工作/学习无法开展。",
+            "25": "疲惫已反复迫使放弃任务或明显无法收尾。",
+            "50": "困倦或疲惫已使本人需要超出既有常规休息的额外停顿、补觉、明显费力或流程调整，才能维持普通目标。",
+            "75": "即使有困倦，借既有午休/常规休息节奏，普通工作或学习目标仍能自主持续完成，未因疲惫实质减少或放弃；症状频率另记，不仅凭频繁就判功能差。",
+            "100": "已有明确高于本人普通要求的持续任务，负荷差异能具体说明；本人仍能有效安排节奏、完成目标，疲惫未使关键过程或结果实质受损。若该条件成立按100，不再按普通任务75重复归档。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "明确任务目标及疲惫有无改变过程/目标。普通午休不擅自解释为额外中断；未报告改变不能被写成已发生，也不外推高负荷。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "正常交付同时自述经常困倦，50与75所需的功能影响尚待区分。"
+          ],
+          "discriminating_question": "工作犯困时，你通常还能按原节奏完成，还是需要频繁暂停、补觉或明显多花时间？有没有最近一次具体情况？",
+          "cannot_infer": [
+            "完成任务不等于没有精力负担；困倦也不等于不能工作。",
+            "不以说得详细程度、咖啡习惯或道德评价决定档位。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "思考与判断表现",
+      "short": "思考",
+      "weight_units": 1,
+      "construct": "评价已观察任务中的理解、推理、核验、决定、计划与调节；不是IQ、人格或整体认知测量。",
+      "items": [
+        {
+          "id": "C1",
+          "name": "规则理解与方法迁移",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "在已选规则或方法中，能否理解、应用、修正与迁移；注明所覆盖领域。",
+          "anchors": {
+            "0": "实际任务中关键规则持续理解错误，提示后仍不能形成可用应用。",
+            "25": "理解部分表面步骤，但关键应用反复出错且需大量指导。",
+            "50": "能在清楚示例或明确提示下完成常见应用，对变化需外部引导。",
+            "75": "能自主解释并正确应用，识别不合目标的结果并修正。",
+            "100": "能识别新任务中哪些条件适用、哪些不适用，自主调整方法处理实质变化；不要求多份材料自动升档。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个具体规则/方法的理解、本人行动及结果；跨题已有材料可复用但不冒充独立样本。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已出现不同项目复用方法、发现边界误用或主动纠正原方案。"
+          ],
+          "discriminating_question": "这套方法换到另一个任务时，哪一步不能照搬？你当时怎样判断并调整？也可以说明一次没迁移成功的情况。",
+          "cannot_infer": [
+            "工具协作表现不能推出全部学科学习、英语或IQ。",
+            "年限、学历和使用AI本身不决定档位。"
+          ]
+        },
+        {
+          "id": "C2",
+          "name": "问题推理与证据链",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价已观察问题的条件、候选解释、验证及结论边界；数量推理单列覆盖，不混称已测。",
+          "anchors": {
+            "0": "实际推理与已知条件矛盾且不能修正，所得结论无法支持任务。",
+            "25": "能提出局部解释，但经反证仍跳过关键条件或混淆相关与因果。",
+            "50": "能按明确步骤推理和提出候选，但需要提示才完成关键验证或保留未知。",
+            "75": "能自主组织证据、提出可检验解释，实际验证关键关系并明确尚未解决部分。",
+            "100": "能区分有竞争力的替代解释，设计有效对照/反证并校正结论；不要求本人有最终修复权限。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个具体问题的条件、假设、证据及验证；不要求公开公司敏感代码。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有日志时间线、干预复现或排除候选的叙述，但替代解释细节未展开。"
+          ],
+          "discriminating_question": "在那个问题里，你最需要排除的另一个解释是什么？哪条观察或操作让你区分它们，仍有哪些不能确定？",
+          "cannot_infer": [
+            "最终没修复不自动压低已展示逻辑；数量任务未测不压低工程推理。",
+            "不能从单个排障案例推总体智力。"
+          ]
+        },
+        {
+          "id": "C3",
+          "name": "按风险核验信息",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价不同后果风险下核验深度是否匹配，区分日常了解与专业/重要决策。",
+          "anchors": {
+            "0": "在实际重要决定中，明确遇到矛盾/可靠反证仍以错误来源行动且拒绝修正。",
+            "25": "重要结论主要依赖未经核对的说法，出现明显冲突仍缺有效验证。",
+            "50": "能识别需要核对并查找信息，但对关键来源、定义或适用范围的核验依赖提示。",
+            "75": "能按后果风险自主核对关键证据、原始定义或实际观察，区分暂时了解与可用于行动的结论。",
+            "100": "在来源冲突、诱导或高不确定任务中能自主追溯、交叉验证并根据证据调整行动边界。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "至少说明信息场景、后果风险、本人核验动作与行动边界。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "专业任务中已有原始日志/代码/干预验证，但一般资讯习惯说得较概括。",
+            "重要决策曾比较原文、定义或矛盾来源，仅细节未采。"
+          ],
+          "discriminating_question": "挑一个真的会影响你花钱、工作或重要选择的结论：你核对了什么原始材料或实际观察？哪些只是先听AI了解、没有据此行动？",
+          "cannot_infer": [
+            "低风险闲聊没看原文不能概括全部专业核验。",
+            "同一AI自检不是独立来源，但合理借助AI查资料本身不扣分。"
+          ]
+        },
+        {
+          "id": "C4",
+          "name": "决策与试验设计",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价当时信息下能否选出可执行方案、处理成本与不确定性，并按反馈调整。",
+          "anchors": {
+            "0": "实际选择持续违背已明确目标/硬约束，且反馈后仍无法形成可行行动。",
+            "25": "能提出选择，但忽略明显代价或关键不确定性，主要靠他人纠偏。",
+            "50": "目标和基本选项清楚，能按建议作小规模尝试或阶段决定。",
+            "75": "能自主选可逆/合适规模的试验，识别主要风险和代价，并按结果调整。",
+            "100": "能处理实质冲突的目标或难逆代价，预先设关键判断/停止条件，并在新信息下有效取舍。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个真实决定的当时目标、备选、代价与后续行动。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有先做可用版本、按反馈改进或主动指出投入边界的例子。"
+          ],
+          "discriminating_question": "你当时为什么选这个试法而不是另一个？出现什么结果你会继续、改方向或停止？",
+          "cannot_infer": [
+            "好结果可能含运气，坏结果也不自动证明判断差。",
+            "事后补写理由不能冒充当时已知计划。"
+          ]
+        },
+        {
+          "id": "C5",
+          "name": "计划调节与注意管理",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价特定场景下如何启动、分配注意、处理干扰和调整计划；工作与自驱场景分别说明。",
+          "anchors": {
+            "0": "在已选目标中，明确尝试后仍长期无法启动或维持任何有效行动。",
+            "25": "干扰或拖延反复使普通计划停摆，需大量外部推进。",
+            "50": "在外部结构或提醒下能推进，遇干扰常需别人帮助重新安排。",
+            "75": "能自主识别卡点、调整任务粒度/时间或环境，恢复并维持目标推进。",
+            "100": "在多任务或显著变化下能主动重新排序、取舍和保护关键行动，而非仅靠加时硬撑。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "具体目标、干扰、本人调整和实际推进；不得只凭未来计划升档。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有发现剪辑/回避等具体卡点，并实际完成一次调整后的行动。",
+            "工作稳定但自驱项目表现不同，需要按场景区分。"
+          ],
+          "discriminating_question": "最近一次计划卡住后，你具体改了哪一步，后来真的做成了什么？工作和自己项目是否不一样？",
+          "cannot_infer": [
+            "作品是否发布不直接等于注意力强弱。",
+            "不能由一次拖延推人格或执行能力上限。"
+          ]
+        },
+        {
+          "id": "C6",
+          "name": "压力后回到行动",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价压力后的恢复、代价与重要行为能否恢复，不按放松方式作道德评分。",
+          "anchors": {
+            "0": "明确压力使大部分普通重要行动持续无法开展，现有应对无可用效果。",
+            "25": "压力反复使重要任务或关系遭明显失控，恢复需大量外部接管。",
+            "50": "可缓解感受，但恢复重要行动主要靠提醒或代价明显且尚难调整。",
+            "75": "能自主缓解并回到重要行动，知道常见代价且有实际调整。",
+            "100": "在高冲突/重大压力的已观察场景中仍能调节节奏与边界，保护重要行动及关系。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个实际压力场景、恢复过程、任务或关系影响。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "自述恢复快，同时能说出拖延代价和已经实施的调整。"
+          ],
+          "discriminating_question": "最近一次压力大时，你用什么办法恢复，之后具体回到了哪件事？这个办法有没有让别的重要事情被拖住？",
+          "cannot_infer": [
+            "放松方式本身不直接代表好坏、人格或临床状态。",
+            "短时情绪激动不等于长期调节差。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "实践与协作能力",
+      "short": "实践",
+      "weight_units": 1,
+      "construct": "评价本人在明确角色、任务与工具条件下的专业、解决、沟通、组织、履约与独立办事表现。",
+      "items": [
+        {
+          "id": "D1",
+          "name": "专业交付与关键取舍",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "在本人选择的专业任务中，能否理解需求、作关键判断并交付可用结果；工具承担部分单列。",
+          "anchors": {
+            "0": "所述普通专业任务无法形成可用产出，关键约束经提示仍不能处理。",
+            "25": "能参与部分环节，但重要判断和收尾长期需他人大量接管。",
+            "50": "在清楚方案或较多指导下可完成普通任务，对关键偏差仍需提示。",
+            "75": "能自主拆需求、选择工具、判断偏差并验收交付，责任范围与工具贡献清楚。",
+            "100": "能处理实质复杂约束，解释关键取舍、失败路径或替代方案，并据结果有效修正。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个明确本人责任的真实任务、关键行动与可用产出；匿名描述足够。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有多环节独立负责、技术/业务约束取舍或工具纠偏经历。"
+          ],
+          "discriminating_question": "挑一个你负责交付的项目：最难的约束是什么，你排除了哪种方案，出了偏差你怎样判断和收尾？",
+          "cannot_infer": [
+            "不按职级、年限、技术栈数量自动加分。",
+            "使用AI不扣分，AI产出也不全部冒充本人独立技术掌握。"
+          ]
+        },
+        {
+          "id": "D2",
+          "name": "现实问题定位与处置",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "按本人职责分别评价定位、验证、处置和结果核对，不强求拥有全部权限。",
+          "anchors": {
+            "0": "在已明任务边界内不能形成有效定位或处置，提示后仍无法推进。",
+            "25": "能发现局部现象但关键定位/处置需他人大量接管。",
+            "50": "能按既定步骤处理常见问题，关键异常仍需指导。",
+            "75": "能自主收集信息、定位可行动问题、验证并推进适合本人权限的处置，明确遗留部分。",
+            "100": "能在多约束或竞争解释下设计有效处置/恢复路径，核对责任范围内结果并防止关键复发。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "真实问题、本人可控范围、定位/干预动作和已知结果。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有干预复现、补可观测性或将模糊问题转成可处置环节的例子。"
+          ],
+          "discriminating_question": "你验证原因之后，自己负责到哪一步？做了什么处置、怎样确认有效；哪些步骤交给了别人或还没完成？",
+          "cannot_infer": [
+            "没有最终修复权限不等于解决能力低。",
+            "不能把D2闭环要求拿去限制C2的推理评分。"
+          ]
+        },
+        {
+          "id": "D3",
+          "name": "面向目标的沟通",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价受众能否理解、作决定或采取合适行动，以及本人能否处理误解；不以争论获胜计分。",
+          "anchors": {
+            "0": "重要信息持续传达错误且无法通过澄清形成基本理解。",
+            "25": "表达或倾听经常使普通协作无法推进，需他人大量翻译协调。",
+            "50": "能表达基本意思，遇偏题/误解需外界帮助拉回目标。",
+            "75": "能自主组织观点与证据、倾听反问并澄清目标，使普通沟通可推进。",
+            "100": "在明显分歧、情绪或不同背景受众中仍能调整表达并形成明确可执行共识或分歧边界。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "具体受众、目标、表达/倾听动作和对方可观察反馈。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有与管理者分歧、主动拉回目标且后续推进的案例。"
+          ],
+          "discriminating_question": "那次分歧里，对方最后具体理解或改变了什么？你怎么确认不是只讲完自己的观点，若没改变又怎样收尾？",
+          "cannot_infer": [
+            "激动、内向、话少或口音不自动决定沟通水平。",
+            "他人不同意不等于本人表达失败。"
+          ]
+        },
+        {
+          "id": "D4",
+          "name": "协作组织与协调",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价任务拆分、依赖协调、卡点处理与交接，不按团队人数或职位直接给档。",
+          "anchors": {
+            "0": "本人责任内协作经常因组织失效而无法进行，且不能有效修正。",
+            "25": "能够分派部分任务，但关键依赖/冲突反复需他人接管。",
+            "50": "在既定流程下能排任务和跟进，遇卡点需上级给出主要协调办法。",
+            "75": "在常规任务中能自主拆分、排期、跟进并分析卡点，适时协调或向上同步。",
+            "100": "在明确的依赖变化、资源冲突或分歧下，能重定资源、排期、方案或分工中与问题相关的安排，实际保住关键目标或清楚重定承诺并推进结果。不是每个案例都必须展示所有协调手段。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个实际任务的约束、本人组织/资源/方案调整和推进结果；简短但具体的自报可用，不要求量化指标或长故事。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有小组管理、卡点分析、向上反馈和资源调度的具体过程。"
+          ],
+          "discriminating_question": "你带小组时，有没有一次排期或依赖真的变了？你怎样重新分配、和谁协调，最后哪些目标保住或重新约定？",
+          "cannot_infer": [
+            "头衔、人数和人缘好不等于组织高档。",
+            "没有遭遇严重危机不证明不能处理，可保留未测范围。"
+          ]
+        },
+        {
+          "id": "D5",
+          "name": "承诺与交付可靠性",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价实际承诺是否兑现，变更是否及时重估与沟通，不把条件变化自动算失败。",
+          "anchors": {
+            "0": "本人可控的普通承诺反复未完成且无有效同步或补救。",
+            "25": "普通交付经常明显失约，主要靠他人追赶与接管。",
+            "50": "在外部跟催或清楚排程下可完成，遇变化的重估/同步仍需提醒。",
+            "75": "能自主按约完成本人可控交付，发现变化时及时重估并同步可兑现承诺。",
+            "100": "在明确变更/返工或多依赖中仍能及时取舍、重约与验收，使关键承诺可靠可追踪。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "过去实际承诺、变化和交付结果；不要求暴露内部文档。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "近期多次正常交付，且已说明实际变化中的重新评估行为。"
+          ],
+          "discriminating_question": "最近有哪次任务中途真的变更或返工？原承诺和重新约定分别是什么，最后如何验收？如果近期确实没有就保留未测。",
+          "cannot_infer": [
+            "没有延期不自动证明复杂交付能力；延期也不自动证明不可靠。",
+            "将来会同步只是策略，不能冒充已发生记录。"
+          ]
+        },
+        {
+          "id": "D6",
+          "name": "独立办事与资源选择",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价陌生或日常事务中能否理解要求、找资源并落地解决；不是不用工具或永不求助。",
+          "anchors": {
+            "0": "本人选定的普通事务无法推进，现有帮助后仍不能完成关键步骤。",
+            "25": "普通事务主要依赖他人大量包办，自己难判断下一步。",
+            "50": "能按明确攻略或提示完成，异常步骤通常需他人接管。",
+            "75": "能自主搜集信息、选择工具/服务并完成普通陌生事务，知道求助边界。",
+            "100": "在真实变动或非标准约束下仍能重排办法、核对信息并完成关键事务或形成可行退路。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "一个实际事务的要求、本人选择和完成情况。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有独立旅行、导航、搬家或陌生地区事务处理的完整过程。"
+          ],
+          "discriminating_question": "旅行或搬家里有没有计划外变化？你当时怎样判断信息、换办法或找人帮忙，最后结果怎样？",
+          "cannot_infer": [
+            "使用搜索、AI、导航或搬家公司不是不独立。",
+            "熟练旅行不等于所有生活场景都已覆盖。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "个人经济与缓冲",
+      "short": "经济",
+      "weight_units": 1,
+      "construct": "分别表达收入覆盖、资产容量、现金缓冲、偿付余地、实际结余和来源持续性；不冒称财务能力或同龄财富排名。",
+      "items": [
+        {
+          "id": "E1",
+          "name": "经常收入覆盖",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "同期间税后经常收入相对必要开支的覆盖倍数，转成明确的平滑容量读数。",
+          "anchors": {
+            "0": "收入覆盖比x=0，对应0；未知不记0。",
+            "25": "x=1/3时25。",
+            "50": "x=1时50，表示该口径必要开支得到覆盖。",
+            "75": "x=3时75。",
+            "100": "100为数学渐近上限，有限倍数不精确到100；不是财富自由或能力满分。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "匹配期间的经常税后收入与必要开支；区间可用。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有固定其他收入/保障线索，可能尚未计入已报总额。",
+            "税前税后或期间有明显混淆。"
+          ],
+          "discriminating_question": "目前这笔税后收入是否已经包含所有经常来源？偶发奖金、尚未赚钱的副业与必要开支请分别记，不必补没有的收入。",
+          "cannot_infer": [
+            "不能把覆盖倍数当同龄工资排名。",
+            "税后生活覆盖不能冒充地区税前工资坐标。"
+          ],
+          "measure_type": "capacity",
+          "numeric_rule": {
+            "kind": "saturating_ratio",
+            "input_fields": [
+              "after_tax_recurring_income",
+              "necessary_expenses_same_period"
+            ],
+            "params": {
+              "numerator_field": "after_tax_recurring_income",
+              "denominator_field": "necessary_expenses_same_period",
+              "k": 1,
+              "formula": "100 * max(x, 0) / (max(x, 0) + k); x = numerator / denominator",
+              "nonpositive_denominator": "unknown",
+              "finite_upper_policy": "有限正数严格小于100；显示取整到100不表示达到无穷容量。"
+            },
+            "source_kind": "project_smooth_function_on_observed_ratio",
+            "interpretation": "平滑函数中的k=1是项目默认，50表示收入与必要开支相等，非人口中位数。"
+          }
+        },
+        {
+          "id": "E2",
+          "name": "本人净资产容量",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "本人权属净资产相对必要年开支的容量；与流动性分别记录。",
+          "anchors": {
+            "0": "净资产为0或负数对应0；负数保留原值，不抹去债务。",
+            "25": "净资产为1/3必要开支年时25。",
+            "50": "净资产为1必要开支年时50。",
+            "75": "净资产为3必要开支年时75。",
+            "100": "100为有限正资产年数的渐近上限，不表示已取得当日独立估值。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人净资产及估值日期/允许沿用的快照、必要年开支。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "存在本人已拥有而尚未计入的资产或同一笔资金重复计算线索。",
+            "快照日期与当前适用性有明确变化。"
+          ],
+          "discriminating_question": "这份资产是否仍按原快照大体适用？只需指出明显新增、减少、权属或重复部分，不要求账户截图或实时估值。",
+          "cannot_infer": [
+            "父母尚未转移的资产/住房不并入本人资产。",
+            "资产容量不等于可立即支取现金或当地财富百分位。"
+          ],
+          "measure_type": "capacity",
+          "numeric_rule": {
+            "kind": "saturating_ratio",
+            "input_fields": [
+              "personal_net_assets_cny",
+              "necessary_annual_expenses_cny"
+            ],
+            "params": {
+              "numerator_field": "personal_net_assets_cny",
+              "denominator_field": "necessary_annual_expenses_cny",
+              "k": 1,
+              "formula": "100 * max(x, 0) / (max(x, 0) + k); x = numerator / denominator",
+              "nonpositive_denominator": "unknown",
+              "finite_upper_policy": "有限正数严格小于100；显示取整到100不表示达到无穷容量。"
+            },
+            "source_kind": "project_smooth_function_on_observed_ratio",
+            "interpretation": "k=1为项目容量配置；历史估值须保留原日期，负资产原值与0项目下界分开显示。"
+          }
+        },
+        {
+          "id": "E3",
+          "name": "可用现金缓冲",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "可用于本人必要生活的流动资金相对必要月开支，可用窗口和限制另列。",
+          "anchors": {
+            "0": "明确没有可用现金缓冲时0。",
+            "25": "1个月必要开支时25。",
+            "50": "3个月必要开支时50。",
+            "75": "9个月必要开支时75。",
+            "100": "100为渐近上限，不设跨一天或一元跳20分的阶梯。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "可用资金区间、主要限制与必要月开支。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有定期可提前支取或其他自由现金线索，可能与受限部分混在一起。"
+          ],
+          "discriminating_question": "这笔钱里哪些能按你的需要实际动用，哪些有期限、损失或用途限制？没有变化就沿用原区间。",
+          "cannot_infer": [
+            "潜在家庭支援、风险资产和受限资金不自动算自由现金。",
+            "必要开支不是实际全部消费，地区工资不是当地生活费。"
+          ],
+          "measure_type": "buffer",
+          "numeric_rule": {
+            "kind": "saturating_ratio",
+            "input_fields": [
+              "available_liquid_funds_cny",
+              "necessary_monthly_expenses_cny"
+            ],
+            "params": {
+              "numerator_field": "available_liquid_funds_cny",
+              "denominator_field": "necessary_monthly_expenses_cny",
+              "k": 3,
+              "formula": "100 * max(x, 0) / (max(x, 0) + k); x = numerator / denominator",
+              "nonpositive_denominator": "unknown",
+              "finite_upper_policy": "有限正数严格小于100；显示取整到100不表示达到无穷容量。"
+            },
+            "source_kind": "project_smooth_function_on_observed_ratio",
+            "interpretation": "k=3是项目默认，50对应3个月必要开支；调查使用3个月缓冲不等于验证此转分函数。"
+          }
+        },
+        {
+          "id": "E4",
+          "name": "偿付余地（低负担）",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "同期间到期债务偿付未占用税后收入的比例；只表示当前现金流负担。",
+          "anchors": {
+            "0": "到期偿付至少占全部税后收入，或无正收入却有到期偿付。",
+            "25": "偿付占75%，未占用25%。",
+            "50": "偿付占50%，未占用50%。",
+            "75": "偿付占25%，未占用75%。",
+            "100": "明确无债且到期偿付0，或已核当前到期偿付占比0；仅指低偿付负担。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "匹配期间到期债务偿付、税后收入及债务/期间说明。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "偿付额与总债务额混淆，或有已知付款但未计入期间。"
+          ],
+          "discriminating_question": "这里问本期实际到期偿付，不是债务总额：有没有按期必须偿还的部分？若明确没有就直接记0偿付。",
+          "cannot_infer": [
+            "无债不是财务能力、财富、信用或人生价值100。",
+            "不能拿0收入作分母。"
+          ],
+          "measure_type": "condition_low_burden",
+          "numeric_rule": {
+            "kind": "debt_burden",
+            "input_fields": [
+              "monthly_debt_service_cny",
+              "monthly_after_tax_income_cny",
+              "confirmed_no_debt"
+            ],
+            "params": {
+              "formula": "100 * (1 - clip(monthly_debt_service_cny / monthly_after_tax_income_cny, 0, 1))",
+              "no_debt_zero_service": 100,
+              "nonpositive_income_positive_service": 0,
+              "unknown_period_or_unresolved_zero_denominator": "unknown"
+            },
+            "source_kind": "arithmetic_burden_share_project_interpretation",
+            "interpretation": "分值直读未被到期偿付占用的收入比例；不推断综合财务健康。"
+          }
+        },
+        {
+          "id": "E5",
+          "name": "实际收入留存比例",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "匹配期间税后收入扣实际全部开支后的留存比例；不拿必要开支替代实际开支。",
+          "anchors": {
+            "0": "实际开支达到或超过收入，留存比例≤0。",
+            "25": "留存25%。",
+            "50": "留存50%。",
+            "75": "留存75%。",
+            "100": "实际开支为0、当期收入全部留存；极端比例不表示总体经济满分。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "同期间税后收入、实际总开支、same_period=true；用户跳过继续保留未知。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有实际账单/消费估计，可能只遗漏少数周期项目。"
+          ],
+          "discriminating_question": "如果你愿意补，只需要同一期间实际全部开销的大致范围；确实算不出就保留未知，不再拿必要开支代替。",
+          "cannot_infer": [
+            "未知实际开支不能默认零消费或默认储蓄率。",
+            "个别期间高留存可能来自他人付费或延后支出，不能直接推长期水平。"
+          ],
+          "measure_type": "retained_income_share",
+          "numeric_rule": {
+            "kind": "surplus_margin",
+            "input_fields": [
+              "after_tax_income",
+              "actual_expenses",
+              "same_period"
+            ],
+            "params": {
+              "formula": "100 * clip((after_tax_income - actual_expenses) / after_tax_income, 0, 1)",
+              "requires_positive_income": true,
+              "requires_same_period": true,
+              "negative_margin": "preserve_raw_margin_and_display_score_0"
+            },
+            "source_kind": "arithmetic_share_not_ability_scale",
+            "interpretation": "直接表达实际留存收入比例，数字不是按同龄能力分档。"
+          }
+        },
+        {
+          "id": "E6",
+          "name": "经常来源履约",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "只评价本人所述观察期间经常收入是否按约正常到账。资产/现金过渡归E2/E3，家庭支援归F1，未来再就业能力单列未测，不重复混进本项。",
+          "anchors": {
+            "0": "主要经常来源明确停止或约定收款基本不可得。",
+            "25": "经常来源反复严重拖欠或中断，必要支出受到明确影响。",
+            "50": "仍有经常收款，但反复延期或不稳定，需要本人明确安排补救才能维持。",
+            "75": "观察期间有偶发轻微不履约或额外协调，但必要需求未受明显影响。",
+            "100": "本人所述观察期间经常收入按约正常到账，无拖欠或中断；不要求副业、失业经历或未来资格全部核完。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人具体说明观察期间的正常到账、拖欠或中断情况；概括自报可用，未给出账单不扣分。时间边界另记录，不外推未来。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "本人明确表示经常收入一直正常、未拖欠或中断，但观察范围需要限定。"
+          ],
+          "discriminating_question": "在你刚才说的这段工作期间，工资是正常按约发，还是有过延期或停发？只需说明实际情况，不需要账单。",
+          "cannot_infer": [
+            "履约100不是职业前景、未来失业风险或财务能力100。",
+            "未来再就业/过渡尚未问清不证明当前履约差；单一稳定职业不因缺副业低分。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "name": "可调用资源与约束",
+      "short": "资源",
+      "weight_units": 1,
+      "construct": "评价本人目前能使用的经济、居住、照护、协作与平台资源及责任约束；不是家庭好坏或人格评级。",
+      "items": [
+        {
+          "id": "F1",
+          "name": "可用家庭支持容量",
+          "weight_units": 1,
+          "score_kind": "numeric",
+          "construct": "先判断资金是否可给本人，再评价可用金额对必要开支的容量；不可调用性不能被金额补偿。",
+          "anchors": {
+            "0": "明确unavailable或明确可提供金额0时0；unknown不记0。",
+            "25": "可用容量为1/3必要开支年时25。",
+            "50": "可用容量为1必要开支年时50。",
+            "75": "可用容量为3必要开支年时75。",
+            "100": "容量分的数学渐近上限；可调用条件只设门槛，不平均出50。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "支持金额及是否可提供给本人；口述可用有效，未知时保留容量上界和待确认状态。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "本人已明确家里能提供大致额度，只是到账时间、用途或偿还条件未展开。",
+            "回答仅描述家中有钱，尚未说明是否可提供给本人。"
+          ],
+          "discriminating_question": "你说的这笔支持是需要时家里通常愿意提供给你，还是只是家里有这笔钱？大致时点、用途和是否偿还，有哪些已清楚、哪些未知？",
+          "cannot_infer": [
+            "潜在家庭额度不并入本人净资产或自由现金。",
+            "无需账户证明；本人明确自报可用可作为self_reported_available，来源和条件另列。"
+          ],
+          "measure_type": "gated_capacity",
+          "numeric_rule": {
+            "kind": "gated_capacity",
+            "input_fields": [
+              "potential_support_cny",
+              "necessary_annual_expenses_cny",
+              "availability"
+            ],
+            "params": {
+              "capacity_formula": "100 * max(x, 0) / (max(x, 0) + 1); x = potential_support_cny / necessary_annual_expenses_cny",
+              "k": 1,
+              "availability_states": {
+                "unavailable": "score_0",
+                "unknown": "score_null_range_0_to_capacity",
+                "self_reported_available": "capacity_score",
+                "confirmed_available": "capacity_score"
+              },
+              "gate_policy": "availability is a gate, never averaged with capacity",
+              "source_condition_policy": "self_report_is_acceptable; do_not_require_private_proof"
+            },
+            "source_kind": "project_capacity_curve_with_noncompensatory_gate",
+            "interpretation": "只对本人可用的容量计分；明确不可用得0，未知不猜；时间/用途/偿还条件独立呈现，不用证明材料多少加分。"
+          }
+        },
+        {
+          "id": "F2",
+          "name": "居住与实物退路",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价已明确的过渡居住使用权和实际可用性。先固定本人已说清的用途范围；产权、未来所有生活费用及每种迁居情景另列，不混成使用权得分。",
+          "anchors": {
+            "0": "明确没有任何本人可使用的相关支持或退路。",
+            "25": "仅有可能使用的设想，实际授权/主要条件不清。",
+            "50": "有明确但短期、强条件或不足覆盖所选过渡需要的支持。",
+            "75": "所述过渡居住已有明确许可且可用，但本人同时明确有期限、付费、共享或先决条件，使用需要实际协调或让步。未问到限制不等于有限制。",
+            "100": "本人明确可自由使用所述住房覆盖已说明的过渡居住用途，例如明确可以回去住、使用不受实质阻碍；这只表示当前使用权落实，不外推永久免费、所有账单或其他地区住房。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "具体居住资源、本人可使用的明确陈述及所述用途即可判断当前使用权；“随便住”等肯定陈述是可用证据。没有提供每项未来费用不作为限制证据。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有家人住房可回住或具体使用许可，但对所选过渡需求是否充分未展开。"
+          ],
+          "discriminating_question": "这处支持在你需要时能用多久、有什么费用或条件？对你设想的过渡来说够不够，不用把它算成本人房产。",
+          "cannot_infer": [
+            "家人房产可住不等于本人拥有产权。",
+            "当前可回住不代表所有未来费用、长期期限或海外住房已落实。",
+            "未详说费用/期限不直接支持有限制75；明确自由使用可支持当前用途下的100。"
+          ],
+          "measure_type": "resource_access"
+        },
+        {
+          "id": "F3",
+          "name": "事务与照护人手",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价具体需要下实际可调用的人手或服务安排；能花钱、认识人和已可调用分别记录。",
+          "anchors": {
+            "0": "本人明确在所选需要下没有任何可调用帮助或可实行服务。",
+            "25": "只有可能求助/购买的设想，尚不知谁可做什么。",
+            "50": "有可偶尔做简单事务的人手，但对所选时长/范围支持有限。",
+            "75": "普通短期需要有明确可调用人手或可实际实行的服务安排，时点/费用/范围适配。",
+            "100": "明确较长或复杂需要下也有适配的主备或持续安排，关键时点和条件无实质缺口。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "本人所选需要和至少一个具体可用安排或明确无支持。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "已有室友、朋友或具体付费渠道可帮忙，但所需范围与可调用性未说明。"
+          ],
+          "discriminating_question": "如果你临时几天不在或身体不方便，谁或哪种具体服务能负责哪些事？哪些已经能调用，哪些只是知道可能可以？",
+          "cannot_infer": [
+            "钱能解决的设想不能冒充已落实人手。",
+            "不愿频繁社交不等于没有支持；未知不判明确无人。"
+          ],
+          "measure_type": "resource_access"
+        },
+        {
+          "id": "F4",
+          "name": "协作渠道与互助可及",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "按事先明确的实际目标范围评价协作渠道可调用性，工作、私人或创作分场景呈现；不能只挑其中较弱场景代表整体，不按外向和联系人数量打分。",
+          "anchors": {
+            "0": "本人明确目标领域没有可调用的有效协作或信息渠道。",
+            "25": "只有潜在联系，尚不清楚能帮什么且难实际取得回应。",
+            "50": "存在有限合作/信息渠道，但对当前目标能帮的范围或效果不足。",
+            "75": "在事先选定的普通实际目标范围内，能找到可实际合作或互助的合适对象，知道对方可帮环节与条件。本档不宣称已评价复杂变化任务，也不从未测领域推出协作低。",
+            "100": "在同一目标领域已有明确复杂/变化任务，需要互补环节或重新衔接；本人能实际调用匹配协作并形成有效衔接，必要时取得可用替代。该条件成立时按100，不再按普通75重复归档；不要求混社区。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "先固定本次实际目标范围，采用该范围的已有合作/互助及可帮环节。多个目标分栏评阅；没有预声明合成权重时不得取最弱场景、随意平均或挑最高场景作为整体。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "scope_selection_policy": {
+            "before_rating": "目标范围先由本人当前实际用途或已声明目标确定，不为期待分数临时切换范围。",
+            "mixed_contexts": "工作与私人/创作材料差异明显时分别显示条件与评价，主分只对应事先选择的范围。",
+            "unmeasured_contexts": "未测领域列入coverage，不记0、不降低已测工作合作评价，也不外推其一定很强。",
+            "whole_person_boundary": "仅有某个弱领域的有限案例时，不得下‘整体人脉/资源调用低’的结论；若要求综合多个领域，须先公开领域及固定合成规则。"
+          },
+          "higher_score_signal": [
+            "已有跨环节实际协作、变化时重新衔接或替代渠道的线索，但本人调用过程未展开。",
+            "工作协作与私人/创作联系表现不同，需要先确定本次目标范围，而非直接取弱项。"
+          ],
+          "discriminating_question": "按你当前目标，工作合作和私人/创作合作分别有哪些人能帮到哪一步？如果一位不合适，你通常还有什么实际办法？",
+          "cannot_infer": [
+            "私下交流少或创作合作有限不自动等于工作协作差，更不能概括整体资源调用低。",
+            "职位、粉丝数、联系人数量不能替代实际可用性。"
+          ],
+          "measure_type": "resource_access"
+        },
+        {
+          "id": "F5",
+          "name": "工具与学习资源可及",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价所选目标的关键工具、资料、资格和替代是否实际可用；不以是否参与社区评分。",
+          "anchors": {
+            "0": "目标所需关键资源明确不可及且没有可实行替代。",
+            "25": "只知道资源入口，当前没有资格或可承担取得方法。",
+            "50": "能使用部分关键资源，但明确权限/费用/条件经常卡住目标。",
+            "75": "当前主要资源可实际使用且条件可承担，足以自主推进普通目标。",
+            "100": "关键资源在本人明确变化情景中仍有可实行替代或迁移办法，限制不会实质阻断重要目标。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "具体目标、已使用资源及资格/费用/使用限制。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "当前借助公司工具或平台已有实际成果，可能存在个人可用替代但未问。"
+          ],
+          "discriminating_question": "这些关键工具如果暂时不能用，你有哪些实际可用替代？现在是权限、费用还是熟练度最可能卡住你？",
+          "cannot_infer": [
+            "不混社区不等于资源少。",
+            "城市/公司名气和课程价格不自动代表资源可及或学习效果。"
+          ],
+          "measure_type": "resource_access"
+        },
+        {
+          "id": "F6",
+          "name": "责任约束余地（低负担）",
+          "weight_units": 1,
+          "score_kind": "anchor",
+          "construct": "评价当前固定供养、照护、时间或地点责任对本人明确选择的限制；是条件条，不是能力或责任感。",
+          "anchors": {
+            "0": "固定责任使重要资金、时间或地点选择几乎无法实行，且没有可用协调。",
+            "25": "多项普通重要选择被固定责任持续明显阻断，现有分担有限。",
+            "50": "普通目标可推进，但需明确较大让步，部分重要选择仍难实施。",
+            "75": "普通目标与当前责任能通过现有安排协调，重要选择只受轻微实质约束。",
+            "100": "本人明确当前无相关固定责任约束，或已有可实行安排使所选重要选择无实质阻碍。"
+          },
+          "coverage_policy": {
+            "independent_of_score": true,
+            "minimum": "当前明确的固定责任及对本人目标的实际限制；不推未来永远无责任。",
+            "evidence_count_rule": "照片、日期、回答或案例数量本身不加分；来源可用范围与表现分分别记录。",
+            "unknown_scope_rule": "未见、未问或记不清只缩小结论范围，不作为低能力证据。",
+            "record_separately": [
+              "observed_scope",
+              "unobserved_scope",
+              "source_type",
+              "observed_at",
+              "material_conditions",
+              "upper_level_unassessed"
+            ]
+          },
+          "higher_score_signal": [
+            "本人有明确分担、可迁移或当前暂无义务的说明，但适用时段不清。"
+          ],
+          "discriminating_question": "当前有没有必须固定承担的供养、照护、时间或地点义务，会影响你想做的重要选择？没有就直接记无当前约束。",
+          "cannot_infer": [
+            "责任少不表示人更优秀、家庭更好或更有责任感。",
+            "责任多不直接降低道德、能力或未来潜力。"
+          ],
+          "measure_type": "condition_low_constraint"
+        }
+      ]
+    }
+  ]
+}

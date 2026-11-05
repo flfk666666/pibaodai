@@ -19,3 +19,9 @@ __pycache__/
 .local/
 tmp/
 coverage/
+
+# Private runtime data and personal results
+private-data/
+private-results/
+/outputs/
+/reports/

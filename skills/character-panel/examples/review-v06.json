@@ -1,0 +1,951 @@
+{
+  "rating_type": "weighted_character",
+  "version": "weighted-character-v0.6",
+  "protocol_version": "character-rules-v0.6",
+  "source_revision": 1,
+  "assessment_facts": {
+    "self_annual_cny": 100000
+  },
+  "axes": [
+    {
+      "id": "A",
+      "items": [
+        {
+          "id": "A1",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "height_cm": 180
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "A2",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：主要可见要素协调，明确符合所选形象偏好，局部差异不主导整体。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：主要可见要素协调，明确符合所选形象偏好，局部差异不主导整体。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "A3",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：已见轮廓和体积关系清楚、协调且符合目标，构成明确正向呈现。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：已见轮廓和体积关系清楚、协调且符合目标，构成明确正向呈现。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "A4",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主按所选场景维护，发型、胡须和衣物状态符合本人目标，频率与自身需要相适配。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主按所选场景维护，发型、胡须和衣物状态符合本人目标，频率与自身需要相适配。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "A5",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主形成协调且符合本人目标的搭配，舒适、比例或配饰有明确选择。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主形成协调且符合本人目标的搭配，舒适、比例或配饰有明确选择。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "A6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：已见表情/姿态自然、协调且能自主配合表达目标，静态判断仅限静态。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：已见表情/姿态自然、协调且能自主配合表达目标，静态判断仅限静态。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "外形条件与呈现",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    },
+    {
+      "id": "B",
+      "items": [
+        {
+          "id": "B1",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：本人明确存在所述活动/工作相关不适，或需要轻微额外调整，但普通必要任务仍能自主完成，不因此中断、减少或改由他人代办。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：本人明确存在所述活动/工作相关不适，或需要轻微额外调整，但普通必要任务仍能自主完成，不因此中断、减少或改由他人代办。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "B2",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "body_weight_kg": 85,
+            "bench_press_1rm_kg": 110
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "B3",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "continuous_swim_m": 100
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "B4",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：所选普通动作能自主受控完成，轻微差异可识别并调整，不造成实质任务障碍。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：所选普通动作能自主受控完成，轻微差异可识别并调整，不造成实质任务障碍。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "B5",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：本人所述普通日主要休息后恢复感通常足够，日间休息为常规节奏而非弥补明确恢复不足。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：本人所述普通日主要休息后恢复感通常足够，日间休息为常规节奏而非弥补明确恢复不足。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "B6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：即使有困倦，借既有午休/常规休息节奏，普通工作或学习目标仍能自主持续完成，未因疲惫实质减少或放弃；症状频率另记，不仅凭频繁就判功能差。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：即使有困倦，借既有午休/常规休息节奏，普通工作或学习目标仍能自主持续完成，未因疲惫实质减少或放弃；症状频率另记，不仅凭频繁就判功能差。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "身体功能与当前状态",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    },
+    {
+      "id": "C",
+      "items": [
+        {
+          "id": "C1",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主解释并正确应用，识别不合目标的结果并修正。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主解释并正确应用，识别不合目标的结果并修正。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "C2",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主组织证据、提出可检验解释，实际验证关键关系并明确尚未解决部分。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主组织证据、提出可检验解释，实际验证关键关系并明确尚未解决部分。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "C3",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能按后果风险自主核对关键证据、原始定义或实际观察，区分暂时了解与可用于行动的结论。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能按后果风险自主核对关键证据、原始定义或实际观察，区分暂时了解与可用于行动的结论。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "C4",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主选可逆/合适规模的试验，识别主要风险和代价，并按结果调整。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主选可逆/合适规模的试验，识别主要风险和代价，并按结果调整。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "C5",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主识别卡点、调整任务粒度/时间或环境，恢复并维持目标推进。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主识别卡点、调整任务粒度/时间或环境，恢复并维持目标推进。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "C6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主缓解并回到重要行动，知道常见代价且有实际调整。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主缓解并回到重要行动，知道常见代价且有实际调整。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "思考与判断表现",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    },
+    {
+      "id": "D",
+      "items": [
+        {
+          "id": "D1",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主拆需求、选择工具、判断偏差并验收交付，责任范围与工具贡献清楚。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主拆需求、选择工具、判断偏差并验收交付，责任范围与工具贡献清楚。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "D2",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主收集信息、定位可行动问题、验证并推进适合本人权限的处置，明确遗留部分。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主收集信息、定位可行动问题、验证并推进适合本人权限的处置，明确遗留部分。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "D3",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主组织观点与证据、倾听反问并澄清目标，使普通沟通可推进。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主组织观点与证据、倾听反问并澄清目标，使普通沟通可推进。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "D4",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：在常规任务中能自主拆分、排期、跟进并分析卡点，适时协调或向上同步。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：在常规任务中能自主拆分、排期、跟进并分析卡点，适时协调或向上同步。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "D5",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主按约完成本人可控交付，发现变化时及时重估并同步可兑现承诺。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主按约完成本人可控交付，发现变化时及时重估并同步可兑现承诺。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "D6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：能自主搜集信息、选择工具/服务并完成普通陌生事务，知道求助边界。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：能自主搜集信息、选择工具/服务并完成普通陌生事务，知道求助边界。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "实践与协作能力",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    },
+    {
+      "id": "E",
+      "items": [
+        {
+          "id": "E1",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "after_tax_recurring_income": 6000,
+            "necessary_expenses_same_period": 3000
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "E2",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "personal_net_assets_cny": 100000,
+            "necessary_annual_expenses_cny": 36000
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "E3",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "available_liquid_funds_cny": 18000,
+            "necessary_monthly_expenses_cny": 3000
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "E4",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "confirmed_no_debt": true,
+            "monthly_debt_service_cny": 0,
+            "monthly_after_tax_income_cny": 6000
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "E5",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "after_tax_income": 6000,
+            "actual_expenses": 4000,
+            "same_period": true
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "E6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：观察期间有偶发轻微不履约或额外协调，但必要需求未受明显影响。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：观察期间有偶发轻微不履约或额外协调，但必要需求未受明显影响。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "个人经济与缓冲",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    },
+    {
+      "id": "F",
+      "items": [
+        {
+          "id": "F1",
+          "selected_anchor": null,
+          "numeric_inputs": {
+            "availability": "self_reported_available",
+            "available_support_cny": 100000,
+            "necessary_annual_expenses_cny": 36000
+          },
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：输入原值按公开数值规则重算。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：输入原值按公开数值规则重算。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "F2",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：所述过渡居住已有明确许可且可用，但本人同时明确有期限、付费、共享或先决条件，使用需要实际协调或让步。未问到限制不等于有限制。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：所述过渡居住已有明确许可且可用，但本人同时明确有期限、付费、共享或先决条件，使用需要实际协调或让步。未问到限制不等于有限制。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "F3",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：普通短期需要有明确可调用人手或可实际实行的服务安排，时点/费用/范围适配。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：普通短期需要有明确可调用人手或可实际实行的服务安排，时点/费用/范围适配。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "F4",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：在事先选定的普通实际目标范围内，能找到可实际合作或互助的合适对象，知道对方可帮环节与条件。本档不宣称已评价复杂变化任务，也不从未测领域推出协作低。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：在事先选定的普通实际目标范围内，能找到可实际合作或互助的合适对象，知道对方可帮环节与条件。本档不宣称已评价复杂变化任务，也不从未测领域推出协作低。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "F5",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：当前主要资源可实际使用且条件可承担，足以自主推进普通目标。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：当前主要资源可实际使用且条件可承担，足以自主推进普通目标。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        },
+        {
+          "id": "F6",
+          "selected_anchor": 75,
+          "evaluation": {
+            "status": "rated",
+            "reason": "编写的虚构场景：普通目标与当前责任能通过现有安排协调，重要选择只受轻微实质约束。",
+            "evidence": [
+              {
+                "source_type": "authored_fictional_case",
+                "summary": "此项材料为演示而编写，非实测。编写的虚构场景：普通目标与当前责任能通过现有安排协调，重要选择只受轻微实质约束。",
+                "observed_at": "2025-02-03"
+              }
+            ]
+          },
+          "coverage": {
+            "level": "usable",
+            "scope": "虚构场景的声明条件",
+            "gaps": [
+              "未作人群校准"
+            ],
+            "higher_unassessed": true
+          }
+        }
+      ],
+      "name": "可调用资源与约束",
+      "headline": "按声明场景评阅",
+      "summary": "本案例刻意设定普通自主表现，用于展示结构和计算，不用于证明任何人的能力。",
+      "actions": [
+        "根据同一规则保留原值、场景和未决条件。"
+      ]
+    }
+  ],
+  "title": "日常能独当一面",
+  "name": "虚构演示角色",
+  "date": "2026-01-01",
+  "intro": "完全虚构的结构演示：原值、内容档位和材料覆盖分别保存；不是任何真人测评或校准研究。",
+  "method": {
+    "label": "编写的虚构输入与实跑计算"
+  },
+  "facts": [],
+  "person_note": "编写的虚构角色，非用户资料。"
+}

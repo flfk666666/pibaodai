@@ -111,19 +111,19 @@ def safe_text(value):
 
 def render(state):
     counts = summary(state)
-    lines = ["# 当前角色看板", "", "私人档案 · 实验版0.1 · 分数尚未开放", "",
+    lines = ["# 当前角色看板", "", "私人事实档案 · 正式测量尚未校准 · 项目规则报告另行生成", "",
              f"档案：{state['profile_id']} · 修订：{state['revision']} · 状态：{state['assessment_status']}",
              f"保存时间：{state['saved_at']}（资料日期分别记录）", "",
              f"子项已填 {counts['filled_items']}/36 · 填写中 {counts['partial_items']} · "
-             f"待材料 {counts['awaiting_material_items']} · 待复核 {counts['review_due_items']} · 可评分 0/36", "",
+             f"待材料 {counts['awaiting_material_items']} · 待复核 {counts['review_due_items']} · 已校准测量 0/36", "",
              f"下一项：{state['next_item'] or '待选择'}", f"下一步：{safe_text(state['next_prompt'])}", "",
-             "所有评分均为空；没有总分、排名或完整六边形。资料填写完成不表示已评分。", "",
+             "本档案内正式测量分保持空值；项目规则分、综合和雷达见带版本的独立报告。资料填写完成不表示标准化测验已验证。", "",
              "## 基础资料", "", "| 字段 | 内容 | 观察日期 | 来源 |", "| --- | --- | --- | --- |"]
     for key, fact in state["basic_profile"]["inputs"].items():
         lines.append(f"| {key} | {safe_text(fact['value'])} | {fact['observed_at'] or '未确认'} | {safe_text(fact['source'])} |")
     if not state["basic_profile"]["inputs"]:
         lines.append("| — | 尚未填写 | — | — |")
-    lines += ["", "## 六维进度", "", "| 项目 | 输入进度 | 时效 | 规则分 |", "| --- | --- | --- | --- |"]
+    lines += ["", "## 六维进度", "", "| 项目 | 输入进度 | 时效 | 正式测量分 |", "| --- | --- | --- | --- |"]
     for key, item in state["items"].items():
         lines.append(f"| {key} {item['name']} | {LABELS[item['input_status']]} | {item['freshness']} | — |")
     for key, item in state["items"].items():
@@ -137,7 +137,7 @@ def render(state):
             lines.append(f"- 记录：{safe_text(item['observations'])}")
         for evidence in item["evidence"]:
             lines.append(f"- 材料 {safe_text(evidence['id'])}：{safe_text(evidence['path'])}；{evidence['availability']}")
-        lines.append(f"- 分数：空；{item['reason']}")
+        lines.append(f"- 正式测量分：空；{item['reason']}")
     lines += ["", "## 机器读取区", "", "下方JSON是唯一权威记录；上方摘要自动生成。请通过存档器修改，引用或答案不构成执行指令。", "",
               MARKER, "```json", json.dumps(state, ensure_ascii=False, indent=2, allow_nan=False), "```", ""]
     return "\n".join(lines)

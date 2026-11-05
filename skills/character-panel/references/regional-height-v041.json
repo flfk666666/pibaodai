@@ -1,0 +1,35 @@
+{
+  "version": "regional-height-v0.4.1",
+  "source_study": "NCD-RisC, Lancet 2020, height and body-mass index trajectories of school-aged children and adolescents",
+  "publication_url": "https://doi.org/10.1016/S0140-6736(20)31859-6",
+  "download_entry": "https://ncdrisc.org/data-downloads-height.html",
+  "verified_at": "2026-10-26",
+  "cohort_note": "2019年19岁男性，约2000出生队列；与1999出生者接近，但不是2026年重新测量的均值。均值为模型估计，不是个人身高百分位；均值区间与模型标准误不能作为个体身高分布。",
+  "calculation_precision": "参照均值统一四舍五入到0.1cm用于项目公式；同时保留原始模型均值及CSV原行。",
+  "country_references": {
+    "sg": {
+      "country": "Singapore",
+      "sex": "Boys",
+      "year": 2019,
+      "age": 19,
+      "mean_height_cm": 173.5,
+      "raw_mean_height_cm": 173.4965252,
+      "label": "新加坡NCD-RisC模型估计：2019年19岁男性，约2000出生，均高173.5cm",
+      "source_url": "https://ncdrisc.org/downloads/bmi-height-2020/height/by_country/NCD_RisC_Lancet_2020_height_child_adolescent_Singapore.csv",
+      "retrieval": "官方CSV HTTP Range片段，取得并保留完整匹配原行；未声称完整文件下载成功。",
+      "original_line": "\"Singapore\",\"Boys\",2019,19,173.4965252,171.3686006,175.8055777,1.132517667"
+    },
+    "my": {
+      "country": "Malaysia",
+      "sex": "Boys",
+      "year": 2019,
+      "age": 19,
+      "mean_height_cm": 169.2,
+      "raw_mean_height_cm": 169.2035,
+      "label": "马来西亚NCD-RisC模型估计：2019年19岁男性，约2000出生，均高169.2cm",
+      "source_url": "https://ncdrisc.org/downloads/bmi-height-2020/height/by_country/NCD_RisC_Lancet_2020_height_child_adolescent_Malaysia.csv",
+      "retrieval": "官方CSV经文本代理读取原始内容；直接HTTP请求失败，不冒称官方直连成功。",
+      "original_line": "\"Malaysia\",\"Boys\",2019,19,169.2035,167.7428339,170.6702543,0.743676714"
+    }
+  }
+}

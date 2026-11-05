@@ -39,13 +39,22 @@
 
 ## 先逛逛这个袋子
 
-袋里已有 **1 个实验版 Skill 和 2 个孵化中的想法**。首个 Skill 先把资料采集与存档做好，评分仍未开放。
+袋里已有 **3 个实验版 Skill 和 2 个孵化中的想法**。完整角色看板支持私人资料采集与HTML/PNG图形报告，数字结果按公开子项锚点和权重计算；科技办事指南帮助厘清任务、选择路线并交接执行。
 
 | Skill | 现在能做什么 | 进度 |
 | --- | --- | --- |
-| [🪪 完整角色看板](skills/character-panel/SKILL.md) | 成年人整理本人基础资料、36项问答与照片可见观察，逐项保存到私人档案，支持续填和局部复测 | 实验版 |
+| [苏格拉底式思想陪练](skills/socratic-inquiry/SKILL.md) | 严格追问自己的判断与困惑，检验依据和反例，接受纠正并在需要时收束 | 实验版 |
+| [🪪 完整角色看板](skills/character-panel/SKILL.md) | 保存36项资料并续测，输出六维数字/雷达与地区分析；独立整理人生方向、生活偏爱、实际行动和反馈，不增设第七轴 | 实验版 |
+| [🧭 科技办事指南](skills/tech-task-guide/SKILL.md) | 逐步厘清要办的事，查阅与核验能力资料，比较具体产品路线，给出简短使用入口和新窗口交接 | 实验版 |
 
-完整角色看板使用 Python 3.10+ 标准库运行器。私人 `current.md` 保存在公开仓库与安装目录之外；所有分数保留 `null`，不生成总分或全球百分位。照片用于日常综合形象的可见观察。先看 [虚构演示输入](skills/character-panel/examples/input.md) 与 [对应输出及验证范围](skills/character-panel/examples/output.md)，再决定是否试用。
+**人生方向呈现v0.8，六维算分沿用v0.6：** [人生方向](skills/character-panel/references/life-direction.md)按L1—L5整理想过的生活、偏爱与取舍、形成轨迹、实际行动、障碍调整和反馈；也包含亲密关系、生活方式与意义探索。它有独立私人存档、修订与断点续填，分数留空，不设第七轴，不把探索或合理转向判低。[联合角色分析](skills/character-panel/references/joint-profile-v07.md)继续连接36项条件、瓶颈与地区判断；AI主动补足分析，资金按权属和可用时间去重。[v0.6评分方法](skills/character-panel/references/method-v06.md)保留独立材料覆盖。仍是实验版；公开案例为虚构演示，真人报告只存私人目录：[六维输入](skills/character-panel/examples/review-v06.json) → [输出](skills/character-panel/examples/review-v06-output.md)。
+
+
+历史v0.5采用[完整评分协议v0.5](skills/character-panel/references/complete-rules-v05.md)：36项分别定义最小输入、材料要求、选档、权重理由、缺失/范围、地区处理、复测与完整虚构案例。数值项由原值重算，行为和审美项保留命中锚点及实际材料；未知不默认给分。默认地区比较保留当前生活条件，另列迁居假设，不能因为切换国家偷偷扣语言、住房或人脉。交付可展开规则与本次判定的六维HTML/PNG，仍是实验项目规则，尚非人口常模。
+
+科技办事指南是一套文本指令，无 API 或运行器依赖；核验当前事实与保存资料时，分别需要联网与文件能力。它先查本地能力资料，按需调研和回写，再把详细教程与实际执行交给新窗口。附带种子资料是有日期的官方文档观察，不保证穷尽或持续最新。可先看 [编写的演示输入](skills/tech-task-guide/examples/input.md) 与 [对应输出及验证范围](skills/tech-task-guide/examples/output.md)。
+
+苏格拉底式思想陪练默认严格论辩，每轮围绕一个关键问题追问，检验理由和反例，接受纠正，也可随时暂停、直接解释或总结。无额外运行器和 API 依赖；[输入](skills/socratic-inquiry/examples/input.md)与[完整对话](skills/socratic-inquiry/examples/output.md)为编写的虚构演示。
 
 另外两个脑洞还在打磨：
 
@@ -56,17 +65,23 @@
 
 每个 Skill 都要带使用说明、完整案例和实际验证范围。实验版先开放清楚可用的部分，后续靠真实反馈继续改。
 
+近龄数据补丁已补齐[韩国和EU27参照](skills/character-panel/references/regional-cohorts-v051.md)，逐条注明出生队列、统计年份与来源；欧洲为27国人口加权的项目派生值。看板直接解释[满分100与60档位](skills/character-panel/references/score-reading-v051.md)，不把高档未测当作能力上限。
+
+[每一分怎样算出来](skills/character-panel/references/calculation-logic-v052.md)公开原值转分、36项权重、两种分母与地区换尺。看板内可展开完整贡献账本；已知分与完整范围分开解释，不把计算可复现当作量尺已校准。
+
+[权重与分档实质审计](skills/character-panel/references/model-audit-v053.md)已列出36项依据和待修问题：高档采集不足、证据覆盖混入质量、部分锚点重叠及支援调用门槛。现有总分保留为实验指数，不能当完整能力或当地人口竞争排名；本次审计没有改写旧分。
+
 ## 袋里准备装什么
 
 分类随内容生长，一个 Skill 可以跨几个格子。来源可以是一段经历、一次复盘、一套工具用法，也可以是读书后的理解。
 
 | 格子 | 想收的东西 | 当前入口 |
 | --- | --- | --- |
-| 🧠 思考与决策 | 判断检查、辨别干扰、选择与代价 | [噪音判断想法](ideas/noise-check.md)，孵化中 |
+| 🧠 思考与决策 | 判断检查、辨别干扰、选择与代价 | [苏格拉底式思想陪练](skills/socratic-inquiry/SKILL.md)，实验版；[科技办事指南](skills/tech-task-guide/SKILL.md)，实验版；[噪音判断想法](ideas/noise-check.md)，孵化中 |
 | 🌱 人生与成长 | 阶段复盘、个人现状记录、下一步的小实验 | [完整角色看板](skills/character-panel/SKILL.md)，实验版；[人生进度条](ideas/life-stage-review.md)，孵化中 |
 | 📚 学习与认知 | 学习方法、知识理解、把见闻转成提问和行动 | [判断方法的想法](ideas/noise-check.md)，孵化中 |
 | 🎬 创作与表达 | 口播、沟通、分镜、剪辑与场景表达 | 首批内容待选 |
-| 🧰 工具与效率 | 工具用法、排坑经验、顺手的小流程 | [完整角色看板的私人存档与续填](skills/character-panel/SKILL.md)，实验版 |
+| 🧰 工具与效率 | 工具用法、排坑经验、顺手的小流程 | [科技办事指南](skills/tech-task-guide/SKILL.md)、[完整角色看板的私人存档与续填](skills/character-panel/SKILL.md)，实验版 |
 | 📈 量化与研究 | 研究检查、证据梳理、回测复盘 | 首批内容待选 |
 
 ## 两个脑洞正在孵化
@@ -115,6 +130,7 @@ https://raw.githubusercontent.com/flfk666666/pibaodai/main/llms.txt
 | --- | --- |
 | 给 AI 的轻量导航 | [llms.txt](llms.txt) |
 | 可按标签、用途、输入输出和来源检索的完整目录 | [catalog.json](catalog.json) |
+| 科技任务还没想清，或不知道怎么选工具 | [科技办事指南](skills/tech-task-guide/SKILL.md) |
 | AI 如何挑选、组合和读取 Skills | [AGENTS.md](AGENTS.md) |
 | 目录字段与维护约定 | [目录说明](docs/catalog.md) |
 

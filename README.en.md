@@ -39,13 +39,26 @@ A little personality in the bag. A useful result when you open it.
 
 ## Take a look inside
 
-The bag now contains **1 experimental skill and 2 incubating ideas**. The first skill provides data collection and private records; scoring is still unavailable.
+The bag now contains **3 experimental skills and 2 incubating ideas**. Personal character panel provides private records and offline HTML/PNG reports, with ratings calculated from published item anchors and weights; Technology task guide clarifies a task, selects a route, and hands it over for execution.
 
 | Skill | What it can do now | Status |
 | --- | --- | --- |
-| [🪪 Personal character panel](skills/character-panel/SKILL.md) | Help adults record their own basic information, answers across 36 items, and visible photo observations, with saved progress and selected-item retests | Experimental |
+| [Socratic inquiry companion](skills/socratic-inquiry/SKILL.md) | Examine your own judgments through rigorous questions, matched counterexamples, corrections and a faithful closing summary | Experimental |
+| [🪪 Personal character panel](skills/character-panel/SKILL.md) | Save and resume 36 items with six-axis scores/radar and regional analysis; separately record life directions, preferences, actions and feedback without a seventh axis | Experimental |
+| [🧭 Technology task guide](skills/tech-task-guide/SKILL.md) | Clarify a task progressively, consult and verify capability knowledge, compare concrete product routes, and prepare a short starting guide and standalone handoff | Experimental |
 
-Personal character panel uses a Python 3.10+ standard-library runner. Keep its private `current.md` outside public repositories and the skill installation. All scores remain `null`; it produces no total scores or global percentiles. Photo observations cover visible everyday presentation. Read the [fictional example input](skills/character-panel/examples/input.md) and [paired output with verification scope](skills/character-panel/examples/output.md) before trying it.
+**Life-direction presentation: v0.8; six-axis scoring remains v0.6.** [Life directions](skills/character-panel/references/life-direction.md) uses L1–L5 to record desired life, preferences and trade-offs, formation and trajectory, actual actions, obstacles and adjustments, and feedback. It also covers relationships, lifestyle and meaning beyond work projects. Its private checkpoints, revisions and resume flow are independent; scores stay null, with no seventh axis or penalty for exploration or a reasonable change of direction. [Joint analysis](skills/character-panel/references/joint-profile-v07.md) still connects 36-item conditions, bottlenecks and regional findings; the assistant develops relevant comparisons, with funds deduplicated by ownership and availability. The [v0.6 method](skills/character-panel/references/method-v06.md) keeps evidence coverage separate. These remain experimental rules. Public examples are fictional; real-person reports stay private: [six-axis input](skills/character-panel/examples/review-v06.json) → [output](skills/character-panel/examples/review-v06-output.md).
+
+
+The [calculation walkthrough](skills/character-panel/references/calculation-logic-v052.md) documents raw-value mappings, all item weights, known-score versus full-range denominators, and regional substitutions. The offline dashboard includes an expandable contribution ledger. Reproducible arithmetic does not establish a calibrated population scale.
+
+The [substantive model audit](skills/character-panel/references/model-audit-v053.md) reviews all 36 items and identifies sampling-depth bias, evidence/quality conflation, overlapping anchors, and a support-access gate contradiction. Existing totals remain experimental historical indices; the audit does not change ratings or establish complete ability or regional population rankings.
+
+The historical [v0.5 rule protocol](skills/character-panel/references/complete-rules-v05.md) defines minimum inputs, evidence, anchor selection, weight rationale, missing-data ranges, regional treatment, retests, and fictional worked examples for all 36 items. Numeric scores are recalculated from original values; behavioral and aesthetic judgments retain their evidence and matched anchors. Current-life coordinates preserve real circumstances, with relocation assumptions shown separately. The offline six-axis HTML/PNG exposes the complete rules and decisions. These remain experimental project rules, not population norms.
+
+Technology task guide is a set of text instructions with no API or runtime dependency. Web and file capabilities are needed when verifying current facts and saving records. It consults local capability knowledge first, researches and updates relevant gaps, then hands detailed tutorials and execution to another session. Its seed records are dated official-document observations, with no claim of exhaustive or continuously current coverage. Read the [authored demonstration input](skills/tech-task-guide/examples/input.md) and [paired output with verification scope](skills/tech-task-guide/examples/output.md).
+
+Socratic inquiry companion uses one focused question at a time, with rigorous examination of reasons and counterexamples. It accepts corrections and requests to pause or explain directly. No extra runtime or API is required. Its [input](skills/socratic-inquiry/examples/input.md) and [complete dialogue](skills/socratic-inquiry/examples/output.md) are authored fictional illustrations.
 
 Two other ideas are taking shape:
 
@@ -56,17 +69,19 @@ Two other ideas are taking shape:
 
 Each skill needs usage instructions, a complete example, and a clear account of what has been verified. Experimental releases offer the parts ready to try and develop through feedback from actual use.
 
+The [near-cohort reference update](skills/character-panel/references/regional-cohorts-v051.md) completes Korea and EU27 with dated sources; the European height reference is a transparent population-weighted project calculation across all 27 members. The dashboard explains the [100-point scale and the 60 anchor](skills/character-panel/references/score-reading-v051.md), separating demonstrated performance from unobserved higher-tier evidence.
+
 ## What's going in the bag?
 
 Categories grow with the collection, and a skill can belong in more than one. A method may come from an experience, a review, a tool workflow, or something learned through reading.
 
 | Pocket | What belongs here | Start here |
 | --- | --- | --- |
-| 🧠 Thinking & decisions | Examine judgments, assumptions, choices, and trade-offs | [Noise idea](ideas/noise-check.md), incubating |
+| 🧠 Thinking & decisions | Examine judgments, assumptions, choices, and trade-offs | [Socratic inquiry companion](skills/socratic-inquiry/SKILL.md), experimental; [Technology task guide](skills/tech-task-guide/SKILL.md), experimental; [Noise idea](ideas/noise-check.md), incubating |
 | 🌱 Life & growth | Review life stages, record current circumstances, and plan small next experiments | [Personal character panel](skills/character-panel/SKILL.md), experimental; [Whose timeline?](ideas/life-stage-review.md), incubating |
 | 📚 Learning & understanding | Learning methods, knowledge, questions, and practice | [Judgment-method idea](ideas/noise-check.md), incubating |
 | 🎬 Creating & communication | Spoken scripts, communication, shots, and editing | First entries to be selected |
-| 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Private records and resumable collection](skills/character-panel/SKILL.md), experimental |
+| 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Technology task guide](skills/tech-task-guide/SKILL.md) and [private records and resumable collection](skills/character-panel/SKILL.md), experimental |
 | 📈 Quant & research | Inspect evidence, backtest design, and research claims | First entries to be selected |
 
 ## Two ideas still taking shape
@@ -117,6 +132,7 @@ My goal: describe what you want to do here.
 | --- | --- |
 | A compact index for an agent | [llms.txt](llms.txt) |
 | Searchable descriptions, tags, inputs, outputs, sources, and maturity | [catalog.json](catalog.json) |
+| Clarify a technology task or choose a tool route | [Technology task guide](skills/tech-task-guide/SKILL.md) |
 | Guidance for choosing and combining skills | [AGENTS.md](AGENTS.md) |
 | Field definitions and maintenance rules | [Catalog contract](docs/catalog.md) |
 

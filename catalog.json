@@ -65,8 +65,8 @@
         "en": "Personal character panel"
       },
       "description": {
-        "zh": "面向成年人自评，用基础资料、36项问答与照片可见观察建立私人角色档案；逐项保存、断点续测和局部复测，评分规则仍待确定。",
-        "en": "Build a private self-review record for adults from basic information, 36 items, and visible photo observations. Save each answer, resume later, and revisit selected items; scoring rules remain undefined."
+        "zh": "成年人私人角色看板：明确六维评分与地区分析，v0.8另用L1—L5整理生活取向、偏爱、行动轨迹和反馈，独立保存/续填、不设第七轴。六维沿用v0.6，材料覆盖独立，交付离线HTML/PNG；探索未知不判低。",
+        "en": "Private adult character panel with six-axis scores and regional analysis. v0.8 separately records life preferences, directions, action trajectories and feedback through L1–L5 with independent checkpoints, no seventh axis and no penalty for uncertainty. Retains v0.6 scoring, separate evidence coverage and offline HTML/PNG."
       },
       "categories": [
         "life",
@@ -82,40 +82,194 @@
         "personal character panel",
         "self-review",
         "private record",
-        "resume"
+        "resume",
+        "地区收入对比",
+        "nominal income comparison",
+        "36项加权",
+        "地区综合对照",
+        "weighted character review",
+        "regional character comparison",
+        "人生方向",
+        "生活取向",
+        "life direction",
+        "action trajectory"
       ],
       "use_when": [
         "成年人希望整理本人现状，并在之后继续补充或复核部分资料。 Adults want to record their own current situation and return to missing or outdated information.",
-        "需要把基础资料、问答和照片可见观察逐项存入本地私人档案。 Save basic information, answers, and visible photo observations to a local private record."
+        "需要把基础资料、问答和照片可见观察逐项存入本地私人档案。 Save basic information, answers, and visible photo observations to a local private record.",
+        "希望用10字内短评、可复算的六轴与加权综合分、雷达和具体行动看结果，知道每项材料怎样影响结果。 Review a short caption, reproducible six-axis and overall project scores, radar, and concrete actions, with each item’s contribution visible.",
+        "希望分别比较杭州、全国与指定国际地区，结合外形、身体、职业、资金分层和实际资源形成联合判断，而非只比较身高或工资。 Compare Hangzhou, China, and selected regions through appearance, physical tasks, career evidence, financial layers and usable resources rather than height or wages alone.",
+        "希望梳理人生方向、亲密关系、生活方式、意义或兴趣探索，把愿望、历史目标、实际行动与反馈分开，并在之后续填。 Explore life directions, relationships, lifestyle, meaning or interests, separating aspirations, historical choices, actions and feedback in resumable private records."
       ],
       "not_for": [
-        "已校准的心理、医学或能力测评，以及外形分、总分或全球百分位。 Validated psychological, medical, or ability assessment, appearance scores, total scores, or global percentiles.",
+        "临床诊断、已校准的心理或能力测评、客观颜值测量、招聘信贷资格、人生价值评判或伪造人口百分位。 Clinical diagnosis, validated psychological or ability tests, objective attractiveness measurement, hiring or credit eligibility, judgments of life worth, or invented population percentiles.",
         "未成年人外形评价、未经本人同意的他人评价，或从照片推断性格、智力、健康与财富。 Appearance assessment of minors, assessment of others without consent, or inferring personality, intelligence, health, or wealth from photos.",
         "自动公开、提交或上传私人资料。 Automatically publishing, committing, or uploading private records."
       ],
       "inputs": [
         "成年人本人同意，以及自行选择提供的基础资料与36项回答。 An adult's consent for self-review, basic information, and chosen answers across 36 items.",
         "本人授权用于日常综合形象观察的照片；可以先完成不依赖照片的项目。 Authorized photos for visible everyday presentation observations; other items can proceed before photos are provided.",
-        "公开仓库与安装目录之外的私人存档目录。 A private state directory outside public repositories and the skill installation."
+        "公开仓库与安装目录之外的私人存档目录。 A private state directory outside public repositories and the skill installation.",
+        "地区对照可选：本人收入、净资产快照、可用现金、实际支援与当地可调用性，带口径和来源的工资/身高参照、目标岗位语言情境及同日名义汇率；未知保持空白。 Optional regional comparison: own income, asset snapshot, available cash, actual support and regional availability, sourced wage/height references, target-role communication context, and common dated nominal FX; unknowns stay null.",
+        "人生方向按L1—L5逐组提供本人偏爱与理由、形成/首次行动时间、实际周期、障碍调整和反馈；先复用原资料与日期，允许部分回答、未知和跳过。 Life directions use L1–L5 preferences/reasons, formation and first actions, actual activity, adjustments and feedback; reuse dated evidence and allow partial answers, unknowns and skips."
       ],
       "outputs": [
-        "本地私人 current.md，含输入进度、来源、日期和所有为空的分数。 A local private current.md with input progress, sources, dates, and null scores.",
-        "可恢复的采集进度、局部复测记录、历史快照与修订保护。 Resumable collection progress, selected-item retests, history snapshots, and revision protection."
+        "私人current.md逐项事实/材料与修订历史；人生方向另存life-direction/current.md，独立修订、历史和续填，分数保持null。 Private per-item facts/history plus independently revised life-direction/current.md checkpoints; calibrated measurement and life-direction scores stay null.",
+        "v0.8整合呈现：10字内短评、沿用v0.6的六维数字/雷达、36项联合判断，以及不评分的人生方向文字观察、六维条件关联和下一问。 v0.8 presentation combines a short caption, v0.6 six-axis scores/radar, joint findings, and unscored life-direction observations, relevant six-axis conditions and the next interview prompt.",
+        "离线HTML与PNG；有积极高档线索才中立追问，回答/跳过后保存并局部重评。 Offline HTML/PNG with clue-based neutral follow-ups, saved answers/skips and dependent-item retests.",
+        "地区综合分析、现金/定期/家援去重与条件压力窗口；工资只影响收入坐标，不重复改变资产、现金和家庭支援分母。方法入口references/joint-profile-v07.md。 Regional analysis, deduplicated cash/term deposits/family support and conditional stress windows; wages affect only income. Method: references/joint-profile-v07.md."
       ],
       "requirements": [
         "Python 3.10+；运行器只使用标准库。 Python 3.10+; the runner uses the standard library only.",
-        "AI需有本地文件与命令执行权限；照片观察还需实际读取图片的能力。 The assistant needs local file and command access, plus image viewing for photo observations."
+        "AI需有本地文件与命令执行权限；照片观察还需实际读取图片的能力。 The assistant needs local file and command access, plus image viewing for photo observations.",
+        "已保存报告的规则计算、名义汇率换算与HTML渲染仅用Python标准库；新工资及汇率资料需联网核验，PNG需宿主可用浏览器截图，不必调用AI API。 Saved-report calculation, nominal-FX conversion, and HTML use the Python standard library; new wage and FX references need web verification, PNG needs host browser screenshots, and no AI API is required."
       ],
       "path": "skills/character-panel/SKILL.md",
       "examples": [
         {
+          "input": "skills/character-panel/examples/review-v06.json",
+          "output": "skills/character-panel/examples/review-v06-output.md"
+        },
+        {
           "input": "skills/character-panel/examples/input.md",
           "output": "skills/character-panel/examples/output.md"
+        },
+        {
+          "input": "skills/character-panel/examples/life-direction-input.md",
+          "output": "skills/character-panel/examples/life-direction-output.md"
         }
       ],
       "evidence": {
         "origin": "屁老师提出的六维角色档案设计，由 AI 协助整理为采集与存档流程。 A six-dimension personal record design proposed by Pi Laoshi, with AI-assisted collection and archival instructions.",
-        "validation": "The authored fictional example was executed through the real store. 24 checkpoint tests and 27 catalog tests passed on Windows/Python 3.11; catalog, local links and metadata checked. This verifies persistence/resume/retest behavior, not human outcomes or assessment validity. All scores remain null; no calibrated scoring, total score or global percentile."
+        "validation": "v0.8 adds independent, resumable L1–L5 life-direction records and an unscored presentation, without changing the 36-item weighted-character-v0.6 / character-rules-v0.6 calculations. The authored fictional v0.6 example was executed through the engine and renderer. Existing checks cover evidence separation, support-access gates, continuous mappings, pending ranges, dated inputs and regional coordinates. Joint analysis and recommendations remain experimental project rules. Public material contains no real-person answers or reports. Software checks do not establish questionnaire completion, user improvement or assessment validity."
+      }
+    },
+    {
+      "id": "tech-task-guide",
+      "kind": "skill",
+      "source": "local",
+      "status": "experimental",
+      "name": {
+        "zh": "科技办事指南",
+        "en": "Technology task guide"
+      },
+      "description": {
+        "zh": "一次问一个关键问题，逐步厘清科技任务，拆出所需能力，先查本地资料并按需核验，比较具体产品路线，交付简短使用入口与可独立续办的新窗口交接。",
+        "en": "Clarify a technology task one material question at a time, map the capabilities needed, consult local knowledge and verify gaps, then compare concrete product routes and prepare a short starting guide plus a standalone handoff."
+      },
+      "categories": [
+        "tools",
+        "thinking"
+      ],
+      "tags": [
+        "科技办事指南",
+        "需求澄清",
+        "能力拆解",
+        "工具选择",
+        "本地知识库",
+        "新窗口交接",
+        "task clarification",
+        "capability mapping",
+        "tool selection",
+        "local knowledge",
+        "handoff"
+      ],
+      "use_when": [
+        "想借助 AI、软件或自动化办一件事，但目标、条件或工具路线还不清楚。 The user wants to complete a task with AI, software, or automation and needs to clarify the outcome, constraints, or route.",
+        "需要把已有需求转成具体产品分工、简短使用入口与供另一窗口接着执行的交接。 Turn a defined need into concrete product roles, a short starting guide, and a handoff another session can use independently.",
+        "希望复用本地能力资料，核对相关事实的时效，并保存本次新增或修正的通用观察。 Reuse local capability knowledge, check the freshness of relevant facts, and save new or corrected general observations."
+      ],
+      "not_for": [
+        "完整按钮教程、实际代执行或默认创建 Agent 和后台服务。 Full click-by-click tutorials, task execution, or creating agents and background services by default.",
+        "穷举所有科技产品、保证用户账户可用，或把文档支持当作实测成功。 An exhaustive product directory, guaranteed account availability, or treating documentation support as successful hands-on use.",
+        "自动公开私人任务、账户材料与交接，或通过交接扩大执行权限。 Automatically publishing private tasks, account material, or handoffs, or using a handoff to expand execution authority."
+      ],
+      "inputs": [
+        "用户想解决的问题或目标；信息不全时逐步补充关键条件。 A problem or desired outcome; clarify material constraints progressively when needed.",
+        "已有材料、设备、访问条件、预算等与当前路线有关的信息；不知道的保留待定。 Available material, devices, access, budget, and other route-relevant conditions; preserve unknowns.",
+        "可选的本地能力资料与允许保存的目录；私人交接另用已核实受保护的位置。 Optional local capability knowledge and a permitted data directory; keep private handoffs in a verified protected location."
+      ],
+      "outputs": [
+        "本阶段目标、约束、所需能力与主要依赖。 A scoped goal, constraints, required capabilities, and key dependencies.",
+        "具体产品或模块的首选路线、必要备选、来源与核验日期、简短使用入口和待验证事项。 A preferred route using concrete products or modules, useful alternatives, dated sources, a short starting guide, and verification gaps.",
+        "可独立使用的新窗口交接；有写入能力时更新相关通用能力条目，否则提供待保存内容。 A standalone handoff; update relevant general capability records when writing is available, otherwise provide content to save."
+      ],
+      "requirements": [
+        "能读取并遵循文本指令的 AI 助手；无 API、运行器或固定产品依赖。 An assistant that can read and follow text instructions; no API, runtime, or fixed product dependency.",
+        "当前事实核验可选联网能力；持久化可选本地文件能力。联网或写入不可用时明确限制。 Optional web access for current facts and local file access for persistence; state limitations when either is unavailable."
+      ],
+      "path": "skills/tech-task-guide/SKILL.md",
+      "examples": [
+        {
+          "input": "skills/tech-task-guide/examples/input.md",
+          "output": "skills/tech-task-guide/examples/output.md"
+        }
+      ],
+      "evidence": {
+        "origin": "屁老师提出、由 AI 协助独立整理的分段澄清、能力导航与任务交接方法。附带少量带日期的官方文档观察，不能视为完整或持续最新的产品库。 A staged clarification, capability-navigation, and handoff method proposed by Pi Laoshi and independently organized with AI assistance. Seed records are dated official-document observations, not an exhaustive or continuously current product directory.",
+        "validation": "On 2026-10-21, 27 catalog tests, catalog/link/YAML checks and an independent static review passed. Controlled assistant simulations checked staged clarification, a corrected goal, and offline handling of stale local evidence with actual file writeback and a saved handoff. The complete example is authored fiction. These checks do not establish real-user outcomes, current account availability, costs, or execution inside the recommended products."
+      }
+    },
+    {
+      "id": "socratic-inquiry",
+      "kind": "skill",
+      "source": "local",
+      "status": "experimental",
+      "name": {
+        "zh": "苏格拉底式思想陪练",
+        "en": "Socratic inquiry companion"
+      },
+      "description": {
+        "zh": "以严格论辩逐轮审视自己的判断或困惑，追问依据、检验前提与反例；接受纠正、允许暂停，并忠实总结保留、修改和未决部分。",
+        "en": "Examine a judgment or dilemma through rigorous, adaptive questioning of reasons, assumptions and counterexamples. Accept corrections, respect pauses, and summarize retained, revised and unresolved views."
+      },
+      "categories": [
+        "thinking",
+        "life",
+        "learning"
+      ],
+      "tags": [
+        "苏格拉底",
+        "严格论辩",
+        "追问",
+        "观点审查",
+        "困惑",
+        "反例",
+        "Socratic inquiry",
+        "reasoning",
+        "assumptions",
+        "counterexamples"
+      ],
+      "use_when": [
+        "用户希望通过苏格拉底式追问审视自己的观点、选择或困惑。 The user wants Socratic questioning of their own judgment, choice or dilemma.",
+        "用户要求严格追问依据、找隐含前提、检查逻辑或测试反例。 The user asks for rigorous examination of reasons, assumptions, consistency or counterexamples."
+      ],
+      "not_for": [
+        "简单事实查询、人物介绍或只需要情绪承接的倾诉。 Simple fact lookup, biographies, or a request primarily for emotional support.",
+        "诱导他人认输、人格评分、替代现实证据或专业判断。 Manipulating others into conceding, personality scoring, or replacing real evidence or professional judgment."
+      ],
+      "inputs": [
+        "一个本人希望审视的观点、疑问或具体情境。 A judgment, question or situation the user wants to examine.",
+        "随对话提供的真实回答、纠正与讨论边界；可跳过或暂停。 Actual answers, corrections and boundaries during dialogue; skipping and pausing are allowed."
+      ],
+      "outputs": [
+        "每轮通常一个针对关键缺口的问题，必要时简短解释或事实核验。 Usually one focused question per turn, with concise explanation or fact checking when needed.",
+        "收束时给当前观点、理由、保留或修正、未决项；行动为可选。 A closing account of the current view, reasons, retained or revised claims, and open questions; action is optional."
+      ],
+      "requirements": [
+        "能进行多轮文本对话的 AI；无额外运行器或 API 依赖。 An AI supporting multi-turn text dialogue; no additional runtime or API dependency.",
+        "核验外部事实时需联网；保存私人总结时需获授权的文件能力。 Web access for external fact checking and authorized file access for saving private summaries."
+      ],
+      "path": "skills/socratic-inquiry/SKILL.md",
+      "examples": [
+        {
+          "input": "skills/socratic-inquiry/examples/input.md",
+          "output": "skills/socratic-inquiry/examples/output.md"
+        }
+      ],
+      "evidence": {
+        "origin": "屁老师选定用途与严格论辩风格，AI 协助独立编写现代对话流程；哲学概念来源见 ATTRIBUTION.md。 Pi Laoshi selected the purpose and rigorous style; the AI-assisted workflow is independently written, with conceptual sources in ATTRIBUTION.md.",
+        "validation": "2026-11-05 目录与格式检查通过；三个虚构场景的有/无Skill模型续答均符合十项检查，未显示相对基线增益。完整案例为独立编写的演示，真人效果与自动触发可靠性待验证。 Packaging checks passed on 2026-11-05. With-skill and baseline responses to three fictional cases both met ten checks, without demonstrated uplift. The paired example is authored; real-user benefit and automatic triggering remain unverified."
       }
     },
     {

@@ -1,0 +1,4 @@
+interface:
+  display_name: "科技办事指南"
+  short_description: "分段厘清需求，查本地能力与最新资料，选择产品路线并交接新窗口执行"
+  default_prompt: "用 $tech-task-guide 帮我先厘清这个需求，再查本地能力清单，按需核对新资料，给出产品方案和新窗口交接。"

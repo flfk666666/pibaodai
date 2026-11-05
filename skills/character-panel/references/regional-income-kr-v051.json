@@ -1,0 +1,109 @@
+{
+  "version": "korea-age-wages-v0.5.1",
+  "verified_at": "2026-10-27",
+  "selection_note": "男性25—29岁近龄均值/中位数分别形成情境；旧OECD全年龄值只作背景，不与近龄值混选。",
+  "rows": [
+    {
+      "id": "kr-2024-age25-29-male-mean",
+      "label": "韩国2024年25–29岁男性工资岗位税前月报酬均值",
+      "source_amount": 3150000,
+      "currency": "KRW",
+      "frequency": "month",
+      "annualized_krw_for_comparison": 37800000,
+      "annualization_note": "本项目将官方月单位报酬×12用于名义年化对照；不是官方公布的该年龄组实际全年收入。",
+      "tax_basis": "gross_before_tax",
+      "statistic": "mean",
+      "sex": "male",
+      "age_min": 25,
+      "age_max": 29,
+      "age_reference_date": "2024-12-31",
+      "birth_cohorts_included": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "age_match_status": "near_age_bucket_partial_birth_cohort_overlap",
+      "age_note": "2024年底25—29岁，约1995—1999出生；五岁年龄桶，使用时核对测试人目标窗，不称精确±3匹配。",
+      "statistic_period": "2024年12月时点；对象在该月工资岗位至少工作1天",
+      "published_at": "2026-02-23",
+      "population": "雇主-雇员工资岗位口径；同一个人在不同企业任职分别计为不同岗位；非仅全职、非全职等价化。",
+      "definition": "雇主为劳动支付的报酬，税前、月单位；排除差旅/燃油等实报实销性质的免税收入。不是家庭收入、税后收入或自雇经营收入。",
+      "coverage_note": "行政登记工资岗位；包括社会保险/职业年金岗位全体及其余岗位税务样本估计。特殊形态劳动者按税法属于经营所得者不纳入；部分未申报脆弱岗位因资料限制缺失。",
+      "source_url": "https://www.kostat.go.kr/boardDownload.es?bid=11113&list_no=443648&seq=1",
+      "source_landing_url": "https://mods.go.kr/board.es?act=view&bid=11113&list_no=443648&mid=a10301030500&nPage=1&ref_bid=&tag=",
+      "table": "表8 性别·年龄别收入，2024年25–29岁行",
+      "printed_page": 24,
+      "pdf_page_one_based": 30,
+      "original_unit": "만원＝10,000 KRW",
+      "original_cell": 315,
+      "original_row_all_columns": "25∼29세 304 315 290 284 296 272",
+      "column_order": [
+        "平均_合计",
+        "平均_男性",
+        "平均_女性",
+        "中位_合计",
+        "中位_男性",
+        "中位_女性"
+      ],
+      "verification": "官方原PDF直接下载，pypdf抽取+Poppler渲染后实际看图核对表头、年份、单位及数值。",
+      "comparison_limitations": [
+        "与OECD全年龄年平均工资不只差年龄，也差岗位/人员、全职调整与支付定义，不能将数值差解释为纯年龄效应。",
+        "该总体非程序员、非杭州同岗位、非当地offer预测；均值/中位数分别保留，不取平均创造统一基准。",
+        "是否覆盖奖金按官方报酬定义表达，本文件未另证奖金处理细则；不能自行叫作基本工资或额外加一次奖金。"
+      ]
+    },
+    {
+      "id": "kr-2024-age25-29-male-median",
+      "label": "韩国2024年25–29岁男性工资岗位税前月报酬中位数",
+      "source_amount": 2960000,
+      "currency": "KRW",
+      "frequency": "month",
+      "annualized_krw_for_comparison": 35520000,
+      "annualization_note": "本项目将官方月单位报酬×12用于名义年化对照；不是官方公布的该年龄组实际全年收入。",
+      "tax_basis": "gross_before_tax",
+      "statistic": "median",
+      "sex": "male",
+      "age_min": 25,
+      "age_max": 29,
+      "age_reference_date": "2024-12-31",
+      "birth_cohorts_included": [
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "age_match_status": "near_age_bucket_partial_birth_cohort_overlap",
+      "age_note": "2024年底25—29岁，约1995—1999出生；五岁年龄桶，使用时核对测试人目标窗，不称精确±3匹配。",
+      "statistic_period": "2024年12月时点；对象在该月工资岗位至少工作1天",
+      "published_at": "2026-02-23",
+      "population": "雇主-雇员工资岗位口径；同一个人在不同企业任职分别计为不同岗位；非仅全职、非全职等价化。",
+      "definition": "雇主为劳动支付的报酬，税前、月单位；排除差旅/燃油等实报实销性质的免税收入。不是家庭收入、税后收入或自雇经营收入。",
+      "coverage_note": "行政登记工资岗位；包括社会保险/职业年金岗位全体及其余岗位税务样本估计。特殊形态劳动者按税法属于经营所得者不纳入；部分未申报脆弱岗位因资料限制缺失。",
+      "source_url": "https://www.kostat.go.kr/boardDownload.es?bid=11113&list_no=443648&seq=1",
+      "source_landing_url": "https://mods.go.kr/board.es?act=view&bid=11113&list_no=443648&mid=a10301030500&nPage=1&ref_bid=&tag=",
+      "table": "表8 性别·年龄别收入，2024年25–29岁行",
+      "printed_page": 24,
+      "pdf_page_one_based": 30,
+      "original_unit": "만원＝10,000 KRW",
+      "original_cell": 296,
+      "original_row_all_columns": "25∼29세 304 315 290 284 296 272",
+      "column_order": [
+        "平均_合计",
+        "平均_男性",
+        "平均_女性",
+        "中位_合计",
+        "中位_男性",
+        "中位_女性"
+      ],
+      "verification": "官方原PDF直接下载，pypdf抽取+Poppler渲染后实际看图核对表头、年份、单位及数值。",
+      "comparison_limitations": [
+        "与OECD全年龄年平均工资不只差年龄，也差岗位/人员、全职调整与支付定义，不能将数值差解释为纯年龄效应。",
+        "该总体非程序员、非杭州同岗位、非当地offer预测；均值/中位数分别保留，不取平均创造统一基准。",
+        "是否覆盖奖金按官方报酬定义表达，本文件未另证奖金处理细则；不能自行叫作基本工资或额外加一次奖金。"
+      ]
+    }
+  ]
+}

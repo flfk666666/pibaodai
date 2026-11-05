@@ -11,11 +11,19 @@
 
 ## Runnable skills
 
-- [character-panel](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/SKILL.md): 完整角色看板 / Personal character panel. Experimental adult self-review collection and private records: basic information, 36 items, visible everyday photo observations, per-answer saves, resume, selected-item retests, history, and revision protection. Requires Python 3.10+ standard library, local file/command access, and image viewing for photo observations. Keep private current.md outside public repositories and the skill installation. All scores remain null; no total scores or global percentiles. Examples are fictional demonstration data, not real-person assessments or score calibration.
+- [character-panel](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/SKILL.md): 完整角色看板 / Personal character panel. Experimental life-direction-v0.8 presentation; six-axis scoring stays weighted-character-v0.6 / character-rules-v0.6. Read references/life-direction.md for L1–L5 life preferences/reasons, formation/trajectory, actions, adjustments and feedback, including relationships, lifestyle and meaning beyond work. Use scripts/life.py --state-dir PRIVATE_ROOT status before interviewing; init only if absent, add-direction and record with the life record's own revision. Store in PRIVATE_ROOT/life-direction/current.md with independent history/pause/resume; do not change the 36-item archive. Direction scores stay null; no seventh axis or self-discipline total. Reuse original dates, allow exploration/unknowns/skips, and do not treat old goals as current commitments. For six-axis and joint analysis read references/method-v06.md, references/rubric-v06.json and references/joint-profile-v07.md. Deliver six-axis scores/radar, joint conditions/bottlenecks, regional analysis and offline HTML/PNG. Use references/improvement-actions.md to separate real-life improvement from assessment maintenance. Develop relevant comparisons from evidence; do not require users to enumerate them. Deduplicate funds by ownership/availability; wages affect income only. No country-based ability guesses, invented population ranks or nominal-FX-as-PPP claims. Prefer age +/-3 and disclose source/cohort gaps. Authored fictional six-axis pair: examples/review-v06.json -> examples/review-v06-output.md; real-person records stay private. Software verification does not establish a completed interview, improvement or scale validity; historical reports remain readable.
   - [Example input](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/examples/input.md)
   - [Example output and verification scope](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/character-panel/examples/output.md)
 
-The current inventory is 1 experimental local skill and 2 incubating ideas. Consult catalog.json for the latest entries, requirements, and evidence. Do not offer an incubation brief as an executable capability.
+- [tech-task-guide](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/tech-task-guide/SKILL.md): 科技办事指南 / Technology task guide. Experimental text instructions to clarify a technology task one material question at a time, decompose capabilities, consult local knowledge, check freshness and research gaps, compare concrete product routes, and prepare a short starting guide plus a standalone handoff to another session. Detailed tutorials and execution belong in that session. No API or runtime dependency; optional web access verifies current facts and optional local file access persists records. Seed records are dated official-document observations, not exhaustive or guaranteed current. The paired example is an authored demonstration, not a real-user outcome.
+  - [Example input](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/tech-task-guide/examples/input.md)
+  - [Example output and verification scope](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/tech-task-guide/examples/output.md)
+
+- [socratic-inquiry](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/socratic-inquiry/SKILL.md): 苏格拉底式思想陪练 / Socratic inquiry companion. Experimental text instructions for rigorous, adaptive examination of the user’s own judgment or dilemma. Ask one focused question at a time, distinguish facts from values, match counterexamples to quantifiers and conditions, accept corrections, and stop or summarize when asked. No extra runtime or API dependency. Sources and modern adaptations are documented in ATTRIBUTION.md; examples are authored fictional dialogues, not real-user outcomes.
+  - [Example input](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/socratic-inquiry/examples/input.md)
+  - [Complete dialogue](https://raw.githubusercontent.com/flfk666666/pibaodai/main/skills/socratic-inquiry/examples/output.md)
+
+The current inventory is 3 experimental local skills and 2 incubating ideas. Consult catalog.json for the latest entries, requirements, and evidence. Do not offer an incubation brief as an executable capability.
 
 ## Ideas — not installable
 
@@ -29,6 +37,8 @@ None listed yet. Larger skills and tools may be maintained in their own reposito
 ## How to choose
 
 Decompose the request into desired outcomes and dimensions, inspect the catalog's use_when/not_for fields and source, and choose the smallest useful set. For a local skill, read only its SKILL.md and relevant examples. For an independent project, follow its entry_url first, check actual availability and requirements there, and stop circular navigation. If no suitable capability is available, say so. An incubation brief is not an available tool. Directory inclusion alone is not evidence of a project's behavior or effectiveness.
+
+For an unclear technology task or a choice between product routes, consider tech-task-guide. Do not load its entire knowledge corpus: follow the skill's local index and read only relevant dated entries and references. Account access and documented support still require task-specific verification.
 
 ## Optional appreciation
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "苏格拉底式思想陪练"
+  short_description: "用严格而平等的追问检验自己的判断、理由与反例，允许保留未决问题"
+  default_prompt: "请用 $socratic-inquiry 帮我把这个判断想清楚：严格追问依据，一次聚焦一个问题，并在我要求时停止或总结。"

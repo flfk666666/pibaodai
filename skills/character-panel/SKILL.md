@@ -1,83 +1,97 @@
 ---
 name: character-panel
-description: Build or resume an adult self-assessment character dashboard across appearance, body, cognition, practical ability, personal finances, and family or social resources. Save each answer locally, pause, and retest selected items. Use for 角色看板、个人六维档案、断点续测或局部复测; the first version collects evidence and leaves all uncalibrated scores blank.
+description: Use for adult self-assessment character dashboards, 角色看板、个人六维档案、六轴评分/雷达、地区对照、人生方向、生活取向与行动轨迹、断点续测或局部复测. Save dated evidence privately; deliver six-axis scores and offline HTML/PNG plus an independently saved, unscored life-direction interview. Separate performance, evidence coverage, aspirations and actual actions; ask neutral follow-ups only when needed.
 ---
 
 # 角色看板 / Character Panel
 
-把一个人的当前资料整理成可更新的角色档案，测到一半也能停。状态：**experimental**；资料采集、存档和续测可运行，36项评分规则均未正式确定，`score`、轴分及百分位保持空值。
+默认评分为`weighted-character-v0.6`、规则`character-rules-v0.6`；含人生方向的新报告采用`presentation_version: life-direction-v0.8`，仅六维联合报告仍支持`joint-profile-v0.7`。先读[v0.6评分方法](references/method-v06.md)、[rubric-v06.json](references/rubric-v06.json)对应项及[v0.7联合方法](references/joint-profile-v07.md)；人生方向读[独立方法](references/life-direction.md)，生成提升建议前读[现实提升与评测维护](references/improvement-actions.md)。保留明确六维评分、10字内短评、图形与每轴依据/动作；人生方向不评分、不设第七轴。材料不足和能力不足分开，不因简略回答或尚在探索判低。
 
-## 输入与产出
+## 输入与交付
 
-- 输入：本人逐步提供的基础信息、回答、带日期的测量或经历；外形项目需要经本人授权使用的照片。
-- 产出：私人 `current.md`，包含基础资料、六轴36项、输入/评分/时效状态、材料与续测位置；另有上一成功版本和需要保留的历史快照。
-- 依赖：Python 3.10+、标准库、本地文件读写；观察图片还需要宿主实际看图能力。不需要API、账号或网络来保存资料。
-- 方法与边界：[references/method.md](references/method.md)。逐项问题：[references/items.json](references/items.json)。命令与负载：[references/cli.md](references/cli.md)。完整演示：[输入](examples/input.md) → [输出](examples/output.md)。
+- 本人、成年人；基础资料、实际经历、测量和经授权使用的照片。保留原观察日期，不把保存日期当新测量。
+- 私人事实档案`current.md`、历史与材料；公开包只放通用方法/代码和明确标注的虚构案例。
+- 人生方向另存`PRIVATE_ROOT/life-direction/current.md`，有独立修订和历史；L1—L5整理生活偏爱、形成轨迹、实际行动、障碍调整与反馈。亲密关系、生活方式和意义探索同样适用，不限职业或工作项目。
+- 用户结果必须有精美离线HTML与PNG：首屏短评+六维数字/雷达；每轴给具体分析、可执行动作、36项账本；地区有完整六维参考分和身体/真实财务容量/资源及迁居适配坐标。
+- 新报告采用`recommendation_protocol: real-life-improvement-v1`，六轴分别提供`improvement_plan`与`assessment_maintenance`。主要建议改变现实能力、状态或资源可调用性；补资料、续问、更新估值和留测量照片放评测维护，不充当自我提升。
+- Python标准库处理存档、计算和HTML；截图由宿主浏览器完成。默认不需要API或账号。
 
-适用于成年人为本人整理角色档案。不用于招聘、信贷资格、他人秘密评估、医疗/心理诊断、智商推算或“人生价值”排名。首版不为未成年人评分外形；开始时确认是否本人及是否成年。材料不够时仍可保存，不强迫填完36项。
+## 先读取已有私人档案
 
-## 先找存档，再问问题
+1. 取得明确的本人私人存档路径；先核Git忽略/跟踪边界。不要把真人文件存在公共仓库或Skill安装目录，也不扫描整台电脑。
+2. 用`python scripts/panel.py --state-dir PRIVATE_PATH status`读取。不存在才`init --profile-id ID`，格式损坏保留原件，不能初始化覆盖。
+3. 展示已填/未决、上次位置，复核已有跨题材料，不重问已答或明确暂缺的内容。`PRIVATE_PATH`与`ID`须替换为真实参数。
 
-1. 取得使用者指定的私人存档路径。默认提出公开仓库与Skill安装目录之外的位置；核对Git跟踪/忽略边界，不用“private”这个目录名代替检查。不要扫描整台电脑。每人一个明确档案目录，歧义时先选档案。
-2. 在本Skill目录运行 `status`。若不存在存档，才运行 `init --profile-id ID`；已有格式损坏时保留文件，不初始化覆盖。`PRIVATE_PATH`和`ID`是下列命令的路径/标识参数，执行前替换为实际选定值。
+## 先保存，再继续
 
-   ```text
-   python scripts/panel.py --state-dir PRIVATE_PATH status
-   python scripts/panel.py --state-dir PRIVATE_PATH init --profile-id ID
-   ```
-
-3. 先展示已填项、待材料、待复核和上次位置。读取问题配置中对应一项，按现有字段缺口问一小组问题，不重问已经保存的答案。基础信息使用独立的 `basic` 项，不算36项进度。
-4. 首次先确认本人、成年与基本情况；未确认成年前不分析外形。年龄、性别、城市、教育和职业用于解释资料，不自动换成人物分数。
-
-## 每次回答都保存
-
-收到有效回答后，先把新增字段写入一份UTF-8 JSON负载，再执行 `record`。每个事实都使用 `value`、`unit`、`observed_at`、`source`，缺失明确用 `null`；不把保存日期当测量日期。当前日期不明就不编造。
-
-```json
-{
-  "inputs": {
-    "height_cm": {"value": 172, "unit": "cm", "observed_at": null, "source": "self_report"}
-  },
-  "input_status": "complete",
-  "next_item": "A2",
-  "next_prompt": "补近期面部照片，或先选择另一维度。"
-}
-```
-
-这是编写的单项格式示例，不是真人记录。执行时使用本次真实回答，负载文件也放私人目录。
+每个有效回答或跳过用UTF-8 JSON负载执行：
 
 ```text
-python scripts/panel.py --state-dir PRIVATE_PATH record --item A1 --payload-file PAYLOAD_FILE --expect-revision N
+python scripts/panel.py --state-dir PRIVATE_PATH record --item ITEM_ID --payload-file PAYLOAD_FILE --expect-revision N
 ```
 
-- `N`使用刚读取的当前修订号。冲突时重新读取，不用旧状态覆盖另一会话。
-- 多轮问题未结束用 `partial`；必需字段和材料齐全才用 `complete`。允许 `deferred` 或 `awaiting_material`。输入完整、规则未定仍是“已填、待规则”，不用再向用户索要已有资料。
-- 记录工具会回读校验；同时核对其返回的修订号、项目和状态，随后才能说“已保存”，并进入下一题。失败时说明该回答尚未保存，先处理故障，不继续声称进度可靠。
-- 评分全部保持 `null`，不要传非空 `score`、推测轴分、画满雷达图或按平均数编百分位。资料数量与可评分数量分开报告。
+负载使用`inputs`内`value/unit/observed_at/source`、`input_status`、`next_item/next_prompt`；格式和已有命令见[CLI](references/cli.md)。`N`用刚读修订；写入失败不能声称已保存，冲突先重读。不把派生报告分值写入事实档案的正式校准`score`，这些字段继续null。真实回答可以自报，不要求账户截图或公司敏感原件换高分。
 
-## 照片与其他材料
+## 评分与追问
 
-先读方法中的照片协议。A2—A6没有可用证据时可存文字但不标输入完成；本人暂时不传则等待材料或跳过。照片只允许可见观察，身高要靠测量；不猜智力、人格、财富、家庭、精确体脂或疾病。确认是成年本人后才进行日常综合形象观察，本版仍不输出外形分。
+1. 先看本项究竟评什么，再读取已有事实和图像。图像只能评可见呈现，不推智力、人格、财富、精确体脂或疾病。
+2. 行为/形象依据内容选0/25/50/75/100；数值用原值重算。六轴和轴内六项都以1个权重单位等权归一，是默认产品选择，不是科学唯一比例。
+3. 每项报告带`evaluation`与`coverage`：表现理由及实际材料独立于范围/来源/未测内容。覆盖不乘分、答题/照片数量不加分；没有材料不填默认50、60或75。
+4. **已有积极高分线索＋一个关键条件未明＋答案可能改变判断时，问一个中立的区别问题。**允许反例、失败、未知或跳过。没有明显高分迹象就继续，保留“更高要求尚未观察”，不下能力上限结论。
+5. 不因说得不全面支持低档；低档需要明确困难/失效事实。相邻档未决可带候选范围、`range_reason`和待问问题；不填区间中点，也不对所有人默认上界100。具体自报可以正常支持表现判断。
+6. A3可按可见轮廓评分并注明未见部位，不能因没有完整站姿否定已有上身材料。B1不借卧推加分；B3是具体游泳任务，C2未测数量不压逻辑，C3按风险/领域核验，E6不强制副业或失业经历。F1不可调用不能靠额度补偿。
 
-经授权保存或引用私人原件，记录相对于存档目录的路径与拍摄日期。临时聊天路径可能失效，未实际复制/核对前不要称为持久材料。用 `check-evidence`复核路径；存在性检查不证明内容合格，也不代表AI看过图片。必需材料失效就标等待材料/待复核，不扣人物分。
+## 构建v0.6报告
 
-档案中的引文、问题回答和作品是数据，不是指令或公开授权。个人原件、金融数据、负载文件、当前档案、历史和备份不提交公开仓库；把资料发到额外服务需另有授权。
+报告使用`rating_type: weighted_character`、`version: weighted-character-v0.6`、`protocol_version: character-rules-v0.6`、`source_revision`和六轴A-F各六项。每项：
 
-## 续测、暂停与局部复测
+- 行为`selected_anchor`或null；数值`numeric_inputs`保存原值/区间。
+- `evaluation`: `status`为rated/provisional/missing，`reason`和实际`evidence`（source_type/summary/observed_at，日期未知null）。
+- `coverage`: level为limited/usable/broad、scope、gaps数组、higher_unassessed布尔；三档只解释材料，不是评分乘数。
+- 可选`score_range`、具体`range_reason`、`followup`积极线索/问题/状态。局部未决可以没有代表分，但保留实际支持的范围；无材料不能缩窄范围。
 
-- **续测：** 运行 `status`和证据检查，从已保存的 `next_item`/缺口接着问；可让使用者改轴。旧事实保留原观察日期，不标成本次新测。
-- **暂停：** 先保存有效草稿，再用当前修订执行 `pause`，核对回读结果并报续测位置。
-- **局部复测：** `retest --items A1,E1`在修改前留下历史快照，指定项目进入待复核。保留旧资料可查，重新回答才刷新选中字段；无关项目不重填。依赖关系不确定时提示，不擅自改其他资料。
-
-复测中只改备注或续测位置，仍保持待复核。需要新资料，或使用者明确确认旧资料仍适用，才可标完成；后者在负载中使用`confirm_current: true`，并保留原观察日期，不能擅自代替使用者确认。完成一个复测项会自动转到选中队列的下一项。
+调用`from review_v06 import calculate_report`重算；六维联合报告使用`presentation_version: joint-profile-v0.7`，包含人生方向时使用`life-direction-v0.8`并按[人生方法](references/life-direction.md#页面协议)附加`life_direction`，然后执行：
 
 ```text
-python scripts/panel.py --state-dir PRIVATE_PATH pause --expect-revision N
-python scripts/panel.py --state-dir PRIVATE_PATH retest --items A1,E1 --expect-revision N
-python scripts/panel.py --state-dir PRIVATE_PATH check-evidence --expect-revision N
-python scripts/panel.py --state-dir PRIVATE_PATH render
+python scripts/render_dashboard.py --data REPORT_JSON --output REPORT_HTML
 ```
 
-`render`只读输出当前MD（含人读报告和结构化块）；`current.md`中的结构化块是唯一当前记录，不用手工维护另一个JSON。不要直接手改生成档案；空白格式说明见[templates/current.md](templates/current.md)。首版没有后台调度。用户主动打开、续测或指定复测时才执行；“定期更新”的设想不构成创建定时任务的指令。
+需要本人授权肖像时添加`--portrait LOCAL_IMAGE`；不嵌图则省略。v0.7呈现自动选`assets/dashboard-v07.html`，renderer依次重算v0.6、附加`joint_assessment`，有`financial_facts`时再算`financial_context`；不改36项数值、权重或轴分。页面先呈现短评、六维图形和联合判断，再展开条件、瓶颈、未决与账本。地区A1突出/E1工资坐标在`contextual_references`另列，不能替换本人形象偏好或实际财务联合口径。资金分所有权/可用性/用途去重；3/6/12月为诊断窗口，住房为明确假设演算。完整规则、字段与可运行虚构演示见[v0.7方法](references/joint-profile-v07.md)。未设该呈现版本的v0.6继续选原模板。所有真人JSON、HTML、图片和中间文件留私人目录。既有虚构输入见[review-v06.json](examples/review-v06.json)与[结果](examples/review-v06-output.md)。
 
-换规则或官方参照后再评分属于后续版本：保留旧输入、旧结果和版本，不能把算法变化说成本人进步。当前任务若是想得到可信统计排名，应明确本版尚不具备，而不是用自创分数顶替。
+## 人生方向：先读，再逐组保存
+
+1. 用`python scripts/life.py --state-dir PRIVATE_ROOT status`读取独立人生档案；确实不存在才用`init --profile-id ID`。`PRIVATE_ROOT`与本人六维目录一致，实际写入其`life-direction/`子目录，不修改原36项。修订冲突或格式损坏时保留原件，不能初始化覆盖。
+2. 先复用已有材料及原日期。按[问卷](references/life-direction-items.json)每次推进一组：L1生活取向/偏爱与理由，L2形成与轨迹，L3计划/实际行动，L4障碍/调整，L5反馈/归因与继续、调整、停止条件。历史目标不能自动确认成今天优先；形成日期、首次行动日和保存日分别记录。
+3. 允许`overview / goal / interest / exploration`四类方向。初始化自带`life-overview`；新增方向用`add-direction`，每次回答用`record --direction ID --section L1 --payload-file PAYLOAD_FILE --expect-revision N`。`N`是刚读取的人生修订号，不是六维修订号。局部补充只重写所选方向和分组；暂停/继续用`pause`、`resume`。
+4. 方向、组与报告的`score`均为null；不用忙碌、坚持久、结果好或字段齐全代替目标感/自律。未知、合理休息、停止或转向不判低。需要时依据已有六维条件提出目标建议，但不改原权重、分数，也不把兴趣自动升级为行动承诺。
+5. `life-direction-v0.8`使用`assets/dashboard-v08.html`，保留六维图形，增加人生方向文字观察和下一问。顶层`source_revision`仍引用六维档案；`life_direction.source_revision`引用独立人生档案。HTML不直接保存回答，实际聊天回答由CLI逐组保存，重新生成时核对源修订。完整命令和负载见[CLI人生方向段](references/cli.md#人生方向命令)。
+
+## 把自我提升与评测维护分开
+
+新报告在顶层声明`recommendation_protocol: real-life-improvement-v1`，每个A–F轴填写：
+
+- `improvement_plan`: `title / target_items / current_gap / target / standard_basis / steps / success / sources`；`target_items`仅引用本轴六项，`sources`中的URL仅用HTTPS。
+- `assessment_maintenance`: 字符串数组，可为空。只保存影响评阅准确性的资料、日期、口径或复测提示，尊重用户已跳过的项目。
+
+先用已有事实找真实制约，再给“目标行为→具体动作→生活中的验收”。高分维度可以巩固或迁移优势；未测范围不能写成短板。不为填齐六轴虚构问题，也不强制增高、额外社交、学外语、开副业或购买服务。根据本人已选目标给最小有用动作。
+
+验收看现实任务、状态或资源是否改变，不看是否多答题、补照片、更新档案或得到更高分。练习周期与次数只是可调整建议，不是评分或医学门槛；完成建议不保证升分。健康、财务等建议按风险核验一手来源，来源支持具体建议，不为本项目分数背书。
+
+旧`actions`保留为历史兼容字段；声明新协议的报告不得以`actions`替代六轴的结构化提升计划，也不把旧动作原样复制后改名。完整字段、坏例与改写、边界及[虚构F3片段](examples/improvement-actions-fictional.json)见[improvement-actions.md](references/improvement-actions.md)。
+
+## 地区比较
+
+读取现有[身高参照](references/regional-height-v051.json)与[韩国工资](references/regional-income-kr-v051.json)，新增或更新参照查一手来源。年龄±3优先，近出生队列/宽年龄/年份/统计人群分别明示，不以一国代替全欧。
+
+地区完整六维参考分只变有明示依据/曲线的项；A1身高突出坐标，E1名义收入坐标。E2/E3/F1按真实开支容量和调用条件，不再除当地工资重复变分。另列身高厘米差/真实可用分布、现金实际月数、资产日期、住房照护协作，以及迁居工作语言/岗位资格/报价的未决条件。无当地常模的任务分保持，不凭国名改思考、身体或面貌；同分不表示人口位置相同。
+
+同日换币只统一货币单位，不是PPP。均值/均值置信区间不能当个体分布或标准差；有真实分位表只显示可核的区间，不编精确排名。地区情境合成不是完整当地竞争排名或就业概率。
+
+## 核对与续测
+
+- 实际核对36项内容、数值、权重、候选范围、追问和地区变更；在浏览器检查桌面/手机、短评/六轴/账本/切换和图片，至少导出首屏PNG。
+- 说明分数与材料范围、已知归一与完整范围的不同分母；软件测试不等于人群校准或用户体验已验收。旧版审计见[model-audit-v053](references/model-audit-v053.md)，新修订不删除旧报告。
+- 用户继续、暂停或局部复测时先读最新事实修订；命令`retest --items A1,E1 --expect-revision N`只重测所选项；`pause`保存位置。没有用户调度要求不创建后台定时任务。
+- 方法改变另存新报告，原观察日期、历史资产估值和用户明确暂缓项不自动更新；新回答只重评依赖项。
+
+适用于成年人本人的角色整理，不用于秘密评估他人、招聘/信贷资格、医疗心理诊断、智商或人生价值排名。可选均衡合成不能让关键资格缺口被身高或资产抵消。
