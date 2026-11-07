@@ -320,7 +320,7 @@
         "按固定顺序简明列出脸型、动物系、特点、优势、第一印象、相近脸型的明星和照片、推荐发型、明星实际穿搭图，以及早晚护肤建议。 措辞和收尾随对话调整，鼓励基于具体观察。 Concise advice on face shape, an animal-inspired style label, visible features, styling strengths, first impression, celebrity references, haircuts, documented outfits, and skincare. Adapt the tone and closing to the conversation, and ground encouragement in specific observations."
       ],
       "requirements": [
-        "文本对话和基本计算。照片判断需要图像理解，核对近期明星造型需要联网。缺少这些能力时可用文字继续。 Text conversation and basic calculations. Image understanding supports photo review, and web access verifies recent celebrity looks. A text fallback is available."
+        "文本对话和基本计算。附圈腕与正脸拍摄示意图，安装时保留 assets/。照片判断需要图像理解，核对近期明星造型需要联网。缺少这些能力时可用文字继续。 Text conversation and basic calculations. Keep assets/ when installing to retain the two photo guides. Image understanding supports photo review, and web access verifies recent celebrity looks. A text fallback is available."
       ],
       "path": "skills/three-step-style-upgrade/SKILL.md",
       "examples": [
