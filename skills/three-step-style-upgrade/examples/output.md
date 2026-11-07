@@ -26,9 +26,9 @@
 
 **相近脸型的明星**
 
-- **张凌赫**｜参考脸部纵向比例，以及颧骨往下收窄的轮廓。 [秀场照片](https://style.udn.com/style/amp/story/8065/9507953)
-- **坂口健太郎**｜参考脸型偏长、下巴较圆的轮廓。 [杂志图集](https://www.mensnonno.jp/fashion/new-topics/809163/)
-- **提莫西·查拉梅**｜参考脸长和下颌收窄的走势，他的下巴更尖。 [秀场照片](https://gq.co.za/grooming/hair/2026-10-28-timothe-chalamets-signature-curls-are-back/)
+- **张凌赫**｜参考脸部纵向比例，以及颧骨往下收窄的轮廓。 [看脸](https://upload.wikimedia.org/wikipedia/commons/8/81/Zhang_Linghe_1.png) · [Instagram](https://www.instagram.com/zhanglinghe__1230/) · [Google 图片](https://www.google.com/search?tbm=isch&q=Zhang%20Linghe%20portrait) · [百度图片](https://image.baidu.com/search/index?tn=baiduimage&word=%E5%BC%A0%E5%87%8C%E8%B5%AB%20%E6%AD%A3%E8%84%B8%20%E8%BF%91%E7%85%A7)
+- **坂口健太郎**｜参考脸型偏长、下巴较圆的轮廓。 [看脸](https://upload.wikimedia.org/wikipedia/commons/5/52/Kentaro_Sakaguchi_in_2024.jpg) · [Instagram](https://www.instagram.com/sakaguchikentaro/) · [Google 图片](https://www.google.com/search?tbm=isch&q=Kentaro%20Sakaguchi%20portrait) · [百度图片](https://image.baidu.com/search/index?tn=baiduimage&word=%E5%9D%82%E5%8F%A3%E5%81%A5%E5%A4%AA%E9%83%8E%20%E6%AD%A3%E8%84%B8%20%E8%BF%91%E7%85%A7)
+- **提莫西·查拉梅**｜参考脸长和下颌收窄的走势，他的下巴更尖。 [看脸](https://upload.wikimedia.org/wikipedia/commons/5/5c/Timoth%C3%A9e_Chalamet-63482_%28cropped%29.jpg) · [Instagram](https://www.instagram.com/tchalamet/) · [Google 图片](https://www.google.com/search?tbm=isch&q=Timoth%C3%A9e%20Chalamet%20portrait) · [百度图片](https://image.baidu.com/search/index?tn=baiduimage&word=%E6%8F%90%E8%8E%AB%E8%A5%BF%C2%B7%E6%9F%A5%E6%8B%89%E6%A2%85%20%E7%94%9C%E8%8C%B6%20%E6%AD%A3%E8%84%B8%20%E8%BF%91%E7%85%A7)
 
 **推荐发型**　偏分短碎发。你的卷度已经干了一半的活。跟理发师说「两侧剪轻，头顶保留微卷，额前留几缕往一侧拨」。
 
