@@ -273,6 +273,68 @@
       }
     },
     {
+      "id": "three-step-style-upgrade",
+      "kind": "skill",
+      "source": "local",
+      "status": "experimental",
+      "name": {
+        "zh": "三步提升 · 日常形象",
+        "en": "Three-step personal style upgrade"
+      },
+      "description": {
+        "zh": "用圈腕照和身高体重粗估骨架并给体重目标，用正脸照判断脸型和动物系风格并找明星发型与穿搭，再复用正脸照给早晚护肤建议。",
+        "en": "Use a wrist photo, height, and weight for a rough frame estimate and a weight target. Use a front-facing photo for face shape, visual style, and celebrity style references, then reuse it for a simple morning and evening skincare plan."
+      },
+      "categories": [
+        "life"
+      ],
+      "tags": [
+        "三步提升",
+        "形象提升",
+        "变帅",
+        "变美",
+        "圈腕",
+        "目标体重",
+        "脸型",
+        "动物系长相",
+        "明星发型",
+        "明星穿搭",
+        "早晚护肤",
+        "personal style",
+        "target weight",
+        "face shape",
+        "skincare"
+      ],
+      "use_when": [
+        "想按三步改善日常形象，获得体重目标、适合脸型的发型和穿搭、早晚护肤建议。 You want a weight target, hairstyle and outfit references for your face shape, and simple morning and evening skincare."
+      ],
+      "not_for": [
+        "凭照片判定国籍或族裔、确诊皮肤病、医疗减重或颜值评分。 Inferring nationality or ethnicity from a photo, diagnosing skin conditions, clinical weight loss, or attractiveness scoring."
+      ],
+      "inputs": [
+        "身高、当前体重、圈腕照或指尖接触情况。 Height, current weight, and a wrist photo or a description of finger contact.",
+        "一张本人愿意分享的自然光正脸照，以及用动作描述的早晚护肤流程。 A front-facing photo the user chooses to share and a description of morning and evening skincare steps."
+      ],
+      "outputs": [
+        "骨架粗估、标准参考体重、建议目标和三个体重档的外观对照。 A rough frame estimate, a reference weight, a suggested target, and three possible appearance scenarios.",
+        "按固定顺序简明列出脸型、动物系、特点、优势、第一印象、相近脸型的明星和照片、推荐发型、明星实际穿搭图，以及早晚护肤建议。 措辞和收尾随对话调整，鼓励基于具体观察。 Concise advice on face shape, an animal-inspired style label, visible features, styling strengths, first impression, celebrity references, haircuts, documented outfits, and skincare. Adapt the tone and closing to the conversation, and ground encouragement in specific observations."
+      ],
+      "requirements": [
+        "文本对话和基本计算。照片判断需要图像理解，核对近期明星造型需要联网。缺少这些能力时可用文字继续。 Text conversation and basic calculations. Image understanding supports photo review, and web access verifies recent celebrity looks. A text fallback is available."
+      ],
+      "path": "skills/three-step-style-upgrade/SKILL.md",
+      "examples": [
+        {
+          "input": "skills/three-step-style-upgrade/examples/input.md",
+          "output": "skills/three-step-style-upgrade/examples/output.md"
+        }
+      ],
+      "evidence": {
+        "origin": "屁老师提出三步提升构想，源自日常形象咨询。 Pi Laoshi proposed the three-step approach after an everyday styling consultation.",
+        "validation": "案例为编写的虚构演示，以文字给出模拟照片条件。真人照片分析、体重目标效果、护肤效果及自动触发待验证。 The example is fictional and describes simulated photo conditions in text. Real photo assessment, weight and skincare outcomes, and automatic triggering remain unverified."
+      }
+    },
+    {
       "id": "life-stage-review",
       "kind": "idea",
       "source": "local",

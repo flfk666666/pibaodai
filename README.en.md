@@ -39,13 +39,14 @@ A little personality in the bag. A useful result when you open it.
 
 ## Take a look inside
 
-The bag now contains **3 experimental skills and 2 incubating ideas**. Personal character panel provides private records and offline HTML/PNG reports, with ratings calculated from published item anchors and weights; Technology task guide clarifies a task, selects a route, and hands it over for execution.
+The bag now contains **4 experimental skills and 2 incubating ideas**. Personal character panel provides private records and offline HTML/PNG reports, with ratings calculated from published item anchors and weights; Technology task guide clarifies a task, selects a route, and hands it over for execution.
 
 | Skill | What it can do now | Status |
 | --- | --- | --- |
 | [Socratic inquiry companion](skills/socratic-inquiry/SKILL.md) | Examine your own judgments through rigorous questions, matched counterexamples, corrections and a faithful closing summary | Experimental |
 | [🪪 Personal character panel](skills/character-panel/SKILL.md) | Save and resume 36 items with six-axis scores/radar and regional analysis; separately record life directions, preferences, actions and feedback without a seventh axis | Experimental |
 | [🧭 Technology task guide](skills/tech-task-guide/SKILL.md) | Clarify a task progressively, consult and verify capability knowledge, compare concrete product routes, and prepare a short starting guide and standalone handoff | Experimental |
+| [Three-step personal style upgrade](skills/three-step-style-upgrade/SKILL.md) | Get a weight target, a face shape and visual style read, celebrity outfit photos, skincare advice, and personal encouragement in a tone that fits the conversation | Experimental |
 
 **Life-direction presentation: v0.8; six-axis scoring remains v0.6.** [Life directions](skills/character-panel/references/life-direction.md) uses L1–L5 to record desired life, preferences and trade-offs, formation and trajectory, actual actions, obstacles and adjustments, and feedback. It also covers relationships, lifestyle and meaning beyond work projects. Its private checkpoints, revisions and resume flow are independent; scores stay null, with no seventh axis or penalty for exploration or a reasonable change of direction. [Joint analysis](skills/character-panel/references/joint-profile-v07.md) still connects 36-item conditions, bottlenecks and regional findings; the assistant develops relevant comparisons, with funds deduplicated by ownership and availability. The [v0.6 method](skills/character-panel/references/method-v06.md) keeps evidence coverage separate. These remain experimental rules. Public examples are fictional; real-person reports stay private: [six-axis input](skills/character-panel/examples/review-v06.json) → [output](skills/character-panel/examples/review-v06-output.md).
 
@@ -78,7 +79,7 @@ Categories grow with the collection, and a skill can belong in more than one. A 
 | Pocket | What belongs here | Start here |
 | --- | --- | --- |
 | 🧠 Thinking & decisions | Examine judgments, assumptions, choices, and trade-offs | [Socratic inquiry companion](skills/socratic-inquiry/SKILL.md), experimental; [Technology task guide](skills/tech-task-guide/SKILL.md), experimental; [Noise idea](ideas/noise-check.md), incubating |
-| 🌱 Life & growth | Review life stages, record current circumstances, and plan small next experiments | [Personal character panel](skills/character-panel/SKILL.md), experimental; [Whose timeline?](ideas/life-stage-review.md), incubating |
+| 🌱 Life & growth | Review life stages, record current circumstances, and plan small next experiments | [Personal character panel](skills/character-panel/SKILL.md) and [Three-step personal style upgrade](skills/three-step-style-upgrade/SKILL.md), experimental; [Whose timeline?](ideas/life-stage-review.md), incubating |
 | 📚 Learning & understanding | Learning methods, knowledge, questions, and practice | [Judgment-method idea](ideas/noise-check.md), incubating |
 | 🎬 Creating & communication | Spoken scripts, communication, shots, and editing | First entries to be selected |
 | 🧰 Tools & workflows | Useful tool habits, troubleshooting lessons, and practical shortcuts | [Technology task guide](skills/tech-task-guide/SKILL.md) and [private records and resumable collection](skills/character-panel/SKILL.md), experimental |
@@ -133,6 +134,7 @@ My goal: describe what you want to do here.
 | A compact index for an agent | [llms.txt](llms.txt) |
 | Searchable descriptions, tags, inputs, outputs, sources, and maturity | [catalog.json](catalog.json) |
 | Clarify a technology task or choose a tool route | [Technology task guide](skills/tech-task-guide/SKILL.md) |
+| Set a weight target, choose a hairstyle, or simplify skincare | [Three-step personal style upgrade](skills/three-step-style-upgrade/SKILL.md) |
 | Guidance for choosing and combining skills | [AGENTS.md](AGENTS.md) |
 | Field definitions and maintenance rules | [Catalog contract](docs/catalog.md) |
 

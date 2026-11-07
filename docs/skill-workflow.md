@@ -40,7 +40,7 @@
 | 检查点 | 怎样判断结果是否满足目标，哪里仍需人判断 |
 | 验证范围 | 实际执行过什么、哪些步骤只是演示、已知失败情况 |
 
-没有实测材料时，可以制作明确标注的演示案例；不能写成“亲测有效”。`stable` 需要有记录的实际使用证据和已知边界。目前有三个实验版：[完整角色看板](../skills/character-panel/SKILL.md)提供私人存档、续测、36项加权六轴与地区综合对照，规则仍属实验版；[科技办事指南](../skills/tech-task-guide/SKILL.md)提供分段澄清、能力导航和新窗口交接，其案例为编写的演示；[苏格拉底式思想陪练](../skills/socratic-inquiry/SKILL.md)提供严格追问、观点检验与收束，附完整虚构对话。这份流程说明本身不算一个已上架的 Skill。
+没有实测材料时，可以制作明确标注的演示案例；不能写成“亲测有效”。`stable` 需要有记录的实际使用证据和已知边界。目前有四个实验版：[完整角色看板](../skills/character-panel/SKILL.md)提供私人存档、续测、36项加权六轴与地区综合对照，规则仍属实验版；[科技办事指南](../skills/tech-task-guide/SKILL.md)提供分段澄清、能力导航和新窗口交接，其案例为编写的演示；[苏格拉底式思想陪练](../skills/socratic-inquiry/SKILL.md)提供严格追问、观点检验与收束，附完整虚构对话；[三步提升 · 日常形象](../skills/three-step-style-upgrade/SKILL.md)按圈腕与体重、脸型与造型、早晚护肤三步给建议。这份流程说明本身不算一个已上架的 Skill。
 
 ## Idea-to-skill workflow
 
@@ -53,4 +53,4 @@ Bring an idea, reflection, tool experience, or a solution to a concrete problem.
 5. Remove private details, retain attribution, update the catalog and bilingual entry points, then run `npm test` and `npm run check`.
 6. Submit a pull request for review. An AI acting for the maintainer may publish within the user's authorization and must verify the remote result. Improve the method with actual feedback; reserve `stable` for documented use evidence and known limitations.
 
-This document describes the maintenance process and is not itself a runnable skill. There are three experimental entries: [Personal character panel](../skills/character-panel/SKILL.md) provides private records, resume/retest, 36-item weighted six-axis results, and regional character comparisons under an experimental rubric; [Technology task guide](../skills/tech-task-guide/SKILL.md) provides staged clarification, capability navigation, and a standalone handoff, illustrated by an authored example; [Socratic inquiry companion](../skills/socratic-inquiry/SKILL.md) provides rigorous questioning, examination and closing summaries with an authored fictional dialogue.
+This document describes the maintenance process and is not itself a runnable skill. There are four experimental entries: [Personal character panel](../skills/character-panel/SKILL.md) provides private records, resume/retest, 36-item weighted six-axis results, and regional character comparisons under an experimental rubric; [Technology task guide](../skills/tech-task-guide/SKILL.md) provides staged clarification, capability navigation, and a standalone handoff, illustrated by an authored example; [Socratic inquiry companion](../skills/socratic-inquiry/SKILL.md) provides rigorous questioning, examination and closing summaries with an authored fictional dialogue. [Three-step personal style upgrade](../skills/three-step-style-upgrade/SKILL.md) covers weight targets, face shape and celebrity style references, and simple skincare.

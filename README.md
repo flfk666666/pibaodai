@@ -39,13 +39,14 @@
 
 ## 先逛逛这个袋子
 
-袋里已有 **3 个实验版 Skill 和 2 个孵化中的想法**。完整角色看板支持私人资料采集与HTML/PNG图形报告，数字结果按公开子项锚点和权重计算；科技办事指南帮助厘清任务、选择路线并交接执行。
+袋里已有 **4 个实验版 Skill 和 2 个孵化中的想法**。完整角色看板支持私人资料采集与HTML/PNG图形报告，数字结果按公开子项锚点和权重计算；科技办事指南帮助厘清任务、选择路线并交接执行。
 
 | Skill | 现在能做什么 | 进度 |
 | --- | --- | --- |
 | [苏格拉底式思想陪练](skills/socratic-inquiry/SKILL.md) | 严格追问自己的判断与困惑，检验依据和反例，接受纠正并在需要时收束 | 实验版 |
 | [🪪 完整角色看板](skills/character-panel/SKILL.md) | 保存36项资料并续测，输出六维数字/雷达与地区分析；独立整理人生方向、生活偏爱、实际行动和反馈，不增设第七轴 | 实验版 |
 | [🧭 科技办事指南](skills/tech-task-guide/SKILL.md) | 逐步厘清要办的事，查阅与核验能力资料，比较具体产品路线，给出简短使用入口和新窗口交接 | 实验版 |
+| [三步提升 · 日常形象](skills/three-step-style-upgrade/SKILL.md) | 简明列出体重目标、脸型与动物系风格、明星穿搭图和早晚护肤建议，语气随对话调整，用具体观察给人信心 | 实验版 |
 
 **人生方向呈现v0.8，六维算分沿用v0.6：** [人生方向](skills/character-panel/references/life-direction.md)按L1—L5整理想过的生活、偏爱与取舍、形成轨迹、实际行动、障碍调整和反馈；也包含亲密关系、生活方式与意义探索。它有独立私人存档、修订与断点续填，分数留空，不设第七轴，不把探索或合理转向判低。[联合角色分析](skills/character-panel/references/joint-profile-v07.md)继续连接36项条件、瓶颈与地区判断；AI主动补足分析，资金按权属和可用时间去重。[v0.6评分方法](skills/character-panel/references/method-v06.md)保留独立材料覆盖。仍是实验版；公开案例为虚构演示，真人报告只存私人目录：[六维输入](skills/character-panel/examples/review-v06.json) → [输出](skills/character-panel/examples/review-v06-output.md)。
 
@@ -78,7 +79,7 @@
 | 格子 | 想收的东西 | 当前入口 |
 | --- | --- | --- |
 | 🧠 思考与决策 | 判断检查、辨别干扰、选择与代价 | [苏格拉底式思想陪练](skills/socratic-inquiry/SKILL.md)，实验版；[科技办事指南](skills/tech-task-guide/SKILL.md)，实验版；[噪音判断想法](ideas/noise-check.md)，孵化中 |
-| 🌱 人生与成长 | 阶段复盘、个人现状记录、下一步的小实验 | [完整角色看板](skills/character-panel/SKILL.md)，实验版；[人生进度条](ideas/life-stage-review.md)，孵化中 |
+| 🌱 人生与成长 | 阶段复盘、个人现状记录、下一步的小实验 | [完整角色看板](skills/character-panel/SKILL.md)、[三步提升 · 日常形象](skills/three-step-style-upgrade/SKILL.md)，实验版；[人生进度条](ideas/life-stage-review.md)，孵化中 |
 | 📚 学习与认知 | 学习方法、知识理解、把见闻转成提问和行动 | [判断方法的想法](ideas/noise-check.md)，孵化中 |
 | 🎬 创作与表达 | 口播、沟通、分镜、剪辑与场景表达 | 首批内容待选 |
 | 🧰 工具与效率 | 工具用法、排坑经验、顺手的小流程 | [科技办事指南](skills/tech-task-guide/SKILL.md)、[完整角色看板的私人存档与续填](skills/character-panel/SKILL.md)，实验版 |
@@ -131,6 +132,7 @@ https://raw.githubusercontent.com/flfk666666/pibaodai/main/llms.txt
 | 给 AI 的轻量导航 | [llms.txt](llms.txt) |
 | 可按标签、用途、输入输出和来源检索的完整目录 | [catalog.json](catalog.json) |
 | 科技任务还没想清，或不知道怎么选工具 | [科技办事指南](skills/tech-task-guide/SKILL.md) |
+| 想定体重目标、找适合脸型的发型或简化护肤 | [三步提升 · 日常形象](skills/three-step-style-upgrade/SKILL.md) |
 | AI 如何挑选、组合和读取 Skills | [AGENTS.md](AGENTS.md) |
 | 目录字段与维护约定 | [目录说明](docs/catalog.md) |
 

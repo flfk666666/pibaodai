@@ -95,11 +95,13 @@ For selection, explain why the external project fits, then read its entry point.
 
 User: “看了新闻有点想买，又怕自己在追热点，帮我理一下。”
 
-Split the request into evidence review, decision framing, and any requested investment analysis. The catalog currently includes three experimental skills: `character-panel` for adult self-review data collection and private records, `tech-task-guide` for technology-task clarification and execution handoff, and `socratic-inquiry` for examining the user’s own judgments through rigorous dialogue. It also includes two incubation ideas, with no runnable noise or investment-analysis skill. A future noise skill might help compare repeated judgments, but an `incubating` idea cannot be presented as an available tool. `socratic-inquiry` may help examine the user’s reasoning if requested, but does not supply investment analysis or validate a trade. A shared category alone does not establish a match. A category or idea does not authorize a trade or prove an investment conclusion.
+Split the request into evidence review, decision framing, and any requested investment analysis. Relevant experimental entries include `character-panel` for adult self-review data collection and private records, `tech-task-guide` for technology-task clarification and execution handoff, and `socratic-inquiry` for examining the user’s own judgments through rigorous dialogue. It also includes two incubation ideas, with no runnable noise or investment-analysis skill. A future noise skill might help compare repeated judgments, but an `incubating` idea cannot be presented as an available tool. `socratic-inquiry` may help examine the user’s reasoning if requested, but does not supply investment analysis or validate a trade. A shared category alone does not establish a match. A category or idea does not authorize a trade or prove an investment conclusion.
 
 Return the closest available match, its reason for matching, missing inputs, and status. Reading a relevant skill's example costs less context than loading all skills.
 
 For “想用 AI 做点东西，但不知道从哪开始”, `tech-task-guide` may fit. Read its instructions and authored example, clarify the outcome and material constraints progressively, then use only relevant local capability entries. Its dated seed observations are starting evidence, not a current or exhaustive product directory. Compare concrete routes and provide a short starting guide and standalone handoff; detailed tutorials and execution are outside this skill's scope.
+
+For “想定体重目标、找适合脸型的发型，再看看护肤怎么调”, read [three-step-style-upgrade](../skills/three-step-style-upgrade/SKILL.md). Ask for height, weight, and a wrist photo first. Use one front-facing photo for face shape and celebrity references, then reuse it when reviewing the morning and evening skincare steps.
 
 ## Maintenance
 
